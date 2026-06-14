@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Expertise | Dr. Sanjay Gandhi — Cardiac & Cardiothoracic Surgeon</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --crimson: #C8102E; --crimson-dark: #8B0D20; --crimson-mid: #a50e26;
+  --bg: #07090E; --bg2: #0C0F17; --bg3: #101420;
+  --surface: #131923; --surface2: #182030;
+  --border: rgba(200,16,46,0.2); --border2: rgba(255,255,255,0.06);
+  --text: #E8EDF5; --muted: #6E7E92; --gold: #C9A84C;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(7,9,14,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 4%; height: 68px; }
+.logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.logo-heart { width: 38px; height: 38px; background: var(--crimson); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 16px rgba(200,16,46,0.5); }
+.logo-heart svg { width: 20px; height: 20px; }
+.logo-name { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.15; }
+.logo-role { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; margin-top: 1px; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { font-size: 12px; font-weight: 500; color: var(--muted); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta { display: flex; gap: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 7px; padding: 9px 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; border-radius: 2px; cursor: pointer; border: none; transition: all 0.22s; font-family: 'Inter', sans-serif; }
+.btn-ghost { background: transparent; border: 1px solid rgba(200,16,46,0.5); color: var(--crimson); }
+.btn-ghost:hover { background: var(--crimson); color: white; border-color: var(--crimson); }
+.btn-red { background: var(--crimson); color: white; box-shadow: 0 4px 20px rgba(200,16,46,0.35); }
+.btn-red:hover { background: var(--crimson-mid); box-shadow: 0 4px 28px rgba(200,16,46,0.5); }
+.btn-lg { padding: 13px 28px; font-size: 13px; }
+.btn-white { background: white; color: var(--crimson); font-weight: 700; }
+.btn-white:hover { background: #f0f0f0; }
+.section { padding: 88px 7%; }
+.section-dark { background: var(--bg2); }
+.section-mid { background: var(--bg3); }
+.sec-eyebrow { display: flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--crimson); margin-bottom: 14px; }
+.sec-eyebrow-line { width: 22px; height: 1px; background: var(--crimson); }
+.sec-h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 40px); font-weight: 700; line-height: 1.14; margin-bottom: 14px; }
+.sec-sub { color: var(--muted); font-size: 14px; line-height: 1.8; max-width: 560px; }
+.video-pub-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid var(--border2); border-radius: 4px; overflow: hidden; }
+.vp-col { padding: 36px 32px; border-right: 1px solid var(--border2); background: var(--surface); }
+.vp-col:last-child { border-right: none; }
+.vp-label { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--crimson); margin-bottom: 18px; }
+.yt-embed { position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 4px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 0 12px rgba(200,16,46,0.15); }
+.yt-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-title { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.pub-item { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--border2); }
+.pub-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.pub-item p { font-size: 12px; color: var(--muted); line-height: 1.7; font-style: italic; }
+.pub-item strong { color: var(--text); font-style: normal; display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--crimson); }
+.treat-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.treat-list li { font-size: 12px; color: var(--muted); display: flex; align-items: flex-start; gap: 8px; }
+.treat-list li::before { content: '✓'; color: var(--crimson); font-weight: 700; flex-shrink: 0; }
+.treat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 48px; }
+.treat-card { background: var(--surface); border: 1px solid var(--border2); border-radius: 4px; padding: 28px 26px; transition: border-color 0.22s, transform 0.22s; position: relative; overflow: hidden; }
+.treat-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--crimson); transition: height 0.3s; }
+.treat-card:hover { border-color: var(--border); transform: translateY(-3px); }
+.treat-card:hover::before { height: 100%; }
+.treat-icon { font-size: 26px; margin-bottom: 14px; }
+.treat-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+.treat-card p { font-size: 12px; color: var(--muted); line-height: 1.7; }
+.stories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
+.story-card { background: var(--surface); border: 1px solid var(--border2); border-radius: 4px; padding: 28px; }
+.stars { color: var(--gold); font-size: 13px; margin-bottom: 14px; letter-spacing: 2px; }
+.story-card blockquote { font-size: 13px; color: var(--muted); line-height: 1.8; font-style: italic; margin-bottom: 18px; }
+.story-author { font-size: 12px; font-weight: 600; color: var(--text); }
+.cta-band { background: linear-gradient(110deg, var(--crimson-dark) 0%, var(--crimson) 60%, #d9223e 100%); padding: 68px 7%; display: flex; justify-content: space-between; align-items: center; gap: 40px; position: relative; overflow: hidden; }
+.cta-band::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; }
+.cta-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; line-height: 1.2; max-width: 500px; position: relative; }
+.cta-text p { color: rgba(255,255,255,0.72); font-size: 14px; margin-top: 8px; position: relative; }
+.cta-band-right { display: flex; gap: 14px; flex-shrink: 0; position: relative; }
+footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56px 7% 28px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
+.footer-about p { font-size: 12px; color: var(--muted); line-height: 1.8; margin-top: 16px; max-width: 280px; }
+.footer-socials { display: flex; gap: 10px; margin-top: 20px; }
+.social { width: 32px; height: 32px; border: 1px solid var(--border2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--muted); text-decoration: none; transition: all 0.2s; }
+.social:hover { border-color: var(--crimson); color: var(--crimson); }
+.footer-col h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text); margin-bottom: 20px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul a { font-size: 12px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-col ul a:hover { color: var(--crimson); }
+.footer-bottom { border-top: 1px solid var(--border2); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-bottom p { font-size: 11px; color: var(--muted); }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.mob-toggle { display: none; width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 3px; align-items: center; justify-content: center; cursor: pointer; background: transparent; color: var(--text); font-size: 18px; }
+.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(7,9,14,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+.mob-menu.open { display: flex; }
+.mob-menu a { font-size: 16px; font-weight: 500; color: var(--text); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
+.mob-menu a:hover { color: var(--crimson); }
+.mob-close { position: absolute; top: 20px; right: 20px; font-size: 28px; color: var(--text); background: none; border: none; cursor: pointer; }
+@media (max-width: 1024px) { .treat-grid { grid-template-columns: 1fr 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .video-pub-row { grid-template-columns: 1fr; } .stories-grid { grid-template-columns: 1fr; } .cta-band { flex-direction: column; text-align: center; } .footer-grid { grid-template-columns: 1fr; gap: 30px; } nav { padding: 0 4%; } .nav-links { display: none; } .mob-toggle { display: flex; } .section { padding: 60px 5%; } .treat-grid { grid-template-columns: 1fr !important; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="index.html">
+    <div class="logo-heart">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    </div>
+    <div>
+      <div class="logo-name">DR. SANJAY GANDHI</div>
+      <div class="logo-role">Cardiac & Cardiothoracic Surgeon</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="expertise.html">Expertise</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="contact.html" class="btn btn-ghost">Appointment</a>
+    <a href="tel:+91-9784586176" class="btn btn-red">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Emergency 24×7
+    </a>
+    <button class="mob-toggle" onclick="document.getElementById('mobMenu').classList.add('open')" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="this.parentElement.classList.remove('open')" aria-label="Close menu">✕</button>
+  <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
+  <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
+  <a href="expertise.html" onclick="this.parentElement.classList.remove('open')">Expertise</a>
+  <a href="news.html" onclick="this.parentElement.classList.remove('open')">News</a>
+  <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
+  <a href="tel:+91-9784586176" class="btn btn-red" style="margin-top:10px">Emergency 24×7</a>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="section" style="padding-top:140px;position:relative;overflow:hidden;">
+  <!-- Decorative Heart Images -->
+  <img src="images/Heart/Heart.png" alt="" style="position:absolute;top:10px;right:4%;width:220px;opacity:0.07;pointer-events:none;filter:drop-shadow(0 0 40px rgba(200,16,46,0.4));" aria-hidden="true"/>
+  <img src="images/Heart/HeartMultipleImages.png" alt="" style="position:absolute;bottom:-40px;left:3%;width:160px;opacity:0.04;pointer-events:none;" aria-hidden="true"/>
+  <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>EXPERTISE & RESEARCH</div>
+  <h2 class="sec-h2">Treatments, Videos & Research</h2>
+  <p class="sec-sub">Advanced cardiac procedures, published research, and video documentation of Dr. Gandhi's surgical expertise.</p>
+</section>
+
+<!-- VIDEO + TREATMENTS + RESEARCH ROW -->
+<section class="section section-mid" style="padding-top:0;">
+  <div class="video-pub-row">
+    <div class="vp-col">
+      <div class="vp-label">Watch Dr. Gandhi</div>
+      <div class="yt-embed">
+        <iframe src="https://www.youtube.com/embed/RXtUllqBaEk?rel=0&modestbranding=1&color=red" title="Dr. Sanjay Gandhi Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-title" style="margin-top:12px">Dr. Gandhi introduces himself and his cardiac surgery journey at GMCH Udaipur.</div>
+    </div>
+    <div class="vp-col">
+      <div class="vp-label">Advanced Treatments</div>
+      <ul class="treat-list">
+        <li>Minimally Invasive Cardiac Surgery</li>
+        <li>Off Pump & On Pump CABG</li>
+        <li>Robotic & Endoscopic Procedures</li>
+        <li>Advanced Heart Failure Management</li>
+        <li>Pediatric Cardiac Surgery</li>
+        <li>24×7 Emergency Cardiac Care</li>
+        <li>Heart Transplantation</li>
+        <li>ECMO & LVAD Implantation</li>
+      </ul>
+      <div style="margin-top:28px;text-align:center">
+        <img src="images/Heart/Heart.png" alt="Heart" style="width:100px;height:auto;filter:drop-shadow(0 0 20px rgba(200,16,46,0.6));"/>
+      </div>
+    </div>
+    <div class="vp-col">
+      <div class="vp-label">Research & Publications</div>
+      <div class="pub-item">
+        <strong>JCVA 2008</strong>
+        <p>Difficult Weaning From Cardiopulmonary Bypass in the Lateral Position Caused by Lung Collapse. Journal of Cardiothoracic and Vascular Anesthesia, August; 616–624.</p>
+      </div>
+      <div class="pub-item">
+        <strong>World Journal — Pediatric & Congenital Heart Surgery</strong>
+        <p>Classical Windsock Deformity of Ruptured Sinus of Valsalva Seen in Transesophageal Echocardiography. 3(2): 273–274.</p>
+      </div>
+      <div class="pub-item">
+        <strong>World Record Surgery</strong>
+        <p>Successfully operated on the world's tiniest surviving cardiac patient — 15 days old, weighing 470 grams, with a complex congenital heart condition.</p>
+      </div>
+      <a href="about.html" class="btn btn-ghost" style="font-size:11px;margin-top:8px">View Publications →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIAL CASES -->
+<section class="section section-dark" style="position:relative;overflow:hidden;">
+  <img src="images/Heart/HeartMultipleImages.png" alt="" style="position:absolute;top:40px;right:3%;width:250px;opacity:0.05;pointer-events:none;filter:drop-shadow(0 0 20px rgba(200,16,46,0.3));" aria-hidden="true"/>
+  <div class="sec-eyebrow reveal"><span class="sec-eyebrow-line"></span>Special & Critical Cases</div>
+  <h2 class="sec-h2 reveal">Landmark Surgical Cases</h2>
+  <p class="sec-sub" style="margin-bottom:48px">All the cases are unique and complicated but still some cases are special which demands more learning and extension to what we learned till now.</p>
+
+  <!-- Aortic Dissection Case -->
+  <div class="treat-card" style="margin-bottom:24px;border-left:3px solid var(--crimson)">
+    <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--crimson);margin-bottom:12px">🫀 One More Life Saved — Bentall's Operation</div>
+    <p style="font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:12px">Patient from Salumbar, age 42, was having symptom of heavy chest pain and was already a known case of Aortic Aneurysm. On further investigation found to have Aortic Dissection of the aneurysm — the main artery of heart (Ascending Aorta) got blasted internally.</p>
+    <p style="font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:12px">Adding to the complexity the patient was COVID-19 positive and got the treatment for same as well. These kind of patients need immediate BP controlling followed with emergency operation which lasted for 10-12 hrs of duration, in medical term this kind of operations are known as "BENTALL's OPERATION".</p>
+    <p style="font-size:13px;color:var(--muted);line-height:1.8">With assistance of high competent medical team of GMCH the procedure was done successfully, patient recovered well and got discharged from hospital. Patient is living healthy and happy life again.</p>
+  </div>
+
+  <!-- Special Cases Grid -->
+  <div style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:18px">Angiography & Bypass Surgery Specializations</div>
+  <div class="treat-grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="treat-card">
+      <div class="treat-icon">🫀</div>
+      <h3>Off Pump CABG</h3>
+      <p>Beating Heart Bypass Surgery — Total Arterial Revascularization with LIMA-RIMA Y Anastomosis</p>
+    </div>
+    <div class="treat-card">
+      <div class="treat-icon">🩺</div>
+      <h3>Coarctation of Aorta</h3>
+      <p>Discrete Post Subclavian Coarctation of Aorta — Pre & Post operative CT Angiogram guided surgery</p>
+    </div>
+    <div class="treat-card">
+      <div class="treat-icon">💉</div>
+      <h3>Chronic Aortic Dissection</h3>
+      <p>Complex aortic dissection repair including TEVAR — Endovascular Aortic Repair</p>
+    </div>
+    <div class="treat-card">
+      <div class="treat-icon">👶</div>
+      <h3>Transposition of Great Arteries</h3>
+      <p>Post operative child with TGA — Complex congenital heart correction in neonates</p>
+    </div>
+    <div class="treat-card">
+      <div class="treat-icon">🔬</div>
+      <h3>Complex Pediatric Cases</h3>
+      <p>2.5 kg child with ASD, VSD, and PDA — Multiple congenital defect correction</p>
+    </div>
+    <div class="treat-card">
+      <div class="treat-icon">🏥</div>
+      <h3>Juxtarenal Aortic Aneurysm</h3>
+      <p>Complex aneurysm surgery near renal arteries requiring precision and expertise</p>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:32px">
+    <a href="contact.html" class="btn btn-ghost">Book a Consultation →</a>
+  </div>
+</section>
+
+<!-- PATIENT STORIES -->
+<section class="section">
+  <div class="sec-eyebrow reveal"><span class="sec-eyebrow-line"></span>Patient Stories</div>
+  <h2 class="sec-h2 reveal">Lives Transformed</h2>
+  <p class="sec-sub">Thousands of patients and families trust Dr. Gandhi with what matters most.</p>
+  <div class="stories-grid">
+    <div class="story-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Dr. Gandhi gave me a new life. His confidence and expertise are truly unmatched. I am grateful every single day."</blockquote>
+      <div class="story-author">— Patient, Udaipur</div>
+    </div>
+    <div class="story-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"After my bypass surgery, I was back to normal life within weeks. The care and attention from Dr. Gandhi's team was exceptional from day one."</blockquote>
+      <div class="story-author">— Patient, Rajasthan</div>
+    </div>
+    <div class="story-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"My child was born with a severe heart defect. Dr. Gandhi operated when my baby was just a few days old. Today my child is healthy and thriving."</blockquote>
+      <div class="story-author">— Parent, Gujarat</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band" style="position:relative;">
+  <img src="images/Heart/Heart.png" alt="" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:160px;opacity:0.07;pointer-events:none;" aria-hidden="true"/>
+  <div class="cta-text">
+    <h2>Every Heart Deserves the Best Care</h2>
+    <p>Compassionate Care · Advanced Technology · Better Outcomes</p>
+  </div>
+  <div class="cta-band-right">
+    <a href="contact.html" class="btn btn-white btn-lg">Book an Appointment</a>
+    <a href="tel:+919509700069" class="btn btn-ghost btn-lg" style="border-color:rgba(255,255,255,0.4);color:white">📞 +91 95097 00069</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <a class="logo" href="index.html" style="text-decoration:none">
+        <div class="logo-heart"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <div>
+          <div class="logo-name">DR. SANJAY GANDHI</div>
+          <div class="logo-role">Cardiac & Cardiothoracic Surgeon</div>
+        </div>
+      </a>
+      <p>One of India's most trusted cardiac surgeons. 20+ years of excellence, 13,000+ surgeries, committed to saving lives with compassion and world-class expertise.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/sgandhicardiacsurgeon" class="social" target="_blank">f</a>
+        <a href="https://www.instagram.com/sgcardiacsurgeon/" class="social" target="_blank">ig</a>
+        <a href="https://www.youtube.com/channel/UCWSw6M3BHKL52JbRUq6XSgA" class="social" target="_blank">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Dr. Gandhi</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="news.html">News & Articles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Procedures</h4>
+      <ul>
+        <li><a href="expertise.html">CABG Surgery</a></li>
+        <li><a href="expertise.html">Valve Replacement</a></li>
+        <li><a href="expertise.html">Congenital Heart</a></li>
+        <li><a href="expertise.html">ECMO Support</a></li>
+        <li><a href="expertise.html">LVAD Implantation</a></li>
+        <li><a href="expertise.html">Heart Transplant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+91-9784586176">+91-97845 86176</a></li>
+        <li><a href="mailto:sgandhi32@yahoo.com">sgandhi32@yahoo.com</a></li>
+        <li><a href="contact.html">Book Appointment</a></li>
+        <li><a href="about.html">Achievements</a></li>
+        <li><a href="news.html">News & Articles</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Dr. Sanjay Gandhi — Cardiac & Cardiothoracic Surgeon, Udaipur, Rajasthan. All rights reserved.</p>
+    <p>MBBS · MS AIIMS New Delhi · M.Ch SCTIMST Trivandrum</p>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  if(!els.length) return;
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+  }, {threshold:0.15});
+  els.forEach(el=>obs.observe(el));
+})();
+</script>
+
+</body>
+</html>

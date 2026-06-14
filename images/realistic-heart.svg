@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- Main body gradient -->
+    <radialGradient id="bodyGrad" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#e83a3a"/>
+      <stop offset="25%" stop-color="#c41e2e"/>
+      <stop offset="50%" stop-color="#9a1525"/>
+      <stop offset="75%" stop-color="#6b0e1a"/>
+      <stop offset="100%" stop-color="#3d0810"/>
+    </radialGradient>
+    <!-- Highlight gradient -->
+    <radialGradient id="highlightGrad" cx="30%" cy="25%" r="40%">
+      <stop offset="0%" stop-color="rgba(255,120,120,0.6)"/>
+      <stop offset="100%" stop-color="rgba(255,120,120,0)"/>
+    </radialGradient>
+    <!-- Aorta gradient -->
+    <linearGradient id="aortaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d42040"/>
+      <stop offset="50%" stop-color="#8b1525"/>
+      <stop offset="100%" stop-color="#5a0e18"/>
+    </linearGradient>
+    <!-- Vein gradient -->
+    <linearGradient id="veinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a1020"/>
+      <stop offset="50%" stop-color="#7a1530"/>
+      <stop offset="100%" stop-color="#3a0815"/>
+    </linearGradient>
+    <!-- Artery gradient -->
+    <linearGradient id="arteryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cc2235"/>
+      <stop offset="100%" stop-color="#881525"/>
+    </linearGradient>
+    <!-- Pulmonary gradient -->
+    <linearGradient id="pulmonaryGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5533aa"/>
+      <stop offset="50%" stop-color="#443399"/>
+      <stop offset="100%" stop-color="#332266"/>
+    </linearGradient>
+    <!-- Shadow filter -->
+    <filter id="heartShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feOffset dx="0" dy="4" result="offsetBlur"/>
+      <feFlood flood-color="rgba(200,16,46,0.5)" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Inner shadow -->
+    <filter id="innerShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset dx="2" dy="2"/>
+      <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1"/>
+      <feFlood flood-color="rgba(0,0,0,0.4)"/>
+      <feComposite in2="SourceAlpha" operator="in"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g filter="url(#heartShadow)">
+    <!-- Main heart body - left ventricle -->
+    <path d="M250 430 C160 370 70 300 55 210 C40 120 90 60 155 70 C195 75 230 100 250 140 C270 100 305 75 345 70 C410 60 460 120 445 210 C430 300 340 370 250 430Z" 
+      fill="url(#bodyGrad)" filter="url(#innerShadow)"/>
+    
+    <!-- Right atrium -->
+    <path d="M320 100 C350 80 390 85 400 110 C410 140 395 165 370 170 C345 175 320 155 315 130 C310 110 310 105 320 100Z"
+      fill="#7a1020" stroke="#5a0815" stroke-width="0.5"/>
+    
+    <!-- Left atrium -->
+    <path d="M180 100 C150 80 110 85 100 110 C90 140 105 165 130 170 C155 175 180 155 185 130 C190 110 190 105 180 100Z"
+      fill="#8a1525" stroke="#5a0815" stroke-width="0.5"/>
+    
+    <!-- Aorta - main artery going up -->
+    <path d="M235 130 C235 95 220 70 200 50 C210 35 240 30 260 35 C280 40 290 55 285 75 C280 95 270 110 265 130Z"
+      fill="url(#aortaGrad)" stroke="#6b0e1a" stroke-width="1"/>
+    
+    <!-- Aortic arch -->
+    <path d="M200 50 C185 35 175 20 190 10 C210 0 240 5 260 15 C275 22 285 35 280 50 C275 60 265 55 260 45 C250 30 230 25 215 30 C205 33 200 40 200 50Z"
+      fill="url(#arteryGrad)" stroke="#881020" stroke-width="0.8"/>
+    
+    <!-- Superior vena cava (right side, going up) -->
+    <path d="M310 100 C315 80 320 55 325 35 C328 20 335 10 340 15 C345 20 342 35 340 50 C337 70 332 90 325 105Z"
+      fill="url(#veinGrad)" stroke="#4a0815" stroke-width="0.8"/>
+    
+    <!-- Pulmonary artery -->
+    <path d="M260 110 C270 85 290 65 310 55 C320 50 330 55 325 65 C320 75 305 80 295 90 C285 100 275 110 270 120Z"
+      fill="url(#pulmonaryGrad)" stroke="#332266" stroke-width="0.8"/>
+    
+    <!-- Pulmonary artery branch left -->
+    <path d="M200 55 C185 45 165 40 150 45 C140 48 135 55 140 60 C145 65 155 62 165 58 C175 54 185 52 195 55Z"
+      fill="url(#pulmonaryGrad)" stroke="#332266" stroke-width="0.6"/>
+    
+    <!-- Left anterior descending artery -->
+    <path d="M245 145 C242 180 238 220 235 260 C232 300 230 340 232 380 C233 395 235 405 238 415"
+      fill="none" stroke="#cc2235" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+    
+    <!-- Circumflex artery -->
+    <path d="M225 155 C200 165 175 180 160 200 C145 220 140 245 145 270 C148 290 155 310 165 330"
+      fill="none" stroke="#bb2030" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    
+    <!-- Right coronary artery -->
+    <path d="M275 150 C300 160 325 175 340 195 C355 215 360 240 355 265 C350 290 340 310 330 330"
+      fill="none" stroke="#cc2235" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    
+    <!-- Small arterial branches -->
+    <path d="M242 200 C230 210 218 215 210 225" fill="none" stroke="#aa1828" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+    <path d="M240 250 C228 258 220 270 215 282" fill="none" stroke="#aa1828" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+    <path d="M237 300 C225 308 218 320 215 332" fill="none" stroke="#991525" stroke-width="1.3" stroke-linecap="round" opacity="0.6"/>
+    <path d="M280 200 C292 208 302 218 308 230" fill="none" stroke="#aa1828" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+    <path d="M282 250 C295 258 305 268 312 280" fill="none" stroke="#aa1828" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+    <path d="M278 300 C290 310 300 322 308 335" fill="none" stroke="#991525" stroke-width="1.3" stroke-linecap="round" opacity="0.6"/>
+    
+    <!-- Ventricular septum (center line) -->
+    <path d="M250 145 C248 200 247 280 248 360 C248 380 249 400 250 420"
+      stroke="rgba(40,5,10,0.5)" stroke-width="2.5" fill="none"/>
+    
+    <!-- Pulmonary veins (left, entering left atrium) -->
+    <path d="M130 120 C115 110 95 105 80 110 C70 113 65 120 70 125" 
+      fill="none" stroke="#cc3040" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+    <path d="M125 140 C108 135 88 130 75 138"
+      fill="none" stroke="#cc3040" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    
+    <!-- Inferior vena cava -->
+    <path d="M340 170 C358 185 375 200 385 220 C392 235 390 245 385 240"
+      fill="none" stroke="#4a1525" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+    
+    <!-- Surface texture - subtle grooves -->
+    <path d="M200 200 C210 210 220 200 230 210" fill="none" stroke="rgba(60,10,15,0.3)" stroke-width="1"/>
+    <path d="M280 220 C290 230 300 225 310 235" fill="none" stroke="rgba(60,10,15,0.3)" stroke-width="1"/>
+    <path d="M180 280 C190 290 200 285 210 295" fill="none" stroke="rgba(60,10,15,0.3)" stroke-width="1"/>
+    <path d="M300 280 C310 290 320 285 330 295" fill="none" stroke="rgba(60,10,15,0.3)" stroke-width="1"/>
+    
+    <!-- Highlight / specular reflection -->
+    <ellipse cx="185" cy="170" rx="45" ry="60" fill="url(#highlightGrad)" opacity="0.4"/>
+    <ellipse cx="310" cy="180" rx="35" ry="50" fill="url(#highlightGrad)" opacity="0.25"/>
+    
+    <!-- Top highlight on atria -->
+    <ellipse cx="155" cy="105" rx="20" ry="15" fill="rgba(255,150,150,0.2)"/>
+    <ellipse cx="345" cy="95" rx="18" ry="13" fill="rgba(255,130,130,0.15)"/>
+    
+    <!-- Subtle edge glow -->
+    <path d="M250 430 C160 370 70 300 55 210 C40 120 90 60 155 70 C195 75 230 100 250 140 C270 100 305 75 345 70 C410 60 460 120 445 210 C430 300 340 370 250 430Z" 
+      fill="none" stroke="rgba(255,80,80,0.15)" stroke-width="2"/>
+  </g>
+</svg>

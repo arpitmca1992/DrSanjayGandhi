@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>News | Dr. Sanjay Gandhi — Cardiac & Cardiothoracic Surgeon</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --crimson: #C8102E; --crimson-dark: #8B0D20; --crimson-mid: #a50e26;
+  --bg: #07090E; --bg2: #0C0F17; --bg3: #101420;
+  --surface: #131923; --surface2: #182030;
+  --border: rgba(200,16,46,0.2); --border2: rgba(255,255,255,0.06);
+  --text: #E8EDF5; --muted: #6E7E92; --gold: #C9A84C;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(7,9,14,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 4%; height: 68px; }
+.logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.logo-heart { width: 38px; height: 38px; background: var(--crimson); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 16px rgba(200,16,46,0.5); }
+.logo-heart svg { width: 20px; height: 20px; }
+.logo-name { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.15; }
+.logo-role { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; margin-top: 1px; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { font-size: 12px; font-weight: 500; color: var(--muted); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta { display: flex; gap: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 7px; padding: 9px 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; border-radius: 2px; cursor: pointer; border: none; transition: all 0.22s; font-family: 'Inter', sans-serif; }
+.btn-ghost { background: transparent; border: 1px solid rgba(200,16,46,0.5); color: var(--crimson); }
+.btn-ghost:hover { background: var(--crimson); color: white; border-color: var(--crimson); }
+.btn-red { background: var(--crimson); color: white; box-shadow: 0 4px 20px rgba(200,16,46,0.35); }
+.btn-red:hover { background: var(--crimson-mid); box-shadow: 0 4px 28px rgba(200,16,46,0.5); }
+.btn-lg { padding: 13px 28px; font-size: 13px; }
+.btn-white { background: white; color: var(--crimson); font-weight: 700; }
+.btn-white:hover { background: #f0f0f0; }
+.section { padding: 88px 7%; }
+.section-dark { background: var(--bg2); }
+.section-mid { background: var(--bg3); }
+.sec-eyebrow { display: flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--crimson); margin-bottom: 14px; }
+.sec-eyebrow-line { width: 22px; height: 1px; background: var(--crimson); }
+.sec-h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 40px); font-weight: 700; line-height: 1.14; margin-bottom: 14px; }
+.sec-sub { color: var(--muted); font-size: 14px; line-height: 1.8; max-width: 560px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 70px; align-items: center; }
+.about-body { font-size: 14px; color: var(--muted); line-height: 1.9; margin-bottom: 24px; }
+.ach-list { display: flex; flex-direction: column; gap: 10px; }
+.ach { display: flex; align-items: flex-start; gap: 12px; font-size: 13px; color: var(--muted); }
+.ach-check { width: 20px; height: 20px; border-radius: 50%; background: rgba(200,16,46,0.12); border: 1px solid rgba(200,16,46,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--crimson); font-size: 10px; font-weight: 700; margin-top: 1px; }
+.treat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 48px; }
+.treat-card { background: var(--surface); border: 1px solid var(--border2); border-radius: 4px; padding: 28px 26px; transition: border-color 0.22s, transform 0.22s; position: relative; overflow: hidden; }
+.treat-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--crimson); transition: height 0.3s; }
+.treat-card:hover { border-color: var(--border); transform: translateY(-3px); }
+.treat-card:hover::before { height: 100%; }
+.treat-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+.treat-card p { font-size: 12px; color: var(--muted); line-height: 1.7; }
+.cta-band { background: linear-gradient(110deg, var(--crimson-dark) 0%, var(--crimson) 60%, #d9223e 100%); padding: 68px 7%; display: flex; justify-content: space-between; align-items: center; gap: 40px; position: relative; overflow: hidden; }
+.cta-band::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; }
+.cta-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; line-height: 1.2; max-width: 500px; position: relative; }
+.cta-text p { color: rgba(255,255,255,0.72); font-size: 14px; margin-top: 8px; position: relative; }
+.cta-band-right { display: flex; gap: 14px; flex-shrink: 0; position: relative; }
+footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56px 7% 28px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
+.footer-about p { font-size: 12px; color: var(--muted); line-height: 1.8; margin-top: 16px; max-width: 280px; }
+.footer-socials { display: flex; gap: 10px; margin-top: 20px; }
+.social { width: 32px; height: 32px; border: 1px solid var(--border2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--muted); text-decoration: none; transition: all 0.2s; }
+.social:hover { border-color: var(--crimson); color: var(--crimson); }
+.footer-col h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text); margin-bottom: 20px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul a { font-size: 12px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-col ul a:hover { color: var(--crimson); }
+.footer-bottom { border-top: 1px solid var(--border2); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-bottom p { font-size: 11px; color: var(--muted); }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.mob-toggle { display: none; width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 3px; align-items: center; justify-content: center; cursor: pointer; background: transparent; color: var(--text); font-size: 18px; }
+.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(7,9,14,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+.mob-menu.open { display: flex; }
+.mob-menu a { font-size: 16px; font-weight: 500; color: var(--text); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
+.mob-menu a:hover { color: var(--crimson); }
+.mob-close { position: absolute; top: 20px; right: 20px; font-size: 28px; color: var(--text); background: none; border: none; cursor: pointer; }
+@media (max-width: 1024px) { .treat-grid { grid-template-columns: 1fr 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } .cta-band { flex-direction: column; text-align: center; } .footer-grid { grid-template-columns: 1fr; gap: 30px; } nav { padding: 0 4%; } .nav-links { display: none; } .mob-toggle { display: flex; } .section { padding: 60px 5%; } .treat-grid { grid-template-columns: 1fr !important; } [style*="grid-template-columns:repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; } [style*="grid-template-columns:repeat(3"] { grid-template-columns: 1fr !important; } [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="index.html">
+    <div class="logo-heart">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    </div>
+    <div>
+      <div class="logo-name">DR. SANJAY GANDHI</div>
+      <div class="logo-role">Cardiac & Cardiothoracic Surgeon</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="expertise.html">Expertise</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="contact.html" class="btn btn-ghost">Appointment</a>
+    <a href="tel:+91-9784586176" class="btn btn-red">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Emergency 24×7
+    </a>
+    <button class="mob-toggle" onclick="document.getElementById('mobMenu').classList.add('open')" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="this.parentElement.classList.remove('open')" aria-label="Close menu">✕</button>
+  <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
+  <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
+  <a href="expertise.html" onclick="this.parentElement.classList.remove('open')">Expertise</a>
+  <a href="news.html" onclick="this.parentElement.classList.remove('open')">News</a>
+  <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
+  <a href="tel:+91-9784586176" class="btn btn-red" style="margin-top:10px">Emergency 24×7</a>
+</div>
+
+<!-- WORLD RECORD HIGHLIGHT -->
+<section class="section section-mid" style="padding-top:140px;position:relative;overflow:hidden;">
+  <!-- Decorative Heart -->
+  <img src="images/Heart/Heart.png" alt="" style="position:absolute;top:60px;right:3%;width:180px;opacity:0.06;pointer-events:none;filter:drop-shadow(0 0 30px rgba(200,16,46,0.4));animation:heartFloat 6s ease-in-out infinite;" aria-hidden="true"/>
+  <style>@keyframes heartFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-15px) rotate(3deg)}}</style>
+  <div class="about-grid">
+    <div>
+      <div class="sec-eyebrow reveal"><span class="sec-eyebrow-line"></span>World Record</div>
+      <h2 class="sec-h2 reveal">World's Tiniest Baby to Survive Heart Surgery</h2>
+      <p class="about-body">The baby weighed just 470 grams at birth. He was only the size of a palm, and was born prematurely after 28 weeks of pregnancy. His eyes hadn't opened, lungs weren't developed, skin resembled parchment paper — too fragile and delicate to touch, and he had heart complications.</p>
+      <p class="about-body">After 15 days since birth, the baby underwent a heart surgery, becoming the tiniest miracle baby to undergo a PDA corrective operation. The team of doctors, including Dr. Sunil Jangid and Dr. Sanjay Gandhi, performed the unbelievable milestone surgery at Geetanjali Medical College and Hospital in Udaipur, India.</p>
+      <p class="about-body">Operating on an infant, especially when he is so tiny, is very challenging and risky as the body parts are extremely premature. The survival chance was just 55 percent.</p>
+      <div class="ach-list" style="margin-top:20px">
+        <div class="ach"><div class="ach-check">✓</div>Published in Times of India, UK Mirror, Catholic.org</div>
+        <div class="ach"><div class="ach-check">✓</div>Featured on CTSNet (Cardiothoracic Surgery Network)</div>
+        <div class="ach"><div class="ach-check">✓</div>Published in Tamil, Gujarat & Karnataka media</div>
+        <div class="ach"><div class="ach-check">✓</div>American Bazaar Online coverage</div>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+        <a href="https://www.dailyrounds.org/blog/landmark-surgeryworlds-tiniest-baby-with-heart-complications-saved/" target="_blank" class="btn btn-ghost" style="font-size:11px">DailyRounds Article →</a>
+        <a href="https://www.catholic.org/news/hf/family/story.php?id=74927" target="_blank" class="btn btn-ghost" style="font-size:11px">Catholic.org Article →</a>
+        <a href="https://www.ctsnet.org/jans/worlds-tiniest-baby-survive-heart-surgery-470-grams" target="_blank" class="btn btn-ghost" style="font-size:11px">CTSNet →</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:center">
+      <img src="images/Worlds-tiniest-baby-470-grams-survives-heart-surgery-1024x768.png" alt="World's tiniest baby 470 grams survives heart surgery" style="width:100%;border-radius:4px;border:1px solid var(--border)"/>
+      <div style="text-align:center;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:4px;width:100%">
+        <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:var(--crimson);line-height:1">470g</div>
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;margin-top:6px">World's Tiniest Surviving<br>Cardiac Surgery Patient</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS ARTICLES / SUCCESS STORIES -->
+<section class="section">
+  <div class="sec-eyebrow reveal"><span class="sec-eyebrow-line"></span>In The News</div>
+  <h2 class="sec-h2 reveal">News Articles & Success Stories</h2>
+  <p class="sec-sub" style="margin-bottom:48px">Dr. Sanjay Gandhi's surgical achievements widely covered in national and international media across 10+ publications worldwide.</p>
+
+  <!-- INTERNATIONAL MEDIA - Featured News with Thumbnails -->
+  <div style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:18px">🌍 International Media Coverage</div>
+  <div class="treat-grid" style="grid-template-columns:1fr 1fr;margin-top:0;margin-bottom:32px">
+    <a href="https://www.mirror.co.uk/news/world-news/baby-boy-weighing-just-one-10438696" target="_blank" class="treat-card" style="border-left:3px solid var(--crimson);text-decoration:none;display:block">
+      <img src="images/Worlds-tiniest-baby-470-grams-survives-heart-surgery-1024x768.png" alt="UK Mirror - World's Tiniest Baby Heart Surgery" style="width:100%;height:160px;object-fit:cover;border-radius:3px;margin-bottom:14px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--crimson);margin-bottom:12px">🇬🇧 UK Mirror · May 17, 2017</div>
+      <h3 style="font-size:15px;margin-bottom:10px;color:var(--text)">Baby Boy Weighing Just One Pound Becomes World's Tiniest Newborn to Have Successful Heart Surgery</h3>
+      <p style="font-size:12px;color:var(--muted);line-height:1.7">A baby boy born at 28 weeks, weighing just over one pound at birth defied every odd set against him and miraculously survived heart surgery at two weeks old.</p>
+      <span style="font-size:11px;color:var(--crimson);display:inline-block;margin-top:12px;font-weight:600">Read Full Article →</span>
+    </a>
+    <a href="https://www.thesun.co.uk/living/3583271/miracle-baby-boy-weighing-just-1lbs-and-measuring-12ins-is-smallest-in-the-world-to-survive-life-saving-heart-operation/" target="_blank" class="treat-card" style="border-left:3px solid var(--crimson);text-decoration:none;display:block">
+      <img src="images/Worlds-tiniest-baby-470-grams-survives-heart-surgery-1024x768.png" alt="The Sun UK - Miracle Baby" style="width:100%;height:160px;object-fit:cover;border-radius:3px;margin-bottom:14px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--crimson);margin-bottom:12px">🇬🇧 The Sun (UK) · May 17, 2017</div>
+      <h3 style="font-size:15px;margin-bottom:10px;color:var(--text)">'Miracle' Baby Boy Weighing Just 1lb and Measuring 12ins is 'Smallest in the World' to Survive Life-Saving Heart Operation</h3>
+      <p style="font-size:12px;color:var(--muted);line-height:1.7">Weighing just over one pound, and measuring just 12 inches from head to toe, this little boy has survived life-saving heart surgery at Geetanjali Medical College, Udaipur.</p>
+      <span style="font-size:11px;color:var(--crimson);display:inline-block;margin-top:12px;font-weight:600">Read Full Article →</span>
+    </a>
+  </div>
+
+  <!-- NATIONAL MEDIA -->
+  <div style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:18px">🇮🇳 National Media Coverage</div>
+  <div class="treat-grid" style="grid-template-columns:1fr 1fr;margin-top:0;margin-bottom:32px">
+    <a href="https://timesofindia.indiatimes.com/city/udaipur/worlds-tiniest-baby-undergoes-heart-surgery-in-udaipur/articleshow/58705417.cms" target="_blank" class="treat-card" style="border-left:3px solid var(--crimson);text-decoration:none;display:block">
+      <img src="images/TOI-dr-sanjay-gandhi-news-26.9.16.jpg" alt="Times of India - Dr. Sanjay Gandhi" style="width:100%;height:160px;object-fit:cover;border-radius:3px;margin-bottom:14px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--crimson);margin-bottom:12px">Times of India · May 17, 2017</div>
+      <h3 style="font-size:15px;margin-bottom:10px;color:var(--text)">World's Tiniest 'Miracle' Baby Has Heart Surgery in Udaipur</h3>
+      <p style="font-size:12px;color:var(--muted);line-height:1.7">The world's tiniest baby underwent heart surgery just 15 days after birth. The baby suffered from Patent Ductus Arteriosus (PDA) — a condition where the aorta and pulmonary artery were connected.</p>
+      <span style="font-size:11px;color:var(--crimson);display:inline-block;margin-top:12px;font-weight:600">Read Full Article →</span>
+    </a>
+    <a href="https://www.thehindu.com/news/national/other-states/south-asias-tiniest-baby-survives-major-surgery/article24575553.ece" target="_blank" class="treat-card" style="border-left:3px solid var(--crimson);text-decoration:none;display:block">
+      <img src="images/pratahkal-dr-sanjay-gandhi-700-gms-baby-news-28.12.16.jpg" alt="The Hindu - South Asia Tiniest Baby" style="width:100%;height:160px;object-fit:cover;border-radius:3px;margin-bottom:14px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--crimson);margin-bottom:12px">The Hindu · Aug 1, 2018</div>
+      <h3 style="font-size:15px;margin-bottom:10px;color:var(--text)">South Asia's Tiniest Baby (520g) Survives Major Surgery in Udaipur</h3>
+      <p style="font-size:12px;color:var(--muted);line-height:1.7">A baby girl weighing just 520 gm became the tiniest in South Asia to survive a major abdominal surgery. Born premature at 26 weeks, she was operated upon as a 12-day-old in Udaipur.</p>
+      <span style="font-size:11px;color:var(--crimson);display:inline-block;margin-top:12px;font-weight:600">Read Full Article →</span>
+    </a>
+  </div>
+
+  <!-- ONLINE / MEDICAL MEDIA -->
+  <div style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:18px">🏥 Medical & Online Media</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:32px">
+    <a href="https://www.ctsnet.org/jans/worlds-tiniest-baby-survive-heart-surgery-470-grams" target="_blank" class="treat-card" style="text-decoration:none;display:block">
+      <img src="images/Worlds-tiniest-baby-470-grams-survives-heart-surgery-1024x768.png" alt="CTSNet - 470g Baby" style="width:100%;height:130px;object-fit:cover;border-radius:3px;margin-bottom:12px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px">CTSNet · May 18, 2017</div>
+      <h3 style="font-size:13px;margin-bottom:8px;color:var(--text)">World's Tiniest Baby to Survive Heart Surgery (470 Grams)</h3>
+      <p style="font-size:11px;color:var(--muted);line-height:1.6">Published on the global Cardiothoracic Surgery Network — the world's leading professional network for cardiac surgeons.</p>
+      <span style="font-size:11px;color:var(--crimson);font-weight:600">Read →</span>
+    </a>
+    <a href="https://www.americanbazaaronline.com/2017/05/17/worlds-tiniest-baby-undergoes-heart-surgery-in-udaipur-survival-chance-just-55-percent425454/" target="_blank" class="treat-card" style="text-decoration:none;display:block">
+      <img src="images/14Oct2017.jpeg" alt="American Bazaar - 470g Baby" style="width:100%;height:130px;object-fit:cover;border-radius:3px;margin-bottom:12px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px">American Bazaar · May 17, 2017</div>
+      <h3 style="font-size:13px;margin-bottom:8px;color:var(--text)">World's Tiniest Baby Undergoes Heart Surgery in Udaipur, Survival Chance Just 55%</h3>
+      <p style="font-size:11px;color:var(--muted);line-height:1.6">The neonate of age only 15 days, weighed merely 470 grams at birth and was just the size of a palm.</p>
+      <span style="font-size:11px;color:var(--crimson);font-weight:600">Read →</span>
+    </a>
+    <a href="http://www.catholic.org/news/hf/family/story.php?id=74927" target="_blank" class="treat-card" style="text-decoration:none;display:block">
+      <img src="images/rashtradoot-dr-sanjay-gandhi-700-gms-baby-news-28.12.16.jpg" alt="Catholic.org - Miraculous Survival" style="width:100%;height:130px;object-fit:cover;border-radius:3px;margin-bottom:12px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px">Catholic.org · May 17, 2017</div>
+      <h3 style="font-size:13px;margin-bottom:8px;color:var(--text)">MIRACULOUS SURVIVAL: Newborn Baby Weighing Just ONE POUND Survives Heart Surgery</h3>
+      <p style="font-size:11px;color:var(--muted);line-height:1.6">A baby boy born at 28 weeks defied every odd and miraculously survived heart surgery at two weeks old.</p>
+      <span style="font-size:11px;color:var(--crimson);font-weight:600">Read →</span>
+    </a>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:32px">
+    <a href="http://www.faithwire.com/2017/05/18/premature-baby-is-smallest-infant-ever-to-survive-major-heart-surgery/" target="_blank" class="treat-card" style="text-decoration:none;display:block">
+      <img src="images/Worlds-tiniest-baby-470-grams-survives-heart-surgery-1024x768.png" alt="Faithwire - Smallest Infant" style="width:100%;height:130px;object-fit:cover;border-radius:3px;margin-bottom:12px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px">Faithwire · May 18, 2017</div>
+      <h3 style="font-size:13px;margin-bottom:8px;color:var(--text)">Premature Baby Is Smallest Infant Ever to Survive Major Heart Surgery</h3>
+      <p style="font-size:11px;color:var(--muted);line-height:1.6">The high-risk procedure took place at Geetanjali Medical College & Hospital in Eklingpura, India.</p>
+      <span style="font-size:11px;color:var(--crimson);font-weight:600">Read →</span>
+    </a>
+    <a href="https://www.dailyrounds.org/blog/landmark-surgeryworlds-tiniest-baby-with-heart-complications-saved/" target="_blank" class="treat-card" style="text-decoration:none;display:block">
+      <img src="images/pratahkal-dr-sanjay-gandhi-700-gms-baby-news-28.12.16.jpg" alt="DailyRounds - Landmark Surgery" style="width:100%;height:130px;object-fit:cover;border-radius:3px;margin-bottom:12px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px">DailyRounds (Medical) · 2017</div>
+      <h3 style="font-size:13px;margin-bottom:8px;color:var(--text)">Landmark Surgery — World's Tiniest Baby with Heart Complications Saved</h3>
+      <p style="font-size:11px;color:var(--muted);line-height:1.6">Featured on India's leading medical knowledge platform for doctors and healthcare professionals.</p>
+      <span style="font-size:11px;color:var(--crimson);font-weight:600">Read →</span>
+    </a>
+    <a href="https://www.thehindu.com/news/national/other-states/udaipur-baby-weighing-only-400-gm-at-birth-survives/article22422493.ece" target="_blank" class="treat-card" style="text-decoration:none;display:block">
+      <img src="images/2016.png" alt="The Hindu - 400g Baby Survives" style="width:100%;height:130px;object-fit:cover;border-radius:3px;margin-bottom:12px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px">The Hindu · Jan 12, 2018</div>
+      <h3 style="font-size:13px;margin-bottom:8px;color:var(--text)">Udaipur Baby Weighing Only 400 gm at Birth, Survives</h3>
+      <p style="font-size:11px;color:var(--muted);line-height:1.6">Defying the odds of medicine, a newborn weighing just 400 grams survived after premature birth in Udaipur.</p>
+      <span style="font-size:11px;color:var(--crimson);font-weight:600">Read →</span>
+    </a>
+  </div>
+
+  <!-- UK EXPRESS -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:32px">
+    <a href="https://www.express.co.uk/life-style/life/997553/Baby-born-14-weeks-prematurely-abdominal-surgery-india-health-world" target="_blank" class="treat-card" style="text-decoration:none;display:block">
+      <img src="images/2015.png" alt="UK Express - 520g Baby" style="width:100%;height:130px;object-fit:cover;border-radius:3px;margin-bottom:12px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px">🇬🇧 UK Express · Aug 1, 2018</div>
+      <h3 style="font-size:13px;margin-bottom:8px;color:var(--text)">Baby Born 14 Weeks Prematurely Becomes One of the Smallest to Survive Abdominal Surgery</h3>
+      <p style="font-size:11px;color:var(--muted);line-height:1.6">Little Jhanvi weighed just 520g — no bigger than a palm — when operated in Udaipur at 12 days old.</p>
+      <span style="font-size:11px;color:var(--crimson);font-weight:600">Read →</span>
+    </a>
+    <a href="https://timesofindia.indiatimes.com/city/udaipur/seeta-smallest-baby-to-survive-in-south-asia/articleshow/62465562.cms" target="_blank" class="treat-card" style="text-decoration:none;display:block">
+      <img src="images/2014.png" alt="TOI - Seeta Smallest Baby" style="width:100%;height:130px;object-fit:cover;border-radius:3px;margin-bottom:12px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px">Times of India · Jan 12, 2018</div>
+      <h3 style="font-size:13px;margin-bottom:8px;color:var(--text)">Seeta — 'Smallest' Baby to Survive in South Asia</h3>
+      <p style="font-size:11px;color:var(--muted);line-height:1.6">Record-breaking neonatal survival in Udaipur — Geetanjali Medical College & Hospital sets milestone.</p>
+      <span style="font-size:11px;color:var(--crimson);font-weight:600">Read →</span>
+    </a>
+    <a href="https://www.msjonline.org/index.php/ijrms/article/view/10439" target="_blank" class="treat-card" style="text-decoration:none;display:block">
+      <img src="images/News-Article_9-2016.jpg" alt="Research Publication" style="width:100%;height:130px;object-fit:cover;border-radius:3px;margin-bottom:12px;border:1px solid var(--border2)"/>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px">IJRMS (Research) · 2022</div>
+      <h3 style="font-size:13px;margin-bottom:8px;color:var(--text)">Ibutilide vs Amiodarone for Post-Operative Atrial Fibrillation Following CABG</h3>
+      <p style="font-size:11px;color:var(--muted);line-height:1.6">Prospective randomized controlled double-blinded trial published in International Journal of Research in Medical Sciences.</p>
+      <span style="font-size:11px;color:var(--crimson);font-weight:600">Read →</span>
+    </a>
+  </div>
+
+  <!-- Newspaper Clippings Grid with Labels -->
+  <div style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:18px">📰 Regional Newspaper Clippings</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+    <a href="images/TOI-dr-sanjay-gandhi-news-26.9.16.jpg" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;transition:border-color 0.2s;background:var(--surface)">
+      <img src="images/TOI-dr-sanjay-gandhi-news-26.9.16.jpg" alt="Times of India — Sep 2016" style="width:100%;height:180px;object-fit:cover" loading="lazy"/>
+      <div style="padding:10px;font-size:10px;color:var(--muted);text-align:center">Times of India · Sep 2016</div>
+    </a>
+    <a href="images/rashtradoot-dr-sanjay-gandhi-700-gms-baby-news-28.12.16.jpg" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;background:var(--surface)">
+      <img src="images/rashtradoot-dr-sanjay-gandhi-700-gms-baby-news-28.12.16.jpg" alt="Rashtradoot — 700g Baby" style="width:100%;height:180px;object-fit:cover" loading="lazy"/>
+      <div style="padding:10px;font-size:10px;color:var(--muted);text-align:center">Rashtradoot · Dec 2016<br><span style="color:var(--text)">700g Baby Surgery</span></div>
+    </a>
+    <a href="images/rashtradoot-dr-sanjay-gandhi-news-17.9.16.jpg" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;background:var(--surface)">
+      <img src="images/rashtradoot-dr-sanjay-gandhi-news-17.9.16.jpg" alt="Rashtradoot — Sep 2016" style="width:100%;height:180px;object-fit:cover" loading="lazy"/>
+      <div style="padding:10px;font-size:10px;color:var(--muted);text-align:center">Rashtradoot · Sep 2016<br><span style="color:var(--text)">Cardiac Surgery</span></div>
+    </a>
+    <a href="images/RP-Dr-sanjay-gandhi-news-20.12.16.jpg" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;background:var(--surface)">
+      <img src="images/RP-Dr-sanjay-gandhi-news-20.12.16.jpg" alt="Rajasthan Patrika — Dec 2016" style="width:100%;height:180px;object-fit:cover" loading="lazy"/>
+      <div style="padding:10px;font-size:10px;color:var(--muted);text-align:center">Rajasthan Patrika · Dec 2016<br><span style="color:var(--text)">Windpipe Surgery</span></div>
+    </a>
+    <a href="images/rashtradoot-dr-sanjay-gandhi-news-20.12.16.jpg" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;background:var(--surface)">
+      <img src="images/rashtradoot-dr-sanjay-gandhi-news-20.12.16.jpg" alt="Rashtradoot — Dec 2016" style="width:100%;height:180px;object-fit:cover" loading="lazy"/>
+      <div style="padding:10px;font-size:10px;color:var(--muted);text-align:center">Rashtradoot · Dec 2016<br><span style="color:var(--text)">Windpipe Surgery</span></div>
+    </a>
+    <a href="images/pratahkal-dr-sanjay-gandhi-700-gms-baby-news-28.12.16.jpg" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;background:var(--surface)">
+      <img src="images/pratahkal-dr-sanjay-gandhi-700-gms-baby-news-28.12.16.jpg" alt="Pratahkal — Dec 2016" style="width:100%;height:180px;object-fit:cover" loading="lazy"/>
+      <div style="padding:10px;font-size:10px;color:var(--muted);text-align:center">Pratahkal · Dec 2016<br><span style="color:var(--text)">700g Baby Surgery</span></div>
+    </a>
+    <a href="images/News-Article_9-2016.jpg" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;background:var(--surface)">
+      <img src="images/News-Article_9-2016.jpg" alt="News Article — Sep 2016" style="width:100%;height:180px;object-fit:cover" loading="lazy"/>
+      <div style="padding:10px;font-size:10px;color:var(--muted);text-align:center">News Coverage · Sep 2016<br><span style="color:var(--text)">Training from Germany</span></div>
+    </a>
+    <a href="images/14Oct2017.jpeg" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;background:var(--surface)">
+      <img src="images/14Oct2017.jpeg" alt="Dr. Sanjay Gandhi — Oct 2017" style="width:100%;height:180px;object-fit:cover" loading="lazy"/>
+      <div style="padding:10px;font-size:10px;color:var(--muted);text-align:center">Media · Oct 2017<br><span style="color:var(--text)">Dr. Sanjay Gandhi</span></div>
+    </a>
+  </div>
+
+  <!-- Success Stories by Year -->
+  <div style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson);margin-top:48px;margin-bottom:18px">📊 Success Stories by Year</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+    <a href="images/2016.png" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;text-align:center;background:var(--surface);padding:14px;transition:transform 0.2s;text-decoration:none">
+      <img src="images/2016.png" alt="Success Stories 2016" style="width:100%;border-radius:3px" loading="lazy"/>
+      <div style="font-size:11px;color:var(--text);font-weight:600;margin-top:10px">Success Stories 2016</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:4px">World record year — 470g baby surgery</div>
+    </a>
+    <a href="images/2015.png" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;text-align:center;background:var(--surface);padding:14px;transition:transform 0.2s;text-decoration:none">
+      <img src="images/2015.png" alt="Success Stories 2015" style="width:100%;border-radius:3px" loading="lazy"/>
+      <div style="font-size:11px;color:var(--text);font-weight:600;margin-top:10px">Success Stories 2015</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:4px">Expanded cardiac procedures</div>
+    </a>
+    <a href="images/2014.png" target="_blank" style="display:block;border:1px solid var(--border2);border-radius:3px;overflow:hidden;text-align:center;background:var(--surface);padding:14px;transition:transform 0.2s;text-decoration:none">
+      <img src="images/2014.png" alt="Success Stories 2014" style="width:100%;border-radius:3px" loading="lazy"/>
+      <div style="font-size:11px;color:var(--text);font-weight:600;margin-top:10px">Success Stories 2014</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:4px">Key surgical milestones</div>
+    </a>
+  </div>
+
+  <div style="text-align:center;margin-top:32px">
+    <a href="contact.html" class="btn btn-red">Book a Consultation →</a>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band" style="position:relative;">
+  <img src="images/Heart/Heart.png" alt="" style="position:absolute;right:12%;top:50%;transform:translateY(-50%);width:150px;opacity:0.07;pointer-events:none;" aria-hidden="true"/>
+  <div class="cta-text">
+    <h2>Every Heart Deserves the Best Care</h2>
+    <p>Compassionate Care · Advanced Technology · Better Outcomes</p>
+  </div>
+  <div class="cta-band-right">
+    <a href="contact.html" class="btn btn-white btn-lg">Book an Appointment</a>
+    <a href="tel:+919509700069" class="btn btn-ghost btn-lg" style="border-color:rgba(255,255,255,0.4);color:white">📞 +91 95097 00069</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <a class="logo" href="index.html" style="text-decoration:none">
+        <div class="logo-heart"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <div>
+          <div class="logo-name">DR. SANJAY GANDHI</div>
+          <div class="logo-role">Cardiac & Cardiothoracic Surgeon</div>
+        </div>
+      </a>
+      <p>One of India's most trusted cardiac surgeons. 20+ years of excellence, 13,000+ surgeries, committed to saving lives with compassion and world-class expertise.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/sgandhicardiacsurgeon" class="social" target="_blank">f</a>
+        <a href="https://www.instagram.com/sgcardiacsurgeon/" class="social" target="_blank">ig</a>
+        <a href="https://www.youtube.com/channel/UCWSw6M3BHKL52JbRUq6XSgA" class="social" target="_blank">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Dr. Gandhi</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="news.html">News & Articles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Procedures</h4>
+      <ul>
+        <li><a href="expertise.html">CABG Surgery</a></li>
+        <li><a href="expertise.html">Valve Replacement</a></li>
+        <li><a href="expertise.html">Congenital Heart</a></li>
+        <li><a href="expertise.html">ECMO Support</a></li>
+        <li><a href="expertise.html">LVAD Implantation</a></li>
+        <li><a href="expertise.html">Heart Transplant</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+91-9784586176">+91-97845 86176</a></li>
+        <li><a href="mailto:sgandhi32@yahoo.com">sgandhi32@yahoo.com</a></li>
+        <li><a href="contact.html">Book Appointment</a></li>
+        <li><a href="about.html">Achievements</a></li>
+        <li><a href="news.html">News & Articles</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Dr. Sanjay Gandhi — Cardiac & Cardiothoracic Surgeon, Udaipur, Rajasthan. All rights reserved.</p>
+    <p>MBBS · MS AIIMS New Delhi · M.Ch SCTIMST Trivandrum</p>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  if(!els.length) return;
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+  }, {threshold:0.15});
+  els.forEach(el=>obs.observe(el));
+})();
+</script>
+
+</body>
+</html>
