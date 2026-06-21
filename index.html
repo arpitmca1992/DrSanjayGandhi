@@ -82,13 +82,15 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .hs-item:last-child { border-right: none; }
 .hs-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.7); flex-shrink: 0; box-shadow: 0 0 6px rgba(255,255,255,0.4); }
 @keyframes heroMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-.milestones { background: var(--bg2); padding: 0; }
-.milestones-grid { display: grid; grid-template-columns: repeat(6, 1fr); }
-.ms { padding: 36px 20px; text-align: center; border-right: 1px solid var(--border2); border-bottom: 1px solid var(--border2); }
-.ms:last-child { border-right: none; }
-.ms-icon { font-size: 22px; margin-bottom: 10px; }
-.ms-val { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 800; color: var(--crimson); line-height: 1; }
-.ms-lbl { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; line-height: 1.4; }
+.milestones { background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%); padding: 60px 7%; position: relative; overflow: hidden; }
+.milestones::before { content: ''; position: absolute; top: -50%; right: -20%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(200,16,46,0.06) 0%, transparent 70%); pointer-events: none; }
+.milestones-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
+.ms { padding: 28px 20px; text-align: center; border-radius: 8px; background: rgba(21,34,64,0.6); border: 1px solid var(--border2); position: relative; transition: all 0.3s; }
+.ms:hover { border-color: rgba(200,16,46,0.3); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(200,16,46,0.08); }
+.ms-icon { width: 48px; height: 48px; margin: 0 auto 12px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(200,16,46,0.1); border: 1px solid rgba(200,16,46,0.2); }
+.ms-icon svg { width: 22px; height: 22px; }
+.ms-val { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 800; color: var(--text); line-height: 1; }
+.ms-lbl { font-size: 11px; color: var(--muted); letter-spacing: 0.05em; margin-top: 6px; line-height: 1.4; }
 .section { padding: 88px 7%; }
 .section-dark { background: var(--bg2); }
 .section-mid { background: var(--bg3); }
@@ -315,13 +317,13 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 
 <!-- MILESTONES -->
 <div class="milestones">
-  <div class="milestones-grid" style="display:grid;grid-template-columns:repeat(6,1fr)">
-    <div class="ms"><div class="ms-icon">🏥</div><div class="ms-val">13,000+</div><div class="ms-lbl">Successful Surgeries</div></div>
-    <div class="ms"><div class="ms-icon">⭐</div><div class="ms-val">20+</div><div class="ms-lbl">Years of Experience</div></div>
-    <div class="ms"><div class="ms-icon">🎓</div><div class="ms-val">15+</div><div class="ms-lbl">Years as Dept. Head</div></div>
-    <div class="ms"><div class="ms-icon">🔬</div><div class="ms-val">Pioneer</div><div class="ms-lbl">Advanced Cardiac Care</div></div>
-    <div class="ms"><div class="ms-icon">🌐</div><div class="ms-val">National</div><div class="ms-lbl">Recognized Surgeon</div></div>
-    <div class="ms"><div class="ms-icon">🏛️</div><div class="ms-val">AIIMS &amp;</div><div class="ms-lbl">SCTIMST Trained</div></div>
+  <div class="milestones-grid">
+    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div><div class="ms-val">13,000+</div><div class="ms-lbl">Successful Surgeries</div></div>
+    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="ms-val">20+</div><div class="ms-lbl">Years of Experience</div></div>
+    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="ms-val">15+</div><div class="ms-lbl">Years as Dept. Head</div></div>
+    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4"/><path d="M3 9h18M3 15h18"/></svg></div><div class="ms-val">Pioneer</div><div class="ms-lbl">Advanced Cardiac Care</div></div>
+    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="ms-val">World</div><div class="ms-lbl">Record Holder · 470g Baby</div></div>
+    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h5"/></svg></div><div class="ms-val">AIIMS &amp; SCTIMST</div><div class="ms-lbl">Premium Training</div></div>
   </div>
 </div>
 
