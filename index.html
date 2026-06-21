@@ -500,9 +500,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 
 <script>
 function openVideo(videoId) {
-  videoId = videoId || '6JBJ4Y_FpGU';
-  document.getElementById('videoPopup').style.display = 'flex';
-  document.getElementById('ytContainer').innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0" title="Dr. Sanjay Gandhi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>';
+  window.open('https://www.youtube.com/watch?v=' + videoId, '_blank');
 }
 function closeVideo() {
   document.getElementById('videoPopup').style.display = 'none';
