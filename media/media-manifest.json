@@ -1,0 +1,436 @@
+{
+  "lastUpdated": "2026-06-21",
+  "totalAssets": 67,
+  "categories": {
+    "news-coverage": {
+      "description": "Newspaper articles covering Dr. Sanjay Gandhi's cardiac surgeries",
+      "items": [
+        {
+          "file": "news-coverage/2014/01-2month-infant-complex-surgery-may2014.jpeg",
+          "title": "Two-Month Infant's Complex Heart Surgery Saves Life",
+          "titleHindi": "दो माह के मासूम का जटिल ऑपरेशन कर बचाई जान",
+          "date": "2014-05",
+          "newspaper": "Local Daily",
+          "description": "Dr. Sanjay Gandhi performed a 5-hour complex surgery on a 2-month-old infant with congenital heart disease at Geetanjali Hospital. The baby had reversed heart vessels causing oxygen deprivation. Surgery involved cooling body to 18°C and correcting both main arteries. 150+ pediatric heart surgeries completed at GMCH.",
+          "category": "pediatric",
+          "tags": ["infant", "congenital", "complex-surgery", "pediatric"]
+        },
+        {
+          "file": "news-coverage/2016/01-redo-aortic-aneurysm-english-sep2016.jpeg",
+          "title": "First Successful Redo Ascending Aortic Aneurysm Operation in Rajasthan",
+          "date": "2016-09-02",
+          "newspaper": "English Daily",
+          "description": "Dr. Sanjay Gandhi performed Rajasthan's first redo ascending aortic aneurysm surgery on Om Prakash Jain (58) from Boondi. Patient had previous valve surgery 6 years ago at Fortis Jaipur. Aorta was 10cm (normal 2.5cm), 4x enlarged. 9-hour surgery. Delhi/Jaipur/Ahmedabad hospitals refused due to high risk.",
+          "category": "aortic",
+          "tags": ["first-in-rajasthan", "redo-surgery", "aneurysm", "high-risk", "9-hour"]
+        },
+        {
+          "file": "news-coverage/2016/02-infant-heart-surgery-patrika-nov30-2016.jpeg",
+          "title": "Complex Heart Surgery on 7-Day-Old Infant",
+          "titleHindi": "सात दिन के शिशु का जटिल हृदय ऑपरेशन",
+          "date": "2016-11-30",
+          "newspaper": "Patrika",
+          "description": "Dr. Sanjay Gandhi successfully operated on a 7-day-old newborn with congenital heart disease at Geetanjali Hospital. The baby had abdominal hernia complications. 5-hour surgery required cutting ribs to access heart. Post-surgery, baby placed on ventilator and recovered.",
+          "category": "pediatric",
+          "tags": ["newborn", "7-days", "congenital", "complex"]
+        },
+        {
+          "file": "news-coverage/2016/03-tracheal-stenosis-patrika-dec20-2016.jpeg",
+          "title": "Successful Tracheal Stenosis Surgery",
+          "titleHindi": "श्वांस की नली का सफल ऑपरेशन",
+          "date": "2016-12-20",
+          "newspaper": "Patrika",
+          "description": "Dr. Sanjay Gandhi performed tracheal surgery on Vimala Jat (24) from Chittorgarh suffering from tracheal stenosis. 5-hour operation where 4cm shrunk portion of windpipe was removed and reconnected. First such operation in Southern Rajasthan.",
+          "category": "thoracic",
+          "tags": ["tracheal-stenosis", "first-in-south-rajasthan", "thoracic"]
+        },
+        {
+          "file": "news-coverage/2016/04-redo-aortic-aneurysm-rashtradoot-sep17-2016.jpeg",
+          "title": "First Redo Aortic Aneurysm Treatment in Rajasthan",
+          "titleHindi": "राजस्थान में प्रथम बार रीडू एऑटिक एन्यूरिज्म का सफल उपचार",
+          "date": "2016-09-17",
+          "newspaper": "Rashtradoot",
+          "description": "Detailed Hindi coverage of the first redo ascending aortic aneurysm surgery. 9-hour operation at Geetanjali Hospital. Patient Om Prakash Jain's main heart artery was defective and could rupture anytime.",
+          "category": "aortic",
+          "tags": ["rashtradoot", "hindi", "redo-aneurysm"]
+        },
+        {
+          "file": "news-coverage/2016/05-tracheal-stenosis-rashtradoot-dec20-2016.jpeg",
+          "title": "Successful Windpipe Surgery at Geetanjali",
+          "titleHindi": "गीतांजली में सांस की नली का सफल ऑपरेशन",
+          "date": "2016-12-20",
+          "newspaper": "Rashtradoot",
+          "description": "Coverage of tracheal stenosis surgery in Rashtradoot. First time in Southern Rajasthan this operation was performed successfully.",
+          "category": "thoracic",
+          "tags": ["tracheal-stenosis", "rashtradoot"]
+        },
+        {
+          "file": "news-coverage/2016/09-milestone-surgery-valve-bypass-clot-english.jpeg",
+          "title": "Milestone in Surgery - Valve Repair, Bypass & Clot Removal",
+          "date": "2016",
+          "newspaper": "English Daily (What's Happening)",
+          "description": "Dr. Sanjay Gandhi and team at Geetanjali Medical College operated on Salim Mohammad for 8 hours - repairing dysfunctional valves, performing bypass surgery, and removing a clot from the heart. All problems treated in one single operation.",
+          "category": "complex-surgery",
+          "tags": ["milestone", "valve-repair", "bypass", "clot-removal", "8-hour"]
+        },
+        {
+          "file": "news-coverage/2016/10-82yr-bypass-valve-surgery-news.jpeg",
+          "title": "Complex Heart Surgery Successful on 82-Year-Old",
+          "titleHindi": "82 वर्षीय रोगी के दो जटिल हृदय ऑपरेशन सफल",
+          "date": "2016",
+          "newspaper": "Local Daily",
+          "description": "Dr. Sanjay Gandhi performed successful bypass surgery and valve replacement on an 82-year-old patient Keshav Joshi from Sagwada. 6-hour operation.",
+          "category": "elderly",
+          "tags": ["elderly", "82-years", "bypass", "valve-replacement"]
+        },
+        {
+          "file": "news-coverage/2016/11-complex-heart-surgery-hindi-clipping.jpeg",
+          "title": "Most Complex Heart Surgery",
+          "titleHindi": "हार्ट की जटिलतम सर्जरी",
+          "date": "2016",
+          "newspaper": "Hindi Daily",
+          "description": "Dr. Sanjay Gandhi and team performed the most complex heart surgery - simultaneously fixing both valves, performing bypass, and removing clots from the heart. Team included Dr. Ankur Gandhi, Dr. Kalpesh Mistri, Dr. Manmohan Jindal.",
+          "category": "complex-surgery",
+          "tags": ["complex", "dual-valve", "bypass", "clot"]
+        },
+        {
+          "file": "news-coverage/2016/17-11hr-high-risk-60yr-bhaskar-jan29-2016.jpeg",
+          "title": "11-Hour High-Risk Surgery Saves 60-Year-Old",
+          "titleHindi": "11 घंटे के हाई रिस्क ऑपरेशन से 60 वर्षीय बुजुर्ग ने जीती जिंदगी",
+          "date": "2016-01-29",
+          "newspaper": "Dainik Bhaskar",
+          "description": "Cardiac surgeon Dr. Sanjay Gandhi performed 11-hour high-risk surgery on 60-year-old Darmi Bai from Swaroopganj, Abu Road. Patient had aortic dissection from valve to arch. CT angiogram revealed the dissection. Team: Dr. Ankur Gandhi, Kalpesh Mistri, Manmohan Jindal, Kamlesh Bhatt, Pradeep Hegde.",
+          "category": "aortic",
+          "tags": ["11-hour", "high-risk", "aortic-dissection", "elderly", "dainik-bhaskar"]
+        },
+        {
+          "file": "news-coverage/2016/19-2day-baby-heart-surgery-navjyoti-feb24-2016.jpeg",
+          "title": "Heart Surgery on 2-Day-Old Baby",
+          "titleHindi": "दो दिन की बच्ची के हृदय का ऑपरेशन",
+          "date": "2016-02-24",
+          "newspaper": "Dainik Navjyoti",
+          "description": "Baby Priyanka, just 2 days old, had reversed heart vessels preventing oxygen flow. Body was turning blue. Balloon atrial septostomy performed successfully. 7-hour surgery. Such cases occur in only 3-4 per 1000 births. Dr. Gandhi showed video of the operation to media.",
+          "category": "pediatric",
+          "tags": ["2-day-old", "newborn", "balloon-septostomy", "rare-case", "7-hour"]
+        },
+        {
+          "file": "news-coverage/2016/20-germany-training-leibniz-university-mar30-2016.jpeg",
+          "title": "Dr. Sanjay Gandhi Trained in Germany",
+          "titleHindi": "डॉ. संजय गांधी जर्मनी से प्रशिक्षित हुए",
+          "date": "2016-03-30",
+          "newspaper": "Local Daily (Udaipur)",
+          "description": "Dr. Sanjay Gandhi trained at Leibniz Hannover University, Germany from Feb 28 to March 13 under Dr. Fredric Mohr on minimally invasive surgery techniques. Selected through Indo-German collaboration program based on resume screening from across India.",
+          "category": "training",
+          "tags": ["germany", "training", "minimally-invasive", "leibniz-university", "indo-german"]
+        },
+        {
+          "file": "news-coverage/2016/21-heart-tumor-myxoma-removal-geetanjali.jpeg",
+          "title": "Rare Heart Tumor (Myxoma) Removed",
+          "titleHindi": "गीतांजली हृदय शल्य विभाग ने दुर्लभ दिल का ट्यूमर (रसोली) निकाली",
+          "date": "2016",
+          "newspaper": "Local Daily",
+          "description": "Devki Yadav's rare heart tumor (Myxoma) was blocking blood flow causing breathlessness, weakness, and fainting. The tumor was like a branch growing from the heart wall. 4-hour surgery under artificial heart-lung machine. Patient fully recovered in 7 days.",
+          "category": "tumor",
+          "tags": ["myxoma", "heart-tumor", "rare", "4-hour"]
+        },
+        {
+          "file": "news-coverage/2016/22-carotid-artery-brain-surgery-successful.jpeg",
+          "title": "Successful Treatment of Heart & Brain Artery Blockage",
+          "titleHindi": "हृदय एवं मस्तिष्क की मुख्य धमनियों में रुकावट का सफल उपचार",
+          "date": "2016",
+          "newspaper": "Local Daily",
+          "description": "Successful surgery on carotid artery (brain's main artery) blockage along with heart artery treatment. Combined cardiac and vascular procedure.",
+          "category": "vascular",
+          "tags": ["carotid-artery", "brain", "vascular", "combined-surgery"]
+        },
+        {
+          "file": "news-coverage/2016/15-heart-wall-rupture-valve-balloon-surgery.jpeg",
+          "title": "Heart Wall Rupture, Valve Damage & Balloon Surgery at GMCH",
+          "titleHindi": "हृदय की वॉल फटने, वॉल्व खराब होने और नस में गुब्बारे का जीएमसीएच में हुआ ऑपरेशन",
+          "date": "2016",
+          "newspaper": "Health Reporter, Udaipur",
+          "description": "GMCH cardiac team performed three complex procedures on a 50-year-old patient: repaired heart wall rupture after heart attack, fixed aneurysm (6x2.5cm), and replaced damaged valve. First of its kind claimed in Rajasthan. Team: Dr. Sanjay Gandhi, Dr. Ajay Varma, Dr. Ankur Gandhi, Dr. Kalpesh Mistri.",
+          "category": "complex-surgery",
+          "tags": ["heart-wall-rupture", "aneurysm", "valve-replacement", "triple-procedure", "first-in-rajasthan"]
+        },
+        {
+          "file": "news-coverage/2020/01-tavi-valve-french-german-technique-feb28-2020.jpeg",
+          "title": "TAVI - Valve Replacement Using French & German Technique",
+          "titleHindi": "फ्रेंच और जर्मन तकनीक से किया वाल्व प्रत्यारोपण",
+          "date": "2020-02-28",
+          "newspaper": "Rashtradoot / Pratahkal",
+          "description": "Geetanjali Cardiac Center performed open heart surgery-free valve replacement using latest French & German TAVI technique. A 72-year-old patient whose heart valves were shrunk was treated without opening the chest. Cardiologist Dr. Ramesh Patel, Urologist Dr. Bishwas Baheti, Dr. Ankur Vagh Sharma were in the team. Three TAVIs done at Geetanjali.",
+          "category": "tavi",
+          "tags": ["tavi", "minimally-invasive", "french-german-technique", "valve-replacement", "2020"]
+        },
+        {
+          "file": "news-coverage/2026/01-advanced-cath-lab-inauguration-bhaskar-jun21-2026.jpeg",
+          "title": "Advanced Cath Lab Inaugurated - World-Class Heart Treatment Now in Udaipur",
+          "titleHindi": "गीतांजली हॉस्पिटल में अत्याधुनिक एडवांस्ड कैथ लैब शुरू, अब उदयपुर में मिलेगी विश्वस्तरीय हृदय चिकित्सा",
+          "date": "2026-06-21",
+          "newspaper": "Dainik Bhaskar",
+          "description": "Geetanjali Medical College expanded cardiac care with new Artis Pure Floor system (5 to 12 (3.0) Ceiling Mount). Features: telehealth-enabled control technology, unified workflows, high-precision imaging. Dr. Ramesh Patel leads the department - currently largest & most experienced cardiac team in Southern Rajasthan. Dr. Sanjay Gandhi among senior staff present.",
+          "category": "infrastructure",
+          "tags": ["cath-lab", "inauguration", "2026", "artis-pure", "advanced-technology", "dainik-bhaskar"]
+        }
+      ]
+    },
+    "surgery-photos": {
+      "description": "Live cardiac surgery and cath lab procedure photographs",
+      "items": [
+        {
+          "folder": "surgery-photos/cath-lab-apr-2026/",
+          "title": "Cardiac Surgery & Angiography - Patient Chandi Bai Jat",
+          "date": "2026-04-24",
+          "patient": "Chandi Bai Jat, 52/F",
+          "equipment": "Siemens Artis Zee (GMCH)",
+          "doctors": "Dr. SG (Sanjay Gandhi), Dr. BKS, Dr. R. Patel",
+          "totalPhotos": 20,
+          "description": "Complete documentation of a cardiac catheterization and open-heart surgery. Images show: DSA angiography of aorta and coronary arteries, fluoroscopy-guided procedures, open-heart surgery with Siemens Artis Zee ceiling-mounted system, surgical team performing valve/coronary work under surgical lights.",
+          "tags": ["angiography", "open-heart", "siemens-artis-zee", "cath-lab", "april-2026"]
+        }
+      ]
+    },
+    "ecmo": {
+      "description": "ECMO (Extracorporeal Membrane Oxygenation) achievements",
+      "items": [
+        {
+          "file": "ecmo/01-50th-ecmo-patient-recovered-gmch-poster.jpeg",
+          "title": "50th Patient Recovered by ECMO Team",
+          "date": "2025",
+          "description": "Official GMCH poster celebrating 50th patient recovery using ECMO machine. Featured case: IT student recovered from Celphos (aluminium phosphide) poisoning. ECMO temporarily takes over heart and lung function, providing oxygen and removing CO2 when body cannot.",
+          "tags": ["ecmo", "50th-patient", "celphos-poisoning", "life-saving"]
+        },
+        {
+          "file": "ecmo/02-ecmo-saves-life-geetanjali-news-article.jpeg",
+          "title": "ECMO Machine Becomes Life-Saver at Geetanjali",
+          "titleHindi": "गीतांजली हॉस्पिटल में एक्मो मशीन बनी जीवनदायनी",
+          "date": "2022",
+          "newspaper": "Local Daily",
+          "description": "Detailed coverage of how ECMO saved a 21-year-old from Dungarpur who consumed Celphos poison. The patient's heart stopped; ECMO machine kept blood circulating. After recovery, patient shifted to ICU. Dr. Sanjay Gandhi, Dr. Anubhav Bansal, Dr. Gurpreet Singh and full multi-specialty team credited.",
+          "tags": ["ecmo", "poison-case", "life-saving", "press-conference"]
+        }
+      ]
+    },
+    "awards": {
+      "description": "Awards and recognitions received by Dr. Sanjay Gandhi",
+      "items": [
+        {
+          "file": "awards/01-iacts-cme-chairperson-plaque-may2019.jpeg",
+          "title": "IACTS Technocollege CME - Chairperson Felicitation",
+          "date": "2019-05-25",
+          "organization": "Indian Association of Cardiovascular Thoracic Surgeons",
+          "venue": "Pt. B.D. Sharma University of Health Sciences, Rohtak",
+          "description": "Felicitation plaque awarded to Dr. Sanjay Gandhi as Chairperson for his immense contribution towards the Continuing Medical Education programme. Signed by Dr. S.S. Lohchab, Organising Secretary.",
+          "tags": ["iacts", "chairperson", "cme", "award", "2019", "rohtak"]
+        },
+        {
+          "file": "awards/02-iacts-cme-award-ceremony-rohtak-2019.jpeg",
+          "title": "IACTS Award Ceremony Photo - Excellence in Cardiac Surgery",
+          "date": "2019-05-25",
+          "organization": "Indian Association of Cardiovascular Thoracic Surgeons",
+          "venue": "Pt. B.D. Sharma University, Rohtak",
+          "description": "Dr. Sanjay Gandhi receiving the award at IACTS Technocollege event themed 'New Heights of Excellence in Cardiac Surgery Through Emerging Technology'. Photo shows him receiving plaque from senior dignitary.",
+          "tags": ["iacts", "award-ceremony", "emerging-technology", "2019"]
+        }
+      ]
+    },
+    "social-recognition": {
+      "description": "Social media recognition and endorsements",
+      "items": [
+        {
+          "file": "social-recognition/01-cm-ashok-gehlot-tweet-praising-surgery.jpeg",
+          "title": "Chief Minister Ashok Gehlot Tweeted Praise for Surgery Team",
+          "date": "2022",
+          "platform": "Twitter/X",
+          "description": "Screenshot of Rajasthan CM Ashok Gehlot's tweet praising the Udaipur doctors team. The tweet references a Dainik Bhaskar article about a rare heart surgery done free under Chiranjeevi Yojana (7 lakh surgery). CM congratulated the team and wished patient Dinesh speedy recovery. Tweet got 39 replies, 22 retweets, 852 likes.",
+          "tags": ["cm-gehlot", "twitter", "chiranjeevi-yojana", "free-surgery", "government-recognition"]
+        }
+      ]
+    },
+    "videos": {
+      "description": "Surgery and procedure videos",
+      "items": [
+        {
+          "file": "videos/01-surgery-video.mp4",
+          "title": "Cardiac Surgery Video 1",
+          "date": "2026-04-24",
+          "description": "Surgery procedure video from cath lab"
+        },
+        {
+          "file": "videos/02-surgery-video.mp4",
+          "title": "Cardiac Surgery Video 2",
+          "date": "2026-04-24",
+          "description": "Surgery procedure video from cath lab"
+        },
+        {
+          "file": "videos/03-surgery-video.mp4",
+          "title": "Cardiac Surgery Video 3",
+          "date": "2026-04-24",
+          "description": "Surgery procedure video from cath lab"
+        },
+        {
+          "file": "videos/04-surgery-video.mp4",
+          "title": "Cardiac Surgery Video 4",
+          "date": "2026-04-24",
+          "description": "Surgery procedure video from cath lab"
+        },
+        {
+          "file": "videos/05-surgery-video.mp4",
+          "title": "Cardiac Surgery Video 5",
+          "date": "2026-04-24",
+          "description": "Surgery procedure video from cath lab"
+        }
+      ],
+      "youtubeLinks": [
+        {
+          "title": "Motivating & Inspiring Podcast by Senior Heart Surgeon Dr. Sanjay Gandhi",
+          "url": "https://youtu.be/RXtUllqBaEk",
+          "date": "2026-06-13",
+          "description": "Featured podcast - must see and share"
+        }
+      ],
+      "cabgSurgeryVideos": [
+        {"file": "videos/06-cabg-surgery-part1-mohan-lal.mp4", "title": "CABG Surgery Part 1 - Mohan Lal (65yr Male)", "date": "2017", "description": "Coronary artery bypass grafting - arterial revascularisation with LIMA-RIMA Y. Downloaded from drsanjaygandhicardiacsurgeon.com"},
+        {"file": "videos/07-cabg-surgery-part2-mohan-lal.mp4", "title": "CABG Surgery Part 2", "date": "2017"},
+        {"file": "videos/08-cabg-surgery-part3-mohan-lal.mp4", "title": "CABG Surgery Part 3", "date": "2017"},
+        {"file": "videos/09-cabg-surgery-part4-mohan-lal.mp4", "title": "CABG Surgery Part 4", "date": "2017"},
+        {"file": "videos/10-cabg-surgery-part5-mohan-lal.mp4", "title": "CABG Surgery Part 5", "date": "2017"}
+      ],
+      "externalVideoLinks": {
+        "googleDrive": 24,
+        "facebook": 1,
+        "note": "See videos/youtube-links.txt for full list of 25 external video links shared on June 21, 2026"
+      }
+    }
+  },
+  "existing-images": {
+    "description": "Pre-existing images already in use by website HTML (images/ directory). DO NOT MOVE these - HTML references depend on current paths.",
+    "downloadedFromWebsite": [
+      {"file": "media/news-coverage/2016/dainik-navjyoti-700g-baby-dec28-2016.gif", "title": "Dainik Navjyoti - 700g Baby News", "date": "2016-12-28", "source": "drsanjaygandhicardiacsurgeon.com"},
+      {"file": "media/news-coverage/2016/dainik-navjyoti-tracheal-dec20-2016.gif", "title": "Dainik Navjyoti - Tracheal Stenosis", "date": "2016-12-20", "source": "drsanjaygandhicardiacsurgeon.com"},
+      {"file": "media/special-cases/bentall-achievement-2018.png", "title": "Bentall Operation Achievement Collage 2018", "date": "2018", "source": "drsanjaygandhicardiacsurgeon.com"},
+      {"file": "media/special-cases/470g-baby-banner-1024x768.png", "title": "World's Tiniest Baby Banner", "date": "2017", "source": "drsanjaygandhicardiacsurgeon.com"}
+    ],
+    "websiteContent": {
+      "source": "https://drsanjaygandhicardiacsurgeon.com/",
+      "clinicName": "Santosh Heart & Gynaec Care Clinic",
+      "address": "294, B Block, Shyam Nagar, Sen Bhawan Street, Opposite Mahila Thana, Chitrakoot Nagar, Udaipur",
+      "clinicTimings": "7:00 PM to 8:00 PM",
+      "hospitalTimings": "9:00 AM to 5:00 PM (Geetanjali Medical College & Hospital)",
+      "googleMaps": "https://g.page/santosh-heart-gynae-care-clinic?share",
+      "designation": "Associate Professor and Head, Dept. of CTVS, GMCH, Udaipur",
+      "totalSurgeries": "11,000+ (6000 in Ahmedabad + 5000 in Udaipur)",
+      "experience": "16+ years",
+      "specializations": ["Adult & Pediatric Cardiac Surgeries", "Vascular Surgeries", "Peripheral Vascular Bypass", "Aneurysm Surgeries", "Thoracic Surgeries", "Beating Heart Bypass (Total Arterial Revascularization)", "Valvular Heart (MVR, AVR, DVR, Repair)", "Congenital (ASD, VSD, PDA, TOF, TAPVC, TGA)", "Peripheral Vascular Bypass + Aneurysm", "ECMO", "LVAD", "Heart Transplant"],
+      "publications": [
+        "CASE Conference 2008: Difficult Weaning From Cardiopulmonary Bypass in the Lateral Position. JCVA Aug; 616-624",
+        "Classical Windsock Deformity of Ruptured Sinus of Valsalva in TEE. World Journal for Pediatric and Congenital Heart Surgery. 3(2) 273-274"
+      ],
+      "specialCasesOnWebsite": ["Pre/Post CT Angiogram comparison", "Discrete Post Subclavian Coarctation of Aorta", "Pre/Post Chronic Aortic Dissection", "TEVAR Endovascular Aortic Repair", "Juxtarenal Aortic Aneurysm", "Post-op child with Transposition of Great Arteries", "2.5kg child with ASD, VSD, and PDA"],
+      "externalArticles": [
+        {"title": "Landmark Surgery: World's Tiniest Baby with Heart Complications Saved", "url": "https://www.dailyrounds.org/blog/landmark-surgeryworlds-tiniest-baby-with-heart-complications-saved/"},
+        {"title": "Miraculous Survival: Newborn weighing just ONE POUND survives heart surgery", "url": "https://www.catholic.org/news/hf/family/story.php?id=74927"}
+      ]
+    },
+    "profile": [
+      {
+        "file": "images/Profile/dr-sanjay-gandhi.png",
+        "title": "Dr. Sanjay Gandhi - Profile Photo",
+        "description": "Professional portrait in surgical attire, used across hero, about, and expertise pages",
+        "usedIn": ["index.html", "about.html", "expertise.html", "dr-sanjay-gandhi-redesign.html"]
+      }
+    ],
+    "heart-graphics": [
+      {"file": "images/Heart/Heart.png", "title": "Anatomical Heart Illustration", "description": "Red anatomical heart graphic used as decorative background across all pages"},
+      {"file": "images/Heart/HeartMultipleImages.png", "title": "Heart Collage", "description": "Decorative heart composite image"},
+      {"file": "images/Heart/DrSanjayGandhi_v3.png", "title": "Dr. Gandhi Full-body CTA overlay", "description": "Used as faded background in CTA sections"},
+      {"file": "images/Heart/DrSanjayHero_v1.png", "title": "Hero doctor image v1"},
+      {"file": "images/Heart/DrSanjayGandhi_v2.png", "title": "Hero doctor image v2"},
+      {"file": "images/Heart/Heart_v1.png", "title": "Heart illustration v1"},
+      {"file": "images/realistic-heart.svg", "title": "Realistic heart SVG"},
+      {"file": "images/realistic-heart.png", "title": "Realistic heart PNG"}
+    ],
+    "landmark-case-470g-baby": [
+      {
+        "file": "images/Worlds-tiniest-baby-470-grams-survives-heart-surgery-1024x768.png",
+        "title": "World's Tiniest Baby 470 Grams Survives Heart Surgery",
+        "date": "2017-05-18",
+        "newspaper": "Dainik Bhaskar (Rajasthan edition, Kota)",
+        "description": "15-day-old, 470g baby underwent cardiac surgery at Geetanjali Hospital. World's first claim. Dainik Bhaskar coverage with Dr. Sanjay Gandhi named. Baby weighed just 489g at time of echocardiography. Surgery performed on May 5. Coverage across 8 cities."
+      },
+      {
+        "file": "images/New-Born.jpg",
+        "title": "470g Newborn in ICU",
+        "date": "2017-05",
+        "description": "Photo of the world's tiniest baby (470g) in NICU with IV lines, showing the baby's extremely small size compared to an adult finger."
+      },
+      {
+        "file": "images/IMG-20170505-WA0009.jpg",
+        "title": "470g Baby Surgery - Surgical Team in Operation",
+        "date": "2017-05-05",
+        "description": "Dr. Sanjay Gandhi's surgical team performing open heart surgery on the 470g baby. Green drapes, surgical loupes visible."
+      }
+    ],
+    "news-2016": [
+      {"file": "images/TOI-dr-sanjay-gandhi-news-26.9.16.jpg", "title": "Times of India - Aortic Aneurysm Coverage", "date": "2016-09-26"},
+      {"file": "images/rashtradoot-dr-sanjay-gandhi-news-17.9.16.jpg", "title": "Rashtradoot - Redo Aortic Aneurysm", "date": "2016-09-17"},
+      {"file": "images/rashtradoot-dr-sanjay-gandhi-news-30.11.16.jpg", "title": "Rashtradoot - 7-day Infant Surgery", "date": "2016-11-30"},
+      {"file": "images/RP-dr-sanjay-gandhi-news-30.11.16.jpg", "title": "Rajasthan Patrika - Infant Surgery", "date": "2016-11-30"},
+      {"file": "images/rashtradoot-dr-sanjay-gandhi-news-20.12.16.jpg", "title": "Rashtradoot - Tracheal Stenosis", "date": "2016-12-20"},
+      {"file": "images/RP-Dr-sanjay-gandhi-news-20.12.16.jpg", "title": "Rajasthan Patrika - Windpipe Surgery", "date": "2016-12-20"},
+      {"file": "images/rashtradoot-dr-sanjay-gandhi-700-gms-baby-news-28.12.16.jpg", "title": "Rashtradoot - 700g Baby Surgery", "date": "2016-12-28"},
+      {"file": "images/pratahkal-dr-sanjay-gandhi-700-gms-baby-news-28.12.16.jpg", "title": "Pratahkal - 700g Baby Surgery", "date": "2016-12-28"},
+      {"file": "images/Dr-sanjay-gandhi-pratahkal-23.8.16.jpg", "title": "Pratahkal - Heart & Brain Artery Blockage Treatment", "date": "2016-08-23", "description": "Successful treatment of blockage in heart and brain main arteries. Man Singh (61) from Banswada with bypass + carotid endarterectomy. 6-hour operation. First in Southern Rajasthan."},
+      {"file": "images/News-Article_9-2016.jpg", "title": "News Article - Germany Training/Special", "date": "2016"},
+      {"file": "images/News-Article_1-2016.jpg", "title": "News Article 1 - 2016", "date": "2016"},
+      {"file": "images/News-Article_2-2016.jpg", "title": "News Article 2 - 2016", "date": "2016"},
+      {"file": "images/News-Article_3-2016.jpg", "title": "News Article 3 - 2016", "date": "2016"},
+      {"file": "images/News-Article_4-2016.jpg", "title": "News Article 4 - 2016", "date": "2016"},
+      {"file": "images/News-Article_5-2016.jpg", "title": "News Article 5 - 2016", "date": "2016"},
+      {"file": "images/News-Article_6-2016.jpg", "title": "News Article 6 - 2016", "date": "2016"},
+      {"file": "images/News-Article_7-2016.jpg", "title": "News Article 7 - 2016", "date": "2016"},
+      {"file": "images/News-Article_8-2016.jpg", "title": "News Article 8 - 2016", "date": "2016"}
+    ],
+    "news-2014": [
+      {"file": "images/News-Article_1-2014.jpg", "title": "News Article 1 - 2014", "date": "2014"},
+      {"file": "images/News-Article_2-2014.jpg", "title": "News Article 2 - 2014", "date": "2014"},
+      {"file": "images/News-Article_3-2014.jpg", "title": "News Article 3 - 2014", "date": "2014"},
+      {"file": "images/News-Article_4-2014.jpg", "title": "News Article 4 - 2014", "date": "2014"},
+      {"file": "images/News-Article_5-2014.jpg", "title": "News Article 5 - 2014", "date": "2014"},
+      {"file": "images/News-Article_6-2014.jpg", "title": "News Article 6 - 2014", "date": "2014"},
+      {"file": "images/News-Article_7-2014.jpg", "title": "News Article 7 - 2014", "date": "2014"},
+      {"file": "images/News-Article_8-2014.jpg", "title": "News Article 8 - 2014", "date": "2014"}
+    ],
+    "news-2017": [
+      {"file": "images/14Oct2017.jpeg", "title": "2-Year-Old Child Heart Hole - Hybrid Surgery with Percutaneous Device", "date": "2017-10-14", "description": "Geetanjali Hospital first in the state to perform hybrid surgery on 2-year-old Gayatri from Chittorgarh. Percutaneous device implanted to close heart hole without open surgery. Team: Dr. Sanjay Gandhi, Dr. Surendra Patel, Dr. CP Purohit, Dr. Harish Samadhya, Dr. Ramesh Patel, Dr. Ankur Gandhi, Dr. Kalpesh Mistri."}
+    ],
+    "news-2021-covid-era": [
+      {"file": "images/News1.jpeg", "title": "Complex Surgery Saves 42-Year-Old - Aorta Rupture", "titleHindi": "जटिल सर्जरी कर रोगी को दिया जीवनदान", "date": "2021", "newspaper": "Patrika", "description": "42-year-old Akhilesh Kumar from Salumber with ruptured main aorta. 10-hour Bentall operation. Team: Dr. Sanjay Gandhi, Dr. Ajay Verma, Dr. Parth Waghela, Dr. Ankur Gandhi, Dr. Kalpesh Mistri, Dr. Ramchandran, Dr. Harshil Joshi. 11-12 Bentall operations done in Udaipur."},
+      {"file": "images/News2.jpeg", "title": "Main Artery Rupture - Complex Surgery Successful", "titleHindi": "रोगी के हृदय की मुख्य नाड़ी फटने पर जटिल सर्जरी द्वारा सफल ऑपरेशन", "date": "2021", "newspaper": "Rashtradoot", "description": "Same case covered in Rashtradoot - detailed description of the 10-hour surgery on Akhilesh Kumar. Aorta burst internally, CT scan revealed aneurysm. Valve also damaged. Cooled to 16°C during surgery."},
+      {"file": "images/News3.jpeg", "title": "COVID-Recovered Patient's Aorta Surgery at Geetanjali", "titleHindi": "कोरोना महामारी से हाल ही में ठीक हुए रोगी की हृदय की मुख्य नाड़ी एओर्टा फटने पर जटिल सर्जरी द्वारा गीतांजली हॉस्पिटल में हुआ सफल इलाज", "date": "2021", "newspaper": "Local Daily", "description": "Same Bentall operation case with additional COVID context - patient had recently recovered from COVID. Challenges: 1) rare disease 2) post-COVID 3) patient's father also had COVID. Family was going through extreme difficulty."}
+    ],
+    "success-stories": [
+      {"file": "images/success-story3.jpg", "title": "8-Year-Old Child Valve Replacement Success", "date": "2016", "description": "Dr. Sanjay Gandhi performed valve replacement on 8-year-old Chhogaram from Sirohi. Child had breathing difficulty and fever for 8 months. 6-hour surgery at Geetanjali. Child recovered within a day."},
+      {"file": "images/success-story5.jpg", "title": "1.5-Year-Old Complex Heart Operation", "titleHindi": "डेढ़ साल की मासूम के दो जटिल ऑपरेशन सफल", "date": "2016", "description": "Dr. Sanjay Gandhi operated on 1.5-year-old Gunjan from Mewasa. Heart vessels and arteries were in wrong position. Blood circulation was affected causing red eyes, swelling. Referred from Bangalore. Complex double operation successful."}
+    ],
+    "special-cases": [
+      {"file": "images/special-case-angio.png", "title": "Achievement - 75-Year-Old Ruptured Abdominal Aortic Aneurysm (Emergency)", "date": "2018", "description": "Collage: 75-year-old gentleman presented in shock with ruptured abdominal aortic aneurysm. Emergency surgery without preparation - only cross match done. Foley's balloon used to control blood gush. BP was 50-80mmHg on inotropes. Team: Dr. Surender Patel, Dr. Ankur, Dr. Kalpesh, Dr. Manmohan, Dr. Tasha Purohit. Pratahkal coverage dated Fri Mar 16, 2018."},
+      {"file": "images/pre-and-post.jpeg", "title": "Pre & Post Operative CT Angiography Comparison", "date": "2018", "description": "3D CT angiography showing before (ruptured/enlarged aorta) and after (repaired) comparison of an aortic aneurysm case. Dramatic visual of surgical success."}
+    ],
+    "compilation-images": [
+      {"file": "images/2014.png", "title": "Success Stories Compilation 2014", "date": "2014"},
+      {"file": "images/2015.png", "title": "Success Stories Compilation 2015", "date": "2015"},
+      {"file": "images/2016.png", "title": "Success Stories Compilation 2016", "date": "2016"},
+      {"file": "images/News-Article-2016.jpg", "title": "News Article Compilation 2016", "date": "2016"}
+    ],
+    "banner": [
+      {"file": "images/dr-sanjay-gandhi-banner.jpg", "title": "Dr. Sanjay Gandhi Banner Image", "description": "Full banner image of Dr. Gandhi"}
+    ]
+  },
+  "sourceMapping": {
+    "note": "Original new assets from assets/assets_v1/. The assets/assets_v2/assets_v1/ folder is a duplicate and can be removed.",
+    "duplicateFolder": "assets/assets_v2/assets_v1/ (exact copy of assets/assets_v1/)",
+    "existingImagesFolder": "images/ directory - DO NOT MOVE, referenced by all HTML files"
+  }
+}

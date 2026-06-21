@@ -9,14 +9,14 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
   --crimson: #C8102E; --crimson-dark: #8B0D20; --crimson-mid: #a50e26;
-  --bg: #07090E; --bg2: #0C0F17; --bg3: #101420;
-  --surface: #131923; --surface2: #182030;
-  --border: rgba(200,16,46,0.2); --border2: rgba(255,255,255,0.06);
-  --text: #E8EDF5; --muted: #6E7E92; --gold: #C9A84C;
+  --bg: #0A1628; --bg2: #0D1B30; --bg3: #111F38;
+  --surface: #152240; --surface2: #1A2A4E;
+  --border: rgba(200,16,46,0.25); --border2: rgba(255,255,255,0.08);
+  --text: #E8EDF5; --muted: #7A8FA8; --gold: #C9A84C;
 }
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(7,9,14,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 4%; height: 68px; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(10,22,40,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 4%; height: 68px; }
 .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
 .logo-heart { width: 38px; height: 38px; background: var(--crimson); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 16px rgba(200,16,46,0.5); }
 .logo-heart svg { width: 20px; height: 20px; }
@@ -42,18 +42,18 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .sec-h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 40px); font-weight: 700; line-height: 1.14; margin-bottom: 14px; }
 .sec-sub { color: var(--muted); font-size: 14px; line-height: 1.8; max-width: 560px; }
 .video-pub-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid var(--border2); border-radius: 4px; overflow: hidden; }
-.vp-col { padding: 36px 32px; border-right: 1px solid var(--border2); background: var(--surface); }
+.vp-col { padding: 40px 36px; border-right: 1px solid var(--border2); background: var(--surface); }
 .vp-col:last-child { border-right: none; }
-.vp-label { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--crimson); margin-bottom: 18px; }
+.vp-label { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson); margin-bottom: 20px; }
 .yt-embed { position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 4px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 0 12px rgba(200,16,46,0.15); }
 .yt-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 .video-title { font-size: 12px; color: var(--muted); line-height: 1.5; }
-.pub-item { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--border2); }
+.pub-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border2); }
 .pub-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-.pub-item p { font-size: 12px; color: var(--muted); line-height: 1.7; font-style: italic; }
-.pub-item strong { color: var(--text); font-style: normal; display: block; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--crimson); }
-.treat-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-.treat-list li { font-size: 12px; color: var(--muted); display: flex; align-items: flex-start; gap: 8px; }
+.pub-item p { font-size: 13px; color: var(--muted); line-height: 1.8; font-style: italic; }
+.pub-item strong { color: var(--text); font-style: normal; display: block; margin-bottom: 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--crimson); }
+.treat-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.treat-list li { font-size: 14px; color: var(--muted); display: flex; align-items: flex-start; gap: 10px; }
 .treat-list li::before { content: '✓'; color: var(--crimson); font-weight: 700; flex-shrink: 0; }
 .treat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 48px; }
 .treat-card { background: var(--surface); border: 1px solid var(--border2); border-radius: 4px; padding: 28px 26px; transition: border-color 0.22s, transform 0.22s; position: relative; overflow: hidden; }
@@ -73,7 +73,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .cta-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; line-height: 1.2; max-width: 500px; position: relative; }
 .cta-text p { color: rgba(255,255,255,0.72); font-size: 14px; margin-top: 8px; position: relative; }
 .cta-band-right { display: flex; gap: 14px; flex-shrink: 0; position: relative; }
-footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56px 7% 28px; }
+footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px 7% 28px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
 .footer-about p { font-size: 12px; color: var(--muted); line-height: 1.8; margin-top: 16px; max-width: 280px; }
 .footer-socials { display: flex; gap: 10px; margin-top: 20px; }
@@ -91,13 +91,14 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .mob-toggle { display: none; width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 3px; align-items: center; justify-content: center; cursor: pointer; background: transparent; color: var(--text); font-size: 18px; }
-.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(7,9,14,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(10,22,40,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
 .mob-menu.open { display: flex; }
 .mob-menu a { font-size: 16px; font-weight: 500; color: var(--text); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
 .mob-menu a:hover { color: var(--crimson); }
 .mob-close { position: absolute; top: 20px; right: 20px; font-size: 28px; color: var(--text); background: none; border: none; cursor: pointer; }
 @media (max-width: 1024px) { .treat-grid { grid-template-columns: 1fr 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 768px) { .video-pub-row { grid-template-columns: 1fr; } .stories-grid { grid-template-columns: 1fr; } .cta-band { flex-direction: column; text-align: center; } .footer-grid { grid-template-columns: 1fr; gap: 30px; } nav { padding: 0 4%; } .nav-links { display: none; } .mob-toggle { display: flex; } .section { padding: 60px 5%; } .treat-grid { grid-template-columns: 1fr !important; } }
+@media (max-width: 768px) { .video-pub-row { grid-template-columns: 1fr; } .stories-grid { grid-template-columns: 1fr; } .cta-band { flex-direction: column; text-align: center; padding: 40px 5%; } .cta-band-right { justify-content: center; flex-wrap: wrap; } .footer-grid { grid-template-columns: 1fr; gap: 30px; } nav { padding: 0 4%; } .nav-links { display: none; } .nav-cta { display: none; } .mob-toggle { display: flex; } .section { padding: 60px 5%; } .treat-grid { grid-template-columns: 1fr !important; } .footer-bottom { flex-direction: column; text-align: center; } }
+@media (max-width: 480px) { .section { padding: 40px 4%; } nav { height: 56px; } .cta-band { padding: 32px 4%; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
 </style>
 </head>
@@ -145,8 +146,8 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 <!-- PAGE HEADER -->
 <section class="section" style="padding-top:140px;position:relative;overflow:hidden;">
   <!-- Decorative Heart Images -->
-  <img src="images/Heart/Heart.png" alt="" style="position:absolute;top:10px;right:4%;width:220px;opacity:0.07;pointer-events:none;filter:drop-shadow(0 0 40px rgba(200,16,46,0.4));" aria-hidden="true"/>
-  <img src="images/Heart/HeartMultipleImages.png" alt="" style="position:absolute;bottom:-40px;left:3%;width:160px;opacity:0.04;pointer-events:none;" aria-hidden="true"/>
+  <img src="media/heart-graphics/heart.png" alt="" style="position:absolute;top:10px;right:4%;width:220px;opacity:0.07;pointer-events:none;filter:drop-shadow(0 0 40px rgba(200,16,46,0.4));" aria-hidden="true"/>
+  <img src="media/heart-graphics/heart-multiple.png" alt="" style="position:absolute;bottom:-40px;left:3%;width:160px;opacity:0.04;pointer-events:none;" aria-hidden="true"/>
   <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>EXPERTISE & RESEARCH</div>
   <h2 class="sec-h2">Treatments, Videos & Research</h2>
   <p class="sec-sub">Advanced cardiac procedures, published research, and video documentation of Dr. Gandhi's surgical expertise.</p>
@@ -157,14 +158,20 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
   <div class="video-pub-row">
     <div class="vp-col">
       <div class="vp-label">Watch Dr. Gandhi</div>
-      <div class="yt-embed">
-        <iframe src="https://www.youtube.com/embed/RXtUllqBaEk?rel=0&modestbranding=1&color=red" title="Dr. Sanjay Gandhi Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border);cursor:pointer;margin-bottom:14px;" onclick="if(document.getElementById('expertVid')){document.getElementById('expertVid').style.display='flex';}">
+        <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" style="width:100%;height:220px;object-fit:cover;object-position:top;"/>
+        <div style="position:absolute;bottom:12px;right:12px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:rgba(200,16,46,0.6);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.2);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
+          </div>
+        </div>
       </div>
-      <div class="video-title" style="margin-top:12px">Dr. Gandhi introduces himself and his cardiac surgery journey at GMCH Udaipur.</div>
+      <div style="font-size:14px;color:var(--muted);line-height:1.7;">Dr. Gandhi introduces his cardiac surgery journey and the advanced programs at GMCH Udaipur.</div>
+      <a href="https://www.youtube.com/channel/UCWSw6M3BHKL52JbRUq6XSgA" target="_blank" class="btn btn-ghost" style="margin-top:16px;font-size:11px;">Visit YouTube Channel →</a>
     </div>
     <div class="vp-col">
       <div class="vp-label">Advanced Treatments</div>
-      <ul class="treat-list">
+      <ul class="treat-list" style="font-size:14px;gap:12px;">
         <li>Minimally Invasive Cardiac Surgery</li>
         <li>Off Pump & On Pump CABG</li>
         <li>Robotic & Endoscopic Procedures</li>
@@ -175,31 +182,31 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
         <li>ECMO & LVAD Implantation</li>
       </ul>
       <div style="margin-top:28px;text-align:center">
-        <img src="images/Heart/Heart.png" alt="Heart" style="width:100px;height:auto;filter:drop-shadow(0 0 20px rgba(200,16,46,0.6));"/>
+        <img src="media/heart-graphics/heart.png" alt="Heart" style="width:110px;height:auto;filter:drop-shadow(0 0 20px rgba(200,16,46,0.6));"/>
       </div>
     </div>
     <div class="vp-col">
       <div class="vp-label">Research & Publications</div>
       <div class="pub-item">
         <strong>JCVA 2008</strong>
-        <p>Difficult Weaning From Cardiopulmonary Bypass in the Lateral Position Caused by Lung Collapse. Journal of Cardiothoracic and Vascular Anesthesia, August; 616–624.</p>
+        <p style="font-size:13px;">Difficult Weaning From Cardiopulmonary Bypass in the Lateral Position Caused by Lung Collapse. Journal of Cardiothoracic and Vascular Anesthesia, August; 616–624.</p>
       </div>
       <div class="pub-item">
         <strong>World Journal — Pediatric & Congenital Heart Surgery</strong>
-        <p>Classical Windsock Deformity of Ruptured Sinus of Valsalva Seen in Transesophageal Echocardiography. 3(2): 273–274.</p>
+        <p style="font-size:13px;">Classical Windsock Deformity of Ruptured Sinus of Valsalva Seen in Transesophageal Echocardiography. 3(2): 273–274.</p>
       </div>
       <div class="pub-item">
         <strong>World Record Surgery</strong>
-        <p>Successfully operated on the world's tiniest surviving cardiac patient — 15 days old, weighing 470 grams, with a complex congenital heart condition.</p>
+        <p style="font-size:13px;">Successfully operated on the world's tiniest surviving cardiac patient — 15 days old, weighing 470 grams, with a complex congenital heart condition.</p>
       </div>
-      <a href="about.html" class="btn btn-ghost" style="font-size:11px;margin-top:8px">View Publications →</a>
+      <a href="about.html" class="btn btn-ghost" style="font-size:12px;margin-top:12px">View Publications →</a>
     </div>
   </div>
 </section>
 
 <!-- SPECIAL CASES -->
 <section class="section section-dark" style="position:relative;overflow:hidden;">
-  <img src="images/Heart/HeartMultipleImages.png" alt="" style="position:absolute;top:40px;right:3%;width:250px;opacity:0.05;pointer-events:none;filter:drop-shadow(0 0 20px rgba(200,16,46,0.3));" aria-hidden="true"/>
+  <img src="media/heart-graphics/heart-multiple.png" alt="" style="position:absolute;top:40px;right:3%;width:250px;opacity:0.05;pointer-events:none;filter:drop-shadow(0 0 20px rgba(200,16,46,0.3));" aria-hidden="true"/>
   <div class="sec-eyebrow reveal"><span class="sec-eyebrow-line"></span>Special & Critical Cases</div>
   <h2 class="sec-h2 reveal">Landmark Surgical Cases</h2>
   <p class="sec-sub" style="margin-bottom:48px">All the cases are unique and complicated but still some cases are special which demands more learning and extension to what we learned till now.</p>
@@ -278,7 +285,8 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 
 <!-- CTA BAND -->
 <div class="cta-band" style="position:relative;">
-  <img src="images/Heart/Heart.png" alt="" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:160px;opacity:0.07;pointer-events:none;" aria-hidden="true"/>
+  <img src="media/heart-graphics/dr-gandhi-overlay.png" alt="" style="position:absolute;left:0;top:-80%;width:100%;height:260%;opacity:0.1;pointer-events:none;object-fit:cover;object-position:top center;" aria-hidden="true"/>
+  <img src="media/heart-graphics/heart.png" alt="" style="position:absolute;left:45%;top:50%;transform:translate(-50%,-50%);width:110px;opacity:0.06;pointer-events:none;" aria-hidden="true"/>
   <div class="cta-text">
     <h2>Every Heart Deserves the Best Care</h2>
     <p>Compassionate Care · Advanced Technology · Better Outcomes</p>

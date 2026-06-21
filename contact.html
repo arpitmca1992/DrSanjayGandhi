@@ -9,14 +9,14 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
   --crimson: #C8102E; --crimson-dark: #8B0D20; --crimson-mid: #a50e26;
-  --bg: #07090E; --bg2: #0C0F17; --bg3: #101420;
-  --surface: #131923; --surface2: #182030;
-  --border: rgba(200,16,46,0.2); --border2: rgba(255,255,255,0.06);
-  --text: #E8EDF5; --muted: #6E7E92; --gold: #C9A84C;
+  --bg: #0A1628; --bg2: #0D1B30; --bg3: #111F38;
+  --surface: #152240; --surface2: #1A2A4E;
+  --border: rgba(200,16,46,0.25); --border2: rgba(255,255,255,0.08);
+  --text: #E8EDF5; --muted: #7A8FA8; --gold: #C9A84C;
 }
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(7,9,14,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 4%; height: 68px; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(10,22,40,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 4%; height: 68px; }
 .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
 .logo-heart { width: 38px; height: 38px; background: var(--crimson); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 16px rgba(200,16,46,0.5); }
 .logo-heart svg { width: 20px; height: 20px; }
@@ -66,7 +66,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .cta-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; line-height: 1.2; max-width: 500px; position: relative; }
 .cta-text p { color: rgba(255,255,255,0.72); font-size: 14px; margin-top: 8px; position: relative; }
 .cta-band-right { display: flex; gap: 14px; flex-shrink: 0; position: relative; }
-footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56px 7% 28px; }
+footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px 7% 28px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
 .footer-about p { font-size: 12px; color: var(--muted); line-height: 1.8; margin-top: 16px; max-width: 280px; }
 .footer-socials { display: flex; gap: 10px; margin-top: 20px; }
@@ -84,13 +84,14 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .mob-toggle { display: none; width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 3px; align-items: center; justify-content: center; cursor: pointer; background: transparent; color: var(--text); font-size: 18px; }
-.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(7,9,14,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(10,22,40,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
 .mob-menu.open { display: flex; }
 .mob-menu a { font-size: 16px; font-weight: 500; color: var(--text); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
 .mob-menu a:hover { color: var(--crimson); }
 .mob-close { position: absolute; top: 20px; right: 20px; font-size: 28px; color: var(--text); background: none; border: none; cursor: pointer; }
 @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } .contact-grid { grid-template-columns: 1fr; } .cta-band { flex-direction: column; text-align: center; } .footer-grid { grid-template-columns: 1fr; gap: 30px; } nav { padding: 0 4%; } .nav-links { display: none; } .mob-toggle { display: flex; } .section { padding: 60px 5%; } .form-row2 { grid-template-columns: 1fr; } [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; } }
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .about-grid { grid-template-columns: 1fr; } .cta-band { flex-direction: column; text-align: center; padding: 40px 5%; } .cta-band-right { justify-content: center; flex-wrap: wrap; } .footer-grid { grid-template-columns: 1fr; gap: 30px; } nav { padding: 0 4%; } .nav-links { display: none; } .nav-cta { display: none; } .mob-toggle { display: flex; } .section { padding: 60px 5%; } .form-row2 { grid-template-columns: 1fr; } [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; } .footer-bottom { flex-direction: column; text-align: center; } }
+@media (max-width: 480px) { .section { padding: 40px 4%; } nav { height: 56px; } .cta-band { padding: 32px 4%; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
 </style>
 </head>
@@ -138,7 +139,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 <!-- PAGE HEADER -->
 <section class="section" style="padding-top:140px;position:relative;overflow:hidden;">
   <!-- Decorative Heart -->
-  <img src="images/Heart/Heart.png" alt="" style="position:absolute;top:15px;right:5%;width:190px;opacity:0.06;pointer-events:none;filter:drop-shadow(0 0 30px rgba(200,16,46,0.3));" aria-hidden="true"/>
+  <img src="media/heart-graphics/heart.png" alt="" style="position:absolute;top:15px;right:5%;width:190px;opacity:0.06;pointer-events:none;filter:drop-shadow(0 0 30px rgba(200,16,46,0.3));" aria-hidden="true"/>
   <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>GET IN TOUCH</div>
   <h2 class="sec-h2">Contact & Appointments</h2>
   <p class="sec-sub">Every heart deserves the best care. Reach out to schedule an appointment or for 24×7 emergency assistance.</p>
@@ -146,12 +147,12 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 
 <!-- CLINIC TIMINGS -->
 <section class="section section-mid" style="padding-top:0;">
-  <div class="about-grid" style="grid-template-columns:1fr 1fr;gap:40px">
-    <div class="treat-card" style="padding:36px">
+  <div class="about-grid" style="grid-template-columns:1fr 1fr;gap:40px;align-items:stretch;">
+    <div class="treat-card" style="padding:36px;display:flex;flex-direction:column;">
       <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:18px">🏥 Hospital Timings</div>
       <h3 style="font-size:16px;margin-bottom:6px">Geetanjali Medical College & Hospital</h3>
       <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px">Dept. of Cardiothoracic & Vascular Surgery, Eklingpura, Udaipur, Rajasthan</p>
-      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(200,16,46,0.08);border:1px solid var(--border);border-radius:3px">
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(200,16,46,0.08);border:1px solid var(--border);border-radius:3px;margin-top:auto;">
         <span style="font-size:18px">🕘</span>
         <div>
           <div style="font-size:13px;font-weight:600;color:var(--text)">09:00 AM to 05:00 PM</div>
@@ -159,11 +160,11 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
         </div>
       </div>
     </div>
-    <div class="treat-card" style="padding:36px">
+    <div class="treat-card" style="padding:36px;display:flex;flex-direction:column;">
       <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:18px">🏠 Clinic Timings</div>
       <h3 style="font-size:16px;margin-bottom:6px">Santosh Heart & Gynaec Care Clinic</h3>
       <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px">294, B Block, Shyam Nagar, Sen Bhawan Street, Opposite Mahila Thana, Chitrakoot Nagar, Udaipur</p>
-      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(200,16,46,0.08);border:1px solid var(--border);border-radius:3px">
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(200,16,46,0.08);border:1px solid var(--border);border-radius:3px;margin-top:auto;">
         <span style="font-size:18px">🕖</span>
         <div>
           <div style="font-size:13px;font-weight:600;color:var(--text)">07:00 PM to 08:00 PM</div>
@@ -177,7 +178,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 
 <!-- CONTACT -->
 <section class="section section-dark" style="position:relative;overflow:hidden;">
-  <img src="images/Heart/HeartMultipleImages.png" alt="" style="position:absolute;bottom:20px;right:2%;width:280px;opacity:0.04;pointer-events:none;" aria-hidden="true"/>
+  <img src="media/heart-graphics/heart-multiple.png" alt="" style="position:absolute;bottom:20px;right:2%;width:280px;opacity:0.04;pointer-events:none;" aria-hidden="true"/>
   <div class="sec-eyebrow reveal"><span class="sec-eyebrow-line"></span>Get in Touch</div>
   <h2 class="sec-h2 reveal">Book a Consultation</h2>
   <p class="sec-sub" style="margin-bottom:48px">Every heart deserves the best care. Reach out to schedule an appointment or for 24×7 emergency assistance.</p>
@@ -252,7 +253,8 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 
 <!-- CTA BAND -->
 <div class="cta-band" style="position:relative;">
-  <img src="images/Heart/Heart.png" alt="" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:170px;opacity:0.06;pointer-events:none;" aria-hidden="true"/>
+  <img src="media/heart-graphics/dr-gandhi-overlay.png" alt="" style="position:absolute;left:0;top:-80%;width:100%;height:260%;opacity:0.1;pointer-events:none;object-fit:cover;object-position:top center;" aria-hidden="true"/>
+  <img src="media/heart-graphics/heart.png" alt="" style="position:absolute;left:45%;top:50%;transform:translate(-50%,-50%);width:110px;opacity:0.06;pointer-events:none;" aria-hidden="true"/>
   <div class="cta-text">
     <h2>Every Heart Deserves the Best Care</h2>
     <p>Compassionate Care · Advanced Technology · Better Outcomes</p>

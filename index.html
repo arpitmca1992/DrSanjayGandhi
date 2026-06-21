@@ -9,14 +9,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
   --crimson: #C8102E; --crimson-dark: #8B0D20; --crimson-mid: #a50e26;
-  --bg: #07090E; --bg2: #0C0F17; --bg3: #101420;
-  --surface: #131923; --surface2: #182030;
-  --border: rgba(200,16,46,0.2); --border2: rgba(255,255,255,0.06);
-  --text: #E8EDF5; --muted: #6E7E92; --gold: #C9A84C;
+  --bg: #0A1628; --bg2: #0D1B30; --bg3: #111F38;
+  --surface: #152240; --surface2: #1A2A4E;
+  --border: rgba(200,16,46,0.25); --border2: rgba(255,255,255,0.08);
+  --text: #E8EDF5; --muted: #7A8FA8; --gold: #C9A84C;
+  --navy: #0A1628; --navy-mid: #132042; --navy-light: #1B2D52;
 }
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(7,9,14,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 4%; height: 68px; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(10,22,40,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 4%; height: 68px; }
 .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
 .logo-heart { width: 38px; height: 38px; background: var(--crimson); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 16px rgba(200,16,46,0.5); }
 .logo-heart svg { width: 20px; height: 20px; }
@@ -34,9 +35,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .btn-lg { padding: 13px 28px; font-size: 13px; }
 .btn-white { background: white; color: var(--crimson); font-weight: 700; }
 .btn-white:hover { background: #f0f0f0; }
-.hero { min-height: 100vh; padding-top: 68px; position: relative; overflow: hidden; background: radial-gradient(ellipse 60% 60% at 45% 50%, rgba(200,16,46,0.05) 0%, transparent 60%), var(--bg); display: grid; grid-template-columns: 1.1fr 1.4fr 0.85fr; align-items: stretch; }
+.hero { min-height: 100vh; padding-top: 68px; position: relative; overflow: hidden; background: radial-gradient(ellipse 60% 60% at 45% 50%, rgba(200,16,46,0.04) 0%, transparent 60%), linear-gradient(135deg, #0A1628 0%, #0D1B30 50%, #111F38 100%); display: grid; grid-template-columns: 1.1fr 1.4fr 0.85fr; align-items: stretch; }
 #particles { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-.hero::before { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background-image: linear-gradient(rgba(200,16,46,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(200,16,46,0.04) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, black 20%, transparent 75%); }
+.hero::before { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background-image: linear-gradient(rgba(200,16,46,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(200,16,46,0.03) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, black 20%, transparent 75%); }
 .hero-left { position: relative; z-index: 2; padding: 80px 2% 60px 6%; display: flex; flex-direction: column; justify-content: center; }
 .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--crimson); margin-bottom: 18px; }
 .eyebrow-line { width: 32px; height: 2px; background: var(--crimson); }
@@ -61,12 +62,12 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .ecg-line { position: absolute; bottom: 100px; left: -40%; right: -40%; height: 48px; z-index: 0; opacity: 0.5; }
 .ecg-path { stroke: var(--crimson); stroke-width: 2.5; fill: none; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: ecgDraw 3s linear infinite; }
 @keyframes ecgDraw { to { stroke-dashoffset: 0; } }
-.hero-doctor { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 0; overflow: hidden; }
-.hero-dr { position: relative; z-index: 2; width: 110%; max-width: none; object-fit: contain; object-position: top center; filter: drop-shadow(0 0 40px rgba(200,16,46,0.15)); margin: 0 -5%; }
-.hero-info-card { position: relative; z-index: 3; background: linear-gradient(135deg, rgba(12,15,23,0.97) 0%, rgba(19,25,35,0.95) 100%); border: 1px solid var(--border); border-left: 3px solid var(--crimson); backdrop-filter: blur(14px); border-radius: 4px; padding: 20px 22px 18px; margin-top: 10px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 15px rgba(200,16,46,0.06); }
-.hic-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 4px; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
-.hic-deg { font-size: 11.5px; color: var(--muted); line-height: 1.7; margin-bottom: 10px; }
-.hic-role { font-size: 11px; color: var(--crimson); font-weight: 600; line-height: 1.6; padding-top: 10px; border-top: 1px solid var(--border2); }
+.hero-doctor { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; overflow: hidden; padding-top: 3rem; }
+.hero-dr { position: relative; z-index: 2; width: 132%; max-width: none; object-fit: contain; object-position: top center; filter: drop-shadow(0 0 40px rgba(200,16,46,0.15)); margin: 0 -16%; }
+.hero-info-card { position: relative; z-index: 3; background: linear-gradient(135deg, rgba(10,22,40,0.97) 0%, rgba(15,28,48,0.95) 100%); border: 1px solid var(--border); border-top: 2px solid var(--crimson); backdrop-filter: blur(14px); border-radius: 4px; padding: 24px 28px; margin-top: 14px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 15px rgba(200,16,46,0.06); text-align: center; }
+.hic-name { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 10px; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
+.hic-deg { font-size: 13px; color: var(--muted); line-height: 1.8; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border2); }
+.hic-role { font-size: 12px; color: var(--crimson); font-weight: 600; line-height: 1.7; }
 .ring { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 500px; height: 500px; border-radius: 50%; border: 1px dashed rgba(200,16,46,0.15); animation: rotateSlow 25s linear infinite; z-index: 0; }
 .ring2 { width: 580px; height: 580px; border-color: rgba(200,16,46,0.08); animation: rotateSlow 35s linear infinite reverse; }
 @keyframes rotateSlow { to { transform: translate(-50%,-50%) rotate(360deg); } }
@@ -102,21 +103,22 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .exp-icon { width: 44px; height: 44px; margin: 0 auto 14px; display: flex; align-items: center; justify-content: center; }
 .exp-icon svg { width: 38px; height: 38px; }
 .exp-name { font-size: 11px; font-weight: 600; color: var(--text); line-height: 1.35; }
-.about-3col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid var(--border2); border-radius: 4px; overflow: hidden; margin-top: 80px; }
-.a3c { padding: 32px; border-right: 1px solid var(--border2); background: var(--surface); }
+.about-3col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid var(--border2); border-radius: 6px; overflow: hidden; margin-top: 40px; }
+.a3c { padding: 40px 36px; border-right: 1px solid var(--border2); background: var(--surface); }
 .a3c:last-child { border-right: none; }
-.a3c h4 { font-size: 13px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
-.a3c p, .a3c ul { font-size: 12px; color: var(--muted); line-height: 1.75; }
-.a3c ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.a3c h4 { font-size: 16px; font-weight: 700; margin-bottom: 14px; color: var(--text); }
+.a3c p, .a3c ul { font-size: 14px; color: var(--muted); line-height: 1.85; }
+.a3c ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .a3c ul li::before { content: '✓  '; color: var(--crimson); font-weight: 700; }
-.a3c-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--crimson); margin-bottom: 16px; }
-.stars { color: var(--gold); font-size: 13px; margin-bottom: 14px; letter-spacing: 2px; }
+.a3c-label { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+.a3c-label::before { content: ''; width: 18px; height: 2px; background: var(--crimson); }
+.stars { color: var(--gold); font-size: 16px; margin-bottom: 16px; letter-spacing: 3px; }
 .cta-band { background: linear-gradient(110deg, var(--crimson-dark) 0%, var(--crimson) 60%, #d9223e 100%); padding: 68px 7%; display: flex; justify-content: space-between; align-items: center; gap: 40px; position: relative; overflow: hidden; }
 .cta-band::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; }
 .cta-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; line-height: 1.2; max-width: 500px; position: relative; }
 .cta-text p { color: rgba(255,255,255,0.72); font-size: 14px; margin-top: 8px; position: relative; }
 .cta-band-right { display: flex; gap: 14px; flex-shrink: 0; position: relative; }
-footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56px 7% 28px; }
+footer { background: var(--navy); border-top: 1px solid var(--border); padding: 56px 7% 28px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
 .footer-about p { font-size: 12px; color: var(--muted); line-height: 1.8; margin-top: 16px; max-width: 280px; }
 .footer-socials { display: flex; gap: 10px; margin-top: 20px; }
@@ -129,7 +131,35 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 .footer-bottom { border-top: 1px solid var(--border2); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
 .footer-bottom p { font-size: 11px; color: var(--muted); }
 @media (max-width: 1024px) { .hero { grid-template-columns: 1fr 1fr; } .hero-right { height: auto; min-height: auto; padding: 40px 0; } .hero-heart-svg { height: 320px; } .hero-doctor { display: none; } .expertise-grid { grid-template-columns: repeat(3, 1fr); } .milestones-grid { grid-template-columns: repeat(3, 1fr); } .footer-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 768px) { .hero { grid-template-columns: 1fr; } .hero-left { padding: 50px 5%; } .hero-right { height: 300px; min-height: auto; padding: 20px 0; } .hero-heart-svg { height: 240px; } .hero-doctor { display: none; } .about-3col { grid-template-columns: 1fr; } .cta-band { flex-direction: column; text-align: center; } .footer-grid { grid-template-columns: 1fr; gap: 30px; } nav { padding: 0 4%; } .nav-links { display: none; } .mob-toggle { display: flex; } .section { padding: 60px 5%; } .hero-left { padding: 50px 5%; } .milestones-grid { grid-template-columns: repeat(2, 1fr); } .expertise-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 50px 5%; }
+  .hero-right { height: 300px; min-height: auto; padding: 20px 0; }
+  .hero-heart-svg { height: 240px; }
+  .hero-doctor { display: none; }
+  .about-3col { grid-template-columns: 1fr; }
+  .cta-band { flex-direction: column; text-align: center; padding: 40px 5%; }
+  .cta-band-right { justify-content: center; flex-wrap: wrap; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  nav { padding: 0 4%; }
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .mob-toggle { display: flex; }
+  .section { padding: 60px 5%; }
+  .milestones-grid { grid-template-columns: repeat(2, 1fr); }
+  .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .hero-left { padding: 30px 4%; }
+  .hero-right { height: 220px; }
+  .hero-heart-svg { height: 180px; }
+  .section { padding: 40px 4%; }
+  .milestones-grid { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: 1fr; }
+  .cta-band { padding: 32px 4%; }
+  nav { height: 56px; }
+}
 .blood-cells { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .blood-cell { position: absolute; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #ff6b6b, #8b0d20); opacity: 0.5; animation: flowCell linear infinite; }
 @keyframes flowCell { 0% { transform: translateY(110vh) translateX(0); } 100% { transform: translateY(-10vh) translateX(20px); } }
@@ -141,7 +171,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 .strip-track { animation: marquee 30s linear infinite; }
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .mob-toggle { display: none; width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 3px; align-items: center; justify-content: center; cursor: pointer; background: transparent; color: var(--text); font-size: 18px; }
-.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(7,9,14,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(10,22,40,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
 .mob-menu.open { display: flex; }
 .mob-menu a { font-size: 16px; font-weight: 500; color: var(--text); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
 .mob-menu a:hover { color: var(--crimson); }
@@ -221,14 +251,14 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
     <div class="ring"></div>
     <div class="ring ring2"></div>
     <!-- Realistic Anatomical Heart Image -->
-    <img src="images/Heart/Heart.png" alt="Anatomical Heart" class="hero-heart-svg"/>
+    <img src="media/heart-graphics/heart.png" alt="Anatomical Heart" class="hero-heart-svg"/>
     <svg class="ecg-line" viewBox="0 0 1000 48" preserveAspectRatio="none">
       <path class="ecg-path" d="M0,24 L80,24 L100,24 L110,4 L120,44 L130,4 L140,44 L150,24 L170,24 L250,24 L260,24 L270,4 L280,44 L290,4 L300,44 L310,24 L330,24 L410,24 L420,24 L430,4 L440,44 L450,4 L460,44 L470,24 L490,24 L570,24 L580,24 L590,4 L600,44 L610,4 L620,44 L630,24 L650,24 L730,24 L740,24 L750,4 L760,44 L770,4 L780,44 L790,24 L810,24 L1000,24"/>
     </svg>
   </div>
 
   <div class="hero-doctor">
-    <img src="images/Profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" class="hero-dr"/>
+    <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" class="hero-dr"/>
     <div class="hero-info-card">
       <div class="hic-name">Dr. Sanjay Gandhi</div>
       <div class="hic-deg">MBBS | MS (AIIMS, New Delhi)<br>M.Ch (SCTIMST, Trivandrum)</div>
@@ -263,7 +293,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
 
 <!-- EXPERTISE -->
 <section class="section section-dark" style="position:relative;overflow:hidden;">
-  <img src="images/Heart/HeartMultipleImages.png" alt="" style="position:absolute;top:30px;left:3%;width:200px;opacity:0.04;pointer-events:none;" aria-hidden="true"/>
+  <img src="media/heart-graphics/heart-multiple.png" alt="" style="position:absolute;top:30px;left:3%;width:200px;opacity:0.04;pointer-events:none;" aria-hidden="true"/>
   <div style="text-align:center" class="reveal">
     <div class="sec-eyebrow" style="justify-content:center"><span class="sec-eyebrow-line"></span>Our Expertise<span class="sec-eyebrow-line"></span></div>
     <h2 class="sec-h2" style="margin:0 auto">Specialised Cardiac Procedures</h2>
@@ -299,11 +329,11 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
   <div class="about-3col">
     <div class="a3c">
       <div class="a3c-label">About</div>
-      <img src="images/Profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" style="width:80px;height:80px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--border);margin-bottom:16px;display:block"/>
+      <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" style="width:100px;height:100px;border-radius:50%;object-fit:cover;object-position:top;border:3px solid var(--crimson);margin-bottom:20px;display:block;box-shadow:0 0 20px rgba(200,16,46,0.2)"/>
       <h4>Dr. Sanjay Gandhi</h4>
       <p>A leader in Cardiothoracic & Vascular Surgery with over two decades of experience. Trained at AIIMS New Delhi and SCTIMST Trivandrum, Dr. Gandhi is currently the Head of the Department of CTVS at Geetanjali Medical College & Hospital, Udaipur.</p>
-      <p style="margin-top:10px">He has performed more than 13,000 complex cardiac surgeries with a focus on patient safety, innovation, and long-term outcomes.</p>
-      <a href="about.html" class="btn btn-ghost" style="margin-top:20px;font-size:11px">Know More →</a>
+      <p style="margin-top:12px">He has performed more than 13,000 complex cardiac surgeries with a focus on patient safety, innovation, and long-term outcomes.</p>
+      <a href="about.html" class="btn btn-ghost" style="margin-top:24px;font-size:12px;padding:10px 22px;">Know More →</a>
     </div>
     <div class="a3c">
       <div class="a3c-label">Achievements</div>
@@ -318,29 +348,139 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56
         <li>Pioneer in Minimally Invasive Cardiac Surgery</li>
       </ul>
       <div style="margin-top:28px;display:flex;justify-content:center">
-        <img src="images/Heart/Heart.png" alt="Heart" style="width:90px;height:auto;filter:drop-shadow(0 0 12px rgba(200,16,46,0.7));animation:heartbeat 1.1s ease-in-out infinite;"/>
+        <img src="media/heart-graphics/heart.png" alt="Heart" style="width:100px;height:auto;filter:drop-shadow(0 0 15px rgba(200,16,46,0.7));animation:heartbeat 1.1s ease-in-out infinite;"/>
       </div>
     </div>
     <div class="a3c">
       <div class="a3c-label">Patient Success Stories</div>
-      <div style="margin-bottom:18px">
+      <div style="margin-bottom:22px">
         <div class="stars">★★★★★</div>
-        <p style="font-style:italic;font-size:13px;color:var(--muted);line-height:1.7">"He gave me a new life. His confidence and expertise are truly unmatched."</p>
-        <div style="font-size:12px;color:var(--text);font-weight:600;margin-top:10px">— Patient</div>
+        <p style="font-style:italic;font-size:15px;color:var(--muted);line-height:1.8">"He gave me a new life. His confidence and expertise are truly unmatched."</p>
+        <div style="font-size:13px;color:var(--text);font-weight:700;margin-top:12px">— Patient</div>
       </div>
-      <div style="margin-bottom:18px;padding-top:18px;border-top:1px solid var(--border2)">
+      <div style="margin-bottom:22px;padding-top:20px;border-top:1px solid var(--border2)">
         <div class="stars">★★★★★</div>
-        <p style="font-style:italic;font-size:13px;color:var(--muted);line-height:1.7">"My child had a complex congenital defect. Dr. Gandhi operated flawlessly. We are forever grateful."</p>
-        <div style="font-size:12px;color:var(--text);font-weight:600;margin-top:10px">— Parent, Gujarat</div>
+        <p style="font-style:italic;font-size:15px;color:var(--muted);line-height:1.8">"My child had a complex congenital defect. Dr. Gandhi operated flawlessly. We are forever grateful."</p>
+        <div style="font-size:13px;color:var(--text);font-weight:700;margin-top:12px">— Parent, Gujarat</div>
       </div>
-      <a href="news.html" class="btn btn-ghost" style="font-size:11px">Read More Stories →</a>
+      <a href="news.html" class="btn btn-ghost" style="font-size:12px;padding:10px 22px;">Read More Stories →</a>
     </div>
   </div>
 </section>
 
+<!-- VIDEO SECTION -->
+<section class="section section-mid" style="position:relative;overflow:hidden;">
+  <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>Watch Dr. Gandhi</div>
+  <h2 class="sec-h2">See the Surgeon in Action</h2>
+  <p class="sec-sub" style="margin-bottom:36px;">Learn about Dr. Sanjay Gandhi's cardiac surgery journey and the advanced surgical techniques he employs.</p>
+
+  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;">
+    <!-- Main/Featured Video -->
+    <div style="position:relative;cursor:pointer;grid-row:span 2;" onclick="openVideo('RXtUllqBaEk');">
+      <div style="position:relative;border-radius:8px;overflow:hidden;border:2px solid var(--border);box-shadow:0 10px 40px rgba(0,0,0,0.4);height:100%;">
+        <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi Introduction" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.65);"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--crimson);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(200,16,46,0.6);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
+          <div style="font-size:10px;color:var(--crimson);font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:6px;">Featured Video</div>
+          <div style="font-size:14px;color:white;font-weight:600;line-height:1.4;">Dr. Sanjay Gandhi — Cardiac Surgery Journey & Introduction</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 2 -->
+    <div style="position:relative;cursor:pointer;" onclick="openVideo('RXtUllqBaEk');">
+      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
+        <img src="media/heart-graphics/heart.png" alt="Heart Surgery Procedure" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.6);"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
+          <div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">Cardiac Surgery Procedures at GMCH</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 3 -->
+    <div style="position:relative;cursor:pointer;" onclick="openVideo('RXtUllqBaEk');">
+      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
+        <img src="media/special-cases/470g-baby-surgery-team-may2017.jpg" alt="Patient Testimonials" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.6);"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
+          <div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">Patient Recovery & Testimonials</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 4 -->
+    <div style="position:relative;cursor:pointer;" onclick="openVideo('RXtUllqBaEk');">
+      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
+        <img src="media/special-cases/ruptured-abdominal-aneurysm-75yr-achievement.png" alt="ECMO & LVAD" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.6);"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
+          <div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">ECMO & LVAD Programs</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 5 -->
+    <div style="position:relative;cursor:pointer;" onclick="openVideo('RXtUllqBaEk');">
+      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
+        <img src="media/special-cases/470g-baby-surgery-banner.png" alt="470g Baby Surgery" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.6);"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
+          <div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">World Record: 470g Baby Surgery</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:28px;">
+    <a href="https://www.youtube.com/channel/UCWSw6M3BHKL52JbRUq6XSgA" target="_blank" class="btn btn-ghost" style="font-size:12px;">View All Videos on YouTube →</a>
+  </div>
+</section>
+
+<!-- VIDEO POPUP -->
+<div id="videoPopup" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;cursor:pointer;" onclick="closeVideo();">
+  <div style="position:relative;width:80%;max-width:900px;aspect-ratio:16/9;" onclick="event.stopPropagation();">
+    <div id="ytContainer" style="width:100%;height:100%;border-radius:8px;overflow:hidden;box-shadow:0 0 60px rgba(200,16,46,0.3);"></div>
+    <button onclick="closeVideo();" style="position:absolute;top:-40px;right:0;background:none;border:none;color:white;font-size:28px;cursor:pointer;padding:8px;">✕</button>
+  </div>
+</div>
+
+<script>
+function openVideo(videoId) {
+  videoId = videoId || 'RXtUllqBaEk';
+  document.getElementById('videoPopup').style.display = 'flex';
+  document.getElementById('ytContainer').innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1" title="Dr. Sanjay Gandhi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>';
+}
+function closeVideo() {
+  document.getElementById('videoPopup').style.display = 'none';
+  document.getElementById('ytContainer').innerHTML = '';
+}
+</script>
+
 <!-- CTA BAND -->
 <div class="cta-band" style="position:relative;">
-  <img src="images/Heart/Heart.png" alt="" style="position:absolute;right:15%;top:50%;transform:translateY(-50%);width:140px;opacity:0.08;pointer-events:none;" aria-hidden="true"/>
+  <img src="media/heart-graphics/dr-gandhi-overlay.png" alt="" style="position:absolute;left:0;top:-80%;width:100%;height:260%;opacity:0.1;pointer-events:none;object-fit:cover;object-position:top center;" aria-hidden="true"/>
+  <img src="media/heart-graphics/heart.png" alt="" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120px;opacity:0.06;pointer-events:none;" aria-hidden="true"/>
   <div class="cta-text">
     <h2>Every Heart Deserves the Best Care</h2>
     <p>Compassionate Care · Advanced Technology · Better Outcomes</p>
