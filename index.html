@@ -376,7 +376,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 
   <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;">
     <!-- Main/Featured Video -->
-    <div style="position:relative;cursor:pointer;grid-row:span 2;" onclick="openVideo('RXtUllqBaEk');">
+    <div style="position:relative;cursor:pointer;grid-row:span 2;" onclick="openVideo('4naOZJgNTDQ');">
       <div style="position:relative;border-radius:8px;overflow:hidden;border:2px solid var(--border);box-shadow:0 10px 40px rgba(0,0,0,0.4);height:100%;">
         <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi Introduction" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.65);"/>
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
@@ -392,7 +392,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
     </div>
 
     <!-- Video 2 -->
-    <div style="position:relative;cursor:pointer;" onclick="openVideo('RXtUllqBaEk');">
+    <div style="position:relative;cursor:pointer;" onclick="openVideo('4naOZJgNTDQ');">
       <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
         <img src="media/heart-graphics/heart.png" alt="Heart Surgery Procedure" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.6);"/>
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
@@ -407,7 +407,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
     </div>
 
     <!-- Video 3 -->
-    <div style="position:relative;cursor:pointer;" onclick="openVideo('RXtUllqBaEk');">
+    <div style="position:relative;cursor:pointer;" onclick="openVideo('4naOZJgNTDQ');">
       <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
         <img src="media/special-cases/470g-baby-surgery-team-may2017.jpg" alt="Patient Testimonials" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.6);"/>
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
@@ -422,7 +422,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
     </div>
 
     <!-- Video 4 -->
-    <div style="position:relative;cursor:pointer;" onclick="openVideo('RXtUllqBaEk');">
+    <div style="position:relative;cursor:pointer;" onclick="openVideo('4naOZJgNTDQ');">
       <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
         <img src="media/special-cases/ruptured-abdominal-aneurysm-75yr-achievement.png" alt="ECMO & LVAD" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.6);"/>
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
@@ -437,7 +437,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
     </div>
 
     <!-- Video 5 -->
-    <div style="position:relative;cursor:pointer;" onclick="openVideo('RXtUllqBaEk');">
+    <div style="position:relative;cursor:pointer;" onclick="openVideo('4naOZJgNTDQ');">
       <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
         <img src="media/special-cases/470g-baby-surgery-banner.png" alt="470g Baby Surgery" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.6);"/>
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
@@ -467,7 +467,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 
 <script>
 function openVideo(videoId) {
-  videoId = videoId || 'RXtUllqBaEk';
+  videoId = videoId || '4naOZJgNTDQ';
   document.getElementById('videoPopup').style.display = 'flex';
   document.getElementById('ytContainer').innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1" title="Dr. Sanjay Gandhi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>';
 }
@@ -476,6 +476,50 @@ function closeVideo() {
   document.getElementById('ytContainer').innerHTML = '';
 }
 </script>
+
+<!-- HIGHLIGHTS - PAGE PREVIEWS -->
+<section class="section section-dark">
+  <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>Explore More</div>
+  <h2 class="sec-h2">Highlights</h2>
+  <p class="sec-sub" style="margin-bottom:32px">Explore Dr. Gandhi's achievements, expertise, and media coverage</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+    <!-- News & Media -->
+    <a href="news.html" style="display:block;border:1px solid var(--border2);border-radius:4px;overflow:hidden;background:var(--surface);text-decoration:none;transition:border-color 0.2s,transform 0.2s" onmouseover="this.style.borderColor='rgba(200,16,46,0.4)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
+      <img src="media/news-coverage/2017/hybrid-surgery-2yr-child-oct14-2017.jpeg" alt="World Record 470g Baby" style="width:100%;height:160px;object-fit:cover;object-position:top"/>
+      <div style="padding:16px">
+        <div style="font-size:10px;font-weight:600;color:var(--crimson);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">News & Media</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px">12+ Years of Media Coverage</div>
+        <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px">World record 470g baby surgery, TAVI, ECMO milestones, 200+ newspaper articles from 2014-2026</p>
+        <span style="font-size:11px;font-weight:600;color:var(--crimson)">View All Coverage →</span>
+      </div>
+    </a>
+
+    <!-- Expertise -->
+    <a href="expertise.html" style="display:block;border:1px solid var(--border2);border-radius:4px;overflow:hidden;background:var(--surface);text-decoration:none;transition:border-color 0.2s,transform 0.2s" onmouseover="this.style.borderColor='rgba(200,16,46,0.4)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
+      <img src="media/surgery-photos/cath-lab-apr-2026/01-open-heart-surgery-artis-zee.jpeg" alt="Cath Lab Surgery" style="width:100%;height:160px;object-fit:cover"/>
+      <div style="padding:16px">
+        <div style="font-size:10px;font-weight:600;color:var(--crimson);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">Expertise</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px">Advanced Cardiac Surgery</div>
+        <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px">CABG, valve repair, aortic aneurysm, TAVI, ECMO, pediatric heart surgery with Siemens Artis Zee cath lab</p>
+        <span style="font-size:11px;font-weight:600;color:var(--crimson)">View Expertise →</span>
+      </div>
+    </a>
+
+    <!-- Videos -->
+    <a href="news.html#videos-section" style="display:block;border:1px solid var(--border2);border-radius:4px;overflow:hidden;background:var(--surface);text-decoration:none;transition:border-color 0.2s,transform 0.2s" onmouseover="this.style.borderColor='rgba(200,16,46,0.4)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
+      <div style="height:160px;background:linear-gradient(135deg,var(--bg3),var(--surface2));display:flex;align-items:center;justify-content:center">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(200,16,46,0.15);border:2px solid var(--crimson);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--crimson)"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div style="padding:16px">
+        <div style="font-size:10px;font-weight:600;color:var(--crimson);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">Videos</div>
+        <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px">33+ Surgery & Testimonial Videos</div>
+        <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px">Live surgery recordings, patient testimonials, educational content on YouTube & Facebook</p>
+        <span style="font-size:11px;font-weight:600;color:var(--crimson)">Watch Videos →</span>
+      </div>
+    </a>
+  </div>
+</section>
 
 <!-- CTA BAND -->
 <div class="cta-band" style="position:relative;">
