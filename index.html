@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Dr. Sanjay Gandhi | Cardiac & Cardiothoracic Surgeon</title>
+<title>Dr. Sanjay Gandhi | Cardiothoracic & Vascular Surgeon</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -43,12 +43,13 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .eyebrow-line { width: 32px; height: 2px; background: var(--crimson); }
 .hero-h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 4.8vw, 68px); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 18px; }
 .hero-h1 .accent { color: var(--crimson); text-shadow: 0 0 40px rgba(200,16,46,0.4); }
-.hero-sub { font-size: 16px; color: var(--muted); max-width: 400px; margin-bottom: 32px; line-height: 1.8; font-weight: 300; }
+.hero-sub { font-size: 17px; color: var(--muted); max-width: 420px; margin-bottom: 32px; line-height: 1.85; font-weight: 400; }
 .hero-stats-row { display: flex; gap: 0; margin-bottom: 32px; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; width: fit-content; }
-.hstat { padding: 14px 20px; background: var(--surface); border-right: 1px solid var(--border); }
+.hstat { padding: 14px 20px; background: var(--surface); border-right: 1px solid var(--border); text-align: center; display: flex; flex-direction: column; align-items: center; }
 .hstat:last-child { border-right: none; }
-.hstat-val { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--crimson); line-height: 1; }
-.hstat-lbl { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 3px; }
+.hstat-val { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--crimson); line-height: 1; }
+.hstat-lbl { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px; }
+.hstat-icon { width: 20px; height: 20px; color: var(--crimson); margin-bottom: 6px; }
 .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
 .emergency-btn { display: flex; align-items: center; gap: 8px; padding: 11px 20px; border: 1px solid rgba(200,16,46,0.3); border-radius: 3px; font-size: 12px; font-weight: 500; color: var(--muted); text-decoration: none; transition: all 0.2s; background: rgba(200,16,46,0.03); }
 .emergency-btn:hover { border-color: var(--crimson); color: var(--text); background: rgba(200,16,46,0.08); }
@@ -63,11 +64,11 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .ecg-path { stroke: var(--crimson); stroke-width: 2.5; fill: none; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: ecgDraw 3s linear infinite; }
 @keyframes ecgDraw { to { stroke-dashoffset: 0; } }
 .hero-doctor { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; overflow: hidden; padding-top: 3rem; }
-.hero-dr { position: relative; z-index: 2; width: 132%; max-width: none; object-fit: contain; object-position: top center; filter: drop-shadow(0 0 40px rgba(200,16,46,0.15)); margin: 0 -16%; }
-.hero-info-card { position: relative; z-index: 3; background: linear-gradient(135deg, rgba(10,22,40,0.97) 0%, rgba(15,28,48,0.95) 100%); border: 1px solid var(--border); border-top: 2px solid var(--crimson); backdrop-filter: blur(14px); border-radius: 4px; padding: 24px 28px; margin-top: 14px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 15px rgba(200,16,46,0.06); text-align: center; }
-.hic-name { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 10px; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
-.hic-deg { font-size: 13px; color: var(--muted); line-height: 1.8; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border2); }
-.hic-role { font-size: 12px; color: var(--crimson); font-weight: 600; line-height: 1.7; }
+.hero-dr { position: relative; z-index: 2; width: 132%; max-width: none; object-fit: contain; object-position: top center; filter: drop-shadow(0 0 40px rgba(200,16,46,0.15)); margin: 0 -16%; border: 2px solid rgba(200,16,46,0.3); border-radius: 6px; padding: 4px; }
+.hero-info-card { position: relative; z-index: 3; background: linear-gradient(135deg, rgba(10,22,40,0.97) 0%, rgba(15,28,48,0.95) 100%); border: 1px solid rgba(200,16,46,0.2); backdrop-filter: blur(14px); border-radius: 6px; padding: 24px 28px; margin-top: -2px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.5); text-align: center; }
+.hic-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 10px; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
+.hic-deg { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border2); }
+.hic-role { font-size: 13px; color: var(--crimson); font-weight: 600; line-height: 1.7; }
 .ring { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 500px; height: 500px; border-radius: 50%; border: 1px dashed rgba(200,16,46,0.15); animation: rotateSlow 25s linear infinite; z-index: 0; }
 .ring2 { width: 580px; height: 580px; border-color: rgba(200,16,46,0.08); animation: rotateSlow 35s linear infinite reverse; }
 @keyframes rotateSlow { to { transform: translate(-50%,-50%) rotate(360deg); } }
@@ -214,6 +215,18 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 </head>
 <body>
 
+<!-- PAGE LOADER WITH ECG LINE -->
+<div id="pageLoader" style="position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.5s;">
+  <svg width="200" height="60" viewBox="0 0 200 60" style="overflow:visible;">
+    <path d="M0,30 L40,30 L50,30 L55,10 L60,50 L65,10 L70,50 L75,30 L85,30 L120,30 L125,30 L130,10 L135,50 L140,10 L145,50 L150,30 L160,30 L200,30" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray:500;stroke-dashoffset:500;animation:loaderEcg 1.5s ease-in-out infinite;"/>
+  </svg>
+  <div style="font-family:'Playfair Display',serif;font-size:14px;color:var(--text);margin-top:16px;letter-spacing:0.05em;">Dr. Sanjay Gandhi</div>
+</div>
+<style>
+@keyframes loaderEcg { 0%{stroke-dashoffset:500} 50%{stroke-dashoffset:0} 100%{stroke-dashoffset:-500} }
+</style>
+<script>window.addEventListener('load',function(){var l=document.getElementById('pageLoader');l.style.opacity='0';setTimeout(function(){l.style.display='none'},500)});</script>
+
 <!-- NAV -->
 <nav>
   <a class="logo" href="index.html">
@@ -222,7 +235,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
     </div>
     <div>
       <div class="logo-name">DR. SANJAY GANDHI</div>
-      <div class="logo-role">Cardiac & Cardiothoracic Surgeon</div>
+      <div class="logo-role">Cardiothoracic & Vascular Surgeon</div>
     </div>
   </a>
   <ul class="nav-links">
@@ -259,14 +272,14 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   <div class="blood-cells" id="bloodCells"></div>
 
   <div class="hero-left">
-    <div class="eyebrow"><span class="eyebrow-line"></span>World Class Cardiac Care</div>
+    <div class="eyebrow"><span class="eyebrow-line"></span>World-Class Cardiac Care</div>
     <h1 class="hero-h1">Restoring Life,<br>One <span class="accent">Heartbeat</span><br>at a Time</h1>
-    <p class="hero-sub">Advanced Cardiac & Thoracic Surgical Care with Compassion, Innovation & Unmatched Expertise.</p>
+    <p class="hero-sub">Advanced Cardiothoracic & Vascular Surgical Care — Compassion, Precision & Evidence-Based Excellence.</p>
     <div class="hero-stats-row">
-      <div class="hstat"><div class="hstat-val">13,000+</div><div class="hstat-lbl">Surgeries Performed</div></div>
-      <div class="hstat"><div class="hstat-val">20+</div><div class="hstat-lbl">Years of Experience</div></div>
-      <div class="hstat"><div class="hstat-val">98%</div><div class="hstat-lbl">Patient Satisfaction</div></div>
-      <div class="hstat"><div class="hstat-val">1000s</div><div class="hstat-lbl">Lives Touched</div></div>
+      <div class="hstat"><svg class="hstat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><div class="hstat-val">13,000+</div><div class="hstat-lbl">Surgeries Performed</div></div>
+      <div class="hstat"><svg class="hstat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="hstat-val">20+</div><div class="hstat-lbl">Years of Experience</div></div>
+      <div class="hstat"><svg class="hstat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><div class="hstat-val">98%</div><div class="hstat-lbl">Success Rate</div></div>
+      <div class="hstat"><svg class="hstat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M8 12h8M12 8v8" stroke-opacity="0.5"/></svg><div class="hstat-val">50+</div><div class="hstat-lbl">ECMO Lives Saved</div></div>
     </div>
     <div class="hero-actions">
       <a href="contact.html" class="btn btn-red btn-lg">
@@ -295,6 +308,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
     <div class="hero-info-card">
       <div class="hic-name">Dr. Sanjay Gandhi</div>
       <div class="hic-deg">MBBS | MS (AIIMS, New Delhi)<br>M.Ch (SCTIMST, Trivandrum)</div>
+      <div style="margin:10px auto;color:var(--crimson);"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
       <div class="hic-role">Head, Department of<br>Cardiothoracic & Vascular Surgery<br>Geetanjali Medical College & Hospital, Udaipur</div>
     </div>
   </div>
@@ -328,19 +342,19 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 <section class="section section-dark" style="position:relative;overflow:hidden;">
   <img src="media/heart-graphics/heart-multiple.png" alt="" style="position:absolute;top:30px;left:3%;width:200px;opacity:0.04;pointer-events:none;" aria-hidden="true"/>
   <div style="text-align:center" class="reveal">
-    <div class="sec-eyebrow" style="justify-content:center"><span class="sec-eyebrow-line"></span>Our Expertise<span class="sec-eyebrow-line"></span></div>
-    <h2 class="sec-h2" style="margin:0 auto">Specialised Cardiac Procedures</h2>
+    <div class="sec-eyebrow" style="justify-content:center"><span class="sec-eyebrow-line"></span>Areas of Expertise<span class="sec-eyebrow-line"></span></div>
+    <h2 class="sec-h2" style="margin:0 auto">Specialised Cardiothoracic & Vascular Procedures</h2>
   </div>
   <div class="expertise-grid">
-    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M8 12h8M12 8v8" stroke-opacity="0.5"/></svg></div><div class="exp-name">CABG Surgery</div><div class="exp-desc">Coronary Artery Bypass Grafting — restoring blood flow to the heart using arterial/venous grafts. 5000+ cases performed.</div></div>
+    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M8 12h8M12 8v8" stroke-opacity="0.5"/></svg></div><div class="exp-name">CABG Surgery</div><div class="exp-desc">Coronary Artery Bypass Grafting — revascularisation using arterial and venous conduits to restore myocardial perfusion. Over 5,000 cases performed.</div></div>
     <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 8v-2M12 18v-2M8 12H6M18 12h-2"/></svg></div><div class="exp-name">Valve Repair & Replacement</div><div class="exp-desc">Mitral, aortic, tricuspid valve repair and mechanical/bioprosthetic replacement for rheumatic & degenerative disease.</div></div>
-    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M9 11l2 2 4-4" stroke-opacity="0.7"/></svg></div><div class="exp-name">Congenital Heart Surgery</div><div class="exp-desc">Correcting birth defects — ASD, VSD, TOF, TGA. World record: 470g baby survived open-heart surgery at 15 days old.</div></div>
-    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M7 12c0 2.8 2.2 5 5 5s5-2.2 5-5"/><path d="M12 4v3M12 17v3"/></svg></div><div class="exp-name">Aortic Surgery</div><div class="exp-desc">Ascending aorta replacement, Bentall procedure, aortic dissection repair. First redo aortic aneurysm surgery in Rajasthan.</div></div>
+    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M9 11l2 2 4-4" stroke-opacity="0.7"/></svg></div><div class="exp-name">Congenital Heart Surgery</div><div class="exp-desc">Surgical correction of congenital anomalies — ASD, VSD, TOF, TGA & complex lesions. World record: successful cardiac surgery on a 470g neonate at 15 days of age.</div></div>
+    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M7 12c0 2.8 2.2 5 5 5s5-2.2 5-5"/><path d="M12 4v3M12 17v3"/></svg></div><div class="exp-name">Aortic Surgery</div><div class="exp-desc">Ascending aorta replacement, Bentall procedure & acute aortic dissection repair. Performed the first redo aortic aneurysm surgery in Rajasthan.</div></div>
     <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M8 14h8" stroke-dasharray="2 2"/></svg></div><div class="exp-name">Heart Failure Surgery</div><div class="exp-desc">Advanced surgical options for end-stage heart failure including ventricular remodeling and mechanical circulatory support.</div></div>
-    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><rect x="3" y="8" width="18" height="8" rx="4"/><circle cx="8" cy="12" r="2" fill="rgba(200,16,46,0.2)"/><circle cx="16" cy="12" r="2" fill="rgba(200,16,46,0.2)"/><path d="M10 12h4"/><path d="M12 4v4M12 16v4"/></svg></div><div class="exp-name">ECMO Support</div><div class="exp-desc">Extracorporeal Membrane Oxygenation — 50+ lives saved. Pioneering ECMO program in Southern Rajasthan for cardiac & respiratory failure.</div></div>
+    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><rect x="3" y="8" width="18" height="8" rx="4"/><circle cx="8" cy="12" r="2" fill="rgba(200,16,46,0.2)"/><circle cx="16" cy="12" r="2" fill="rgba(200,16,46,0.2)"/><path d="M10 12h4"/><path d="M12 4v4M12 16v4"/></svg></div><div class="exp-name">ECMO Support</div><div class="exp-desc">Extracorporeal Membrane Oxygenation — 50+ patients successfully treated. Pioneering ECMO programme in Southern Rajasthan for cardiac & respiratory failure.</div></div>
     <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M15 10v6l-3-2-3 2v-6" stroke-opacity="0.6"/></svg></div><div class="exp-name">LVAD Implantation</div><div class="exp-desc">Left Ventricular Assist Device — mechanical pump supporting weakened hearts as bridge-to-transplant or destination therapy.</div></div>
-    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M8 12h2l1-3 2 6 1-3h2" stroke-opacity="0.7"/></svg></div><div class="exp-name">Heart Transplant</div><div class="exp-desc">Complete heart replacement surgery for end-stage cardiac disease — the ultimate life-saving cardiac procedure.</div></div>
-    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M5 12h14"/><path d="M12 5v14"/><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6" stroke-opacity="0.3"/></svg></div><div class="exp-name">TAVR (Minimally Invasive)</div><div class="exp-desc">Transcatheter Aortic Valve Replacement — valve implantation without opening the chest. Successfully performed on 72yr patient in 2020.</div></div>
+    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M8 12h2l1-3 2 6 1-3h2" stroke-opacity="0.7"/></svg></div><div class="exp-name">Heart Transplant</div><div class="exp-desc">Orthotopic heart transplantation for end-stage cardiac failure — a definitive surgical solution when all other options are exhausted.</div></div>
+    <div class="exp-card"><div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M5 12h14"/><path d="M12 5v14"/><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6" stroke-opacity="0.3"/></svg></div><div class="exp-name">TAVR (Minimally Invasive)</div><div class="exp-desc">Transcatheter Aortic Valve Replacement — percutaneous valve implantation without sternotomy. Successfully performed on a 72-year-old high-risk patient in 2020.</div></div>
   </div>
 </section>
 
@@ -352,7 +366,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
     <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="ms-val">15+</div><div class="ms-lbl">Years as Dept. Head</div></div>
     <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4"/><path d="M3 9h18M3 15h18"/></svg></div><div class="ms-val">Pioneer</div><div class="ms-lbl">Advanced Cardiac Care</div></div>
     <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="ms-val">World</div><div class="ms-lbl">Record Holder · 470g Baby</div></div>
-    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h5"/></svg></div><div class="ms-val">AIIMS &amp; SCTIMST</div><div class="ms-lbl">Premium Training</div></div>
+    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h5"/></svg></div><div class="ms-val">AIIMS &amp; SCTIMST</div><div class="ms-lbl">Fellowship Training</div></div>
   </div>
 </div>
 
@@ -364,21 +378,21 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
       <div class="a3c-label">About</div>
       <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" style="width:100px;height:100px;border-radius:50%;object-fit:cover;object-position:top;border:3px solid var(--crimson);margin-bottom:20px;display:block;box-shadow:0 0 20px rgba(200,16,46,0.2)"/>
       <h4>Dr. Sanjay Gandhi</h4>
-      <p>A leader in Cardiothoracic & Vascular Surgery with over two decades of experience. Trained at AIIMS New Delhi and SCTIMST Trivandrum, Dr. Gandhi is currently the Head of the Department of CTVS at Geetanjali Medical College & Hospital, Udaipur.</p>
+      <p>A distinguished Cardiothoracic & Vascular Surgeon with over two decades of clinical and surgical experience. Trained at AIIMS New Delhi and SCTIMST Trivandrum, Dr. Gandhi is currently the Head of the Department of CTVS at Geetanjali Medical College & Hospital, Udaipur.</p>
       <p style="margin-top:12px">He has performed more than 13,000 complex cardiac surgeries with a focus on patient safety, innovation, and long-term outcomes.</p>
-      <a href="about.html" class="btn btn-ghost" style="margin-top:24px;font-size:12px;padding:10px 22px;">Know More →</a>
+      <a href="about.html" class="btn btn-ghost" style="margin-top:24px;font-size:12px;padding:10px 22px;">Learn More →</a>
     </div>
     <div class="a3c">
       <div class="a3c-label">Achievements</div>
       <ul>
         <li>13,000+ Cardiac Surgeries Performed</li>
-        <li>Expert in Complex Bypass & Valve Surgeries</li>
-        <li>Specialist in Congenital Heart Disease</li>
+        <li>Complex Bypass & Valve Surgery Expertise</li>
+        <li>Paediatric & Congenital Heart Surgery</li>
         <li>ECMO, LVAD & Heart Transplant Expert</li>
-        <li>National & International Publications</li>
-        <li>Invited Speaker at Various Conferences</li>
+        <li>Peer-Reviewed National & International Publications</li>
+        <li>Invited Faculty at National & International Conferences</li>
         <li>World Record — 470g Baby Heart Surgery</li>
-        <li>Pioneer in Minimally Invasive Cardiac Surgery</li>
+        <li>Minimally Invasive & Transcatheter Procedures</li>
       </ul>
       <div style="margin-top:28px;display:flex;justify-content:center">
         <img src="media/heart-graphics/heart.png" alt="Heart" style="width:100px;height:auto;filter:drop-shadow(0 0 15px rgba(200,16,46,0.7));animation:heartbeat 1.1s ease-in-out infinite;"/>
@@ -404,8 +418,8 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 <!-- VIDEO SECTION -->
 <section class="section section-mid" style="position:relative;overflow:hidden;">
   <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>Watch Dr. Gandhi</div>
-  <h2 class="sec-h2">See the Surgeon in Action</h2>
-  <p class="sec-sub" style="margin-bottom:36px;">Learn about Dr. Sanjay Gandhi's cardiac surgery journey and the advanced surgical techniques he employs.</p>
+  <h2 class="sec-h2">Surgical Excellence in Practice</h2>
+  <p class="sec-sub" style="margin-bottom:36px;">Explore Dr. Sanjay Gandhi's approach to complex cardiac surgery and the advanced techniques employed at our centre.</p>
 
   <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;">
     <!-- Main/Featured Video -->
@@ -577,7 +591,7 @@ function closeVideo() {
         <div class="logo-heart"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
         <div>
           <div class="logo-name">DR. SANJAY GANDHI</div>
-          <div class="logo-role">Cardiac & Cardiothoracic Surgeon</div>
+          <div class="logo-role">Cardiothoracic & Vascular Surgeon</div>
         </div>
       </a>
       <p>One of India's most trusted cardiac surgeons. 20+ years of excellence, 13,000+ surgeries, committed to saving lives with compassion and world-class expertise.</p>
@@ -620,7 +634,7 @@ function closeVideo() {
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Dr. Sanjay Gandhi — Cardiac & Cardiothoracic Surgeon, Udaipur, Rajasthan. All rights reserved.</p>
+    <p>© 2026 Dr. Sanjay Gandhi — Cardiothoracic & Vascular Surgeon, Udaipur, Rajasthan. All rights reserved.</p>
     <p>MBBS · MS AIIMS New Delhi · M.Ch SCTIMST Trivandrum</p>
   </div>
 </footer>
