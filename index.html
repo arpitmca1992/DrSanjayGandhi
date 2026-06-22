@@ -483,20 +483,50 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 <section class="section section-mid" id="videos" style="position:relative;overflow:hidden;">
   <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>Watch Dr. Gandhi</div>
   <h2 class="sec-h2">Surgical Excellence in Practice</h2>
-  <p class="sec-sub" style="margin-bottom:36px;">Explore Dr. Sanjay Gandhi's approach to complex cardiac surgery and the advanced techniques employed at our centre.</p>
+  <p class="sec-sub" style="margin-bottom:36px;">All the cases are unique and complicated but still some cases are special which demands more learning and extension to what we learned till now.</p>
 
-  <!-- Video Gallery Slider -->
-  <div style="position:relative;">
-    <div id="vidSlider" style="display:flex;gap:16px;overflow-x:auto;scroll-behavior:smooth;padding-bottom:12px;scrollbar-width:none;">
-      <div class="vid-card" onclick="playVideo('umQC0NuxoSk')"><img src="https://img.youtube.com/vi/umQC0NuxoSk/hqdefault.jpg" alt="Cardiac Surgery at GMCH"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">Cardiac Surgery at Geetanjali Hospital</div></div>
-      <div class="vid-card" onclick="playVideo('8oY7e31EeqQ')"><img src="https://img.youtube.com/vi/8oY7e31EeqQ/hqdefault.jpg" alt="Patient Testimonial"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">Patient Testimonial — Heart Surgery</div></div>
-      <div class="vid-card" onclick="playVideo('Ktt5yl_7-pU')"><img src="https://img.youtube.com/vi/Ktt5yl_7-pU/hqdefault.jpg" alt="Patient Experience"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">Patient Experience — Recovery Story</div></div>
-      <div class="vid-card" onclick="playVideo('XGegNKmcXXA')"><img src="https://img.youtube.com/vi/XGegNKmcXXA/hqdefault.jpg" alt="470g Baby Surgery"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">World Record: 470g Baby Heart Surgery</div></div>
-      <div class="vid-card" onclick="playVideo('2O8Evr9EUjA')"><img src="https://img.youtube.com/vi/2O8Evr9EUjA/hqdefault.jpg" alt="Newborn Heart Surgery"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">A Case of Newborn Heart Surgery</div></div>
+  <!-- Video Grid -->
+  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;">
+    <div style="position:relative;cursor:pointer;grid-row:span 2;" onclick="playVideo('umQC0NuxoSk')">
+      <div style="position:relative;border-radius:8px;overflow:hidden;border:2px solid var(--border);box-shadow:0 10px 40px rgba(0,0,0,0.4);height:100%;">
+        <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.65);"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--crimson);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(200,16,46,0.6);"><svg width="26" height="26" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
+          <div style="font-size:10px;color:var(--crimson);font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:6px;">Featured Video</div>
+          <div style="font-size:14px;color:white;font-weight:600;line-height:1.4;">Cardiac Surgery at Geetanjali Hospital</div>
+        </div>
+      </div>
     </div>
-    <!-- Nav Arrows -->
-    <button onclick="document.getElementById('vidSlider').scrollBy({left:-320,behavior:'smooth'})" style="position:absolute;left:-16px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--crimson);border:none;color:#fff;font-size:18px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.4);">‹</button>
-    <button onclick="document.getElementById('vidSlider').scrollBy({left:320,behavior:'smooth'})" style="position:absolute;right:-16px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--crimson);border:none;color:#fff;font-size:18px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.4);">›</button>
+    <div style="position:relative;cursor:pointer;" onclick="playVideo('8oY7e31EeqQ')">
+      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
+        <img src="https://img.youtube.com/vi/8oY7e31EeqQ/hqdefault.jpg" alt="Patient Testimonial" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.7);"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));"><div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">Patient Testimonial — Heart Surgery</div></div>
+      </div>
+    </div>
+    <div style="position:relative;cursor:pointer;" onclick="playVideo('Ktt5yl_7-pU')">
+      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
+        <img src="https://img.youtube.com/vi/Ktt5yl_7-pU/hqdefault.jpg" alt="Patient Experience" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.7);"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));"><div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">Patient Experience — Cardiac Surgery</div></div>
+      </div>
+    </div>
+    <div style="position:relative;cursor:pointer;" onclick="playVideo('XGegNKmcXXA')">
+      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
+        <img src="https://img.youtube.com/vi/XGegNKmcXXA/hqdefault.jpg" alt="Khas Mulaqat" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.7);"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));"><div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">Khas Mulaqat — Dr. Sanjay Gandhi</div></div>
+      </div>
+    </div>
+    <div style="position:relative;cursor:pointer;" onclick="playVideo('2O8Evr9EUjA')">
+      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
+        <img src="https://img.youtube.com/vi/2O8Evr9EUjA/hqdefault.jpg" alt="Newborn Heart Surgery" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.7);"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));"><div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">A Case of Newborn Heart Surgery</div></div>
+      </div>
+    </div>
   </div>
 
   <div style="text-align:center;margin-top:28px;">
