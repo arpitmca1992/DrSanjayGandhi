@@ -264,7 +264,8 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="expertise.html">Expertise</a></li>
+    <li><a href="index.html#expertise">Expertise</a></li>
+    <li><a href="index.html#videos">Videos</a></li>
     <li><a href="news.html">News</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -283,7 +284,8 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   <button class="mob-close" onclick="this.parentElement.classList.remove('open')" aria-label="Close menu">✕</button>
   <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
   <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
-  <a href="expertise.html" onclick="this.parentElement.classList.remove('open')">Expertise</a>
+  <a href="index.html#expertise" onclick="this.parentElement.classList.remove('open')">Expertise</a>
+  <a href="index.html#videos" onclick="this.parentElement.classList.remove('open')">Videos</a>
   <a href="news.html" onclick="this.parentElement.classList.remove('open')">News</a>
   <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
   <a href="tel:+91-9784586176" class="btn btn-red" style="margin-top:10px">Emergency 24×7</a>
@@ -478,7 +480,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 </section>
 
 <!-- VIDEO SECTION -->
-<section class="section section-mid" style="position:relative;overflow:hidden;">
+<section class="section section-mid" id="videos" style="position:relative;overflow:hidden;">
   <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>Watch Dr. Gandhi</div>
   <h2 class="sec-h2">Surgical Excellence in Practice</h2>
   <p class="sec-sub" style="margin-bottom:36px;">Explore Dr. Sanjay Gandhi's approach to complex cardiac surgery and the advanced techniques employed at our centre.</p>
@@ -490,7 +492,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
       <div class="vid-card" onclick="playVideo('8oY7e31EeqQ')"><img src="https://img.youtube.com/vi/8oY7e31EeqQ/hqdefault.jpg" alt="Patient Testimonial"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">Patient Testimonial — Heart Surgery</div></div>
       <div class="vid-card" onclick="playVideo('Ktt5yl_7-pU')"><img src="https://img.youtube.com/vi/Ktt5yl_7-pU/hqdefault.jpg" alt="Patient Experience"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">Patient Experience — Recovery Story</div></div>
       <div class="vid-card" onclick="playVideo('XGegNKmcXXA')"><img src="https://img.youtube.com/vi/XGegNKmcXXA/hqdefault.jpg" alt="470g Baby Surgery"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">World Record: 470g Baby Heart Surgery</div></div>
-      <div class="vid-card" onclick="playVideo('nO_DIwuGBnA')"><img src="https://img.youtube.com/vi/nO_DIwuGBnA/hqdefault.jpg" alt="ECMO Treatment"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">ECMO Life Support — Patient Recovery</div></div>
+      <div class="vid-card" onclick="playVideo('2O8Evr9EUjA')"><img src="https://img.youtube.com/vi/2O8Evr9EUjA/hqdefault.jpg" alt="Newborn Heart Surgery"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">A Case of Newborn Heart Surgery</div></div>
     </div>
     <!-- Nav Arrows -->
     <button onclick="document.getElementById('vidSlider').scrollBy({left:-320,behavior:'smooth'})" style="position:absolute;left:-16px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--crimson);border:none;color:#fff;font-size:18px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.4);">‹</button>
@@ -498,26 +500,12 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   </div>
 
   <div style="text-align:center;margin-top:28px;">
-    <a href="https://www.youtube.com/channel/UCWSw6M3BHKL52JbRUq6XSgA" target="_blank" class="btn btn-ghost" style="font-size:12px;">View All Videos on YouTube →</a>
+    <a href="videos.html" class="btn btn-ghost" style="font-size:12px;">View All Videos →</a>
   </div>
 </section>
 
-<!-- VIDEO POPUP -->
-<div id="videoPopup" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;" onclick="closeVideo();">
-  <div style="position:relative;width:85%;max-width:900px;aspect-ratio:16/9;" onclick="event.stopPropagation();">
-    <iframe id="ytFrame" src="" style="width:100%;height:100%;border:none;border-radius:8px;box-shadow:0 0 60px rgba(200,16,46,0.2);" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-    <button onclick="closeVideo();" style="position:absolute;top:-44px;right:0;background:none;border:none;color:white;font-size:28px;cursor:pointer;">✕</button>
-    <button onclick="navVideo(-1)" style="position:absolute;left:-50px;top:50%;transform:translateY(-50%);background:var(--crimson);border:none;color:#fff;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;">‹</button>
-    <button onclick="navVideo(1)" style="position:absolute;right:-50px;top:50%;transform:translateY(-50%);background:var(--crimson);border:none;color:#fff;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;">›</button>
-  </div>
-</div>
-
 <script>
-var videos=['umQC0NuxoSk','8oY7e31EeqQ','Ktt5yl_7-pU','XGegNKmcXXA','nO_DIwuGBnA'];
-var currentVid=0;
-function playVideo(id){currentVid=videos.indexOf(id);if(currentVid<0)currentVid=0;document.getElementById('ytFrame').src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';document.getElementById('videoPopup').style.display='flex';}
-function closeVideo(){document.getElementById('videoPopup').style.display='none';document.getElementById('ytFrame').src='';}
-function navVideo(dir){currentVid=(currentVid+dir+videos.length)%videos.length;document.getElementById('ytFrame').src='https://www.youtube-nocookie.com/embed/'+videos[currentVid]+'?autoplay=1&rel=0';}
+function playVideo(id){ window.open('https://www.youtube.com/watch?v='+id,'_blank'); }
 </script>
 
 <!-- HIGHLIGHTS - PAGE PREVIEWS -->
@@ -550,14 +538,14 @@ function navVideo(dir){currentVid=(currentVid+dir+videos.length)%videos.length;d
     </a>
 
     <!-- Videos -->
-    <a href="news.html#videos-section" style="display:block;border:1px solid var(--border2);border-radius:4px;overflow:hidden;background:var(--surface);text-decoration:none;transition:border-color 0.2s,transform 0.2s" onmouseover="this.style.borderColor='rgba(200,16,46,0.4)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
+    <a href="videos.html" style="display:block;border:1px solid var(--border2);border-radius:4px;overflow:hidden;background:var(--surface);text-decoration:none;transition:border-color 0.2s,transform 0.2s" onmouseover="this.style.borderColor='rgba(200,16,46,0.4)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
       <div style="height:160px;background:linear-gradient(135deg,var(--bg3),var(--surface2));display:flex;align-items:center;justify-content:center">
         <div style="width:56px;height:56px;border-radius:50%;background:rgba(200,16,46,0.15);border:2px solid var(--crimson);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--crimson)"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
       <div style="padding:16px">
         <div style="font-size:10px;font-weight:600;color:var(--crimson);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px">Videos</div>
-        <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px">33+ Surgery & Testimonial Videos</div>
-        <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px">Live surgery recordings, patient testimonials, educational content on YouTube & Facebook</p>
+        <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px">Patient Testimonials & Surgical Procedures</div>
+        <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px">Live surgery recordings, patient testimonials, and educational content</p>
         <span style="font-size:11px;font-weight:600;color:var(--crimson)">Watch Videos →</span>
       </div>
     </a>
