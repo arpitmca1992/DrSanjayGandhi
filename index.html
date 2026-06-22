@@ -60,6 +60,11 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 @keyframes specPulse { 0%,100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.12); opacity: 1; } }
 @keyframes specBounce { 0% { transform: scale(1); } 40% { transform: scale(0.8); } 70% { transform: scale(1.2); } 100% { transform: scale(1); } }
 @keyframes scrollHighlights { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
+.vid-card { min-width:280px;border-radius:8px;overflow:hidden;border:1px solid var(--border2);cursor:pointer;position:relative;flex-shrink:0;transition:transform 0.3s; }
+.vid-card:hover { transform:translateY(-4px);box-shadow:0 8px 30px rgba(200,16,46,0.15); }
+.vid-card img { width:100%;height:160px;object-fit:cover;display:block;filter:brightness(0.7); }
+.vid-card .vid-play { position:absolute;top:50%;left:50%;transform:translate(-50%,-70%);width:48px;height:48px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(200,16,46,0.4); }
+.vid-card .vid-title { padding:12px 14px;font-size:12px;font-weight:600;color:var(--text);background:var(--surface); }
 .tl-item { display:flex;gap:14px;align-items:flex-start;position:relative; }
 .tl-dot { width:12px;height:12px;border-radius:50%;border:2px solid var(--crimson);background:var(--bg);flex-shrink:0;margin-top:4px;z-index:1; }
 .tl-line { position:absolute;left:5px;top:16px;bottom:-14px;width:2px;background:rgba(200,16,46,0.2); }
@@ -73,7 +78,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 @keyframes orbPulse { 0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.5} 50%{transform:translate(-50%,-50%) scale(1.08);opacity:0.8} }
 .hero-heart-svg { position: relative; height: 541px; z-index: 1; animation: heartbeat 1.1s ease-in-out infinite; filter: drop-shadow(0 0 50px rgba(200,16,46,0.8)) drop-shadow(0 0 100px rgba(200,16,46,0.4)); opacity: 0.95; object-fit: contain; }
 @keyframes heartbeat { 0%{transform:scale(1)} 14%{transform:scale(1.05)} 28%{transform:scale(1)} 42%{transform:scale(1.03)} 70%{transform:scale(1)} 100%{transform:scale(1)} }
-.ecg-line { position: absolute; bottom: 100px; left: -40%; right: -40%; height: 48px; z-index: 0; opacity: 0.5; }
+.ecg-line { position: absolute; bottom: 100px; right: -40%; height: 48px; z-index: 0; opacity: 0.5; }
 .ecg-path { stroke: var(--crimson); stroke-width: 2.5; fill: none; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: ecgDraw 3s linear infinite; }
 @keyframes ecgDraw { to { stroke-dashoffset: 0; } }
 .hero-doctor { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; overflow: hidden; padding-top: 3rem; }
@@ -478,82 +483,18 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   <h2 class="sec-h2">Surgical Excellence in Practice</h2>
   <p class="sec-sub" style="margin-bottom:36px;">Explore Dr. Sanjay Gandhi's approach to complex cardiac surgery and the advanced techniques employed at our centre.</p>
 
-  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;">
-    <!-- Main/Featured Video -->
-    <div style="position:relative;cursor:pointer;grid-row:span 2;" onclick="openVideo('umQC0NuxoSk');">
-      <div style="position:relative;border-radius:8px;overflow:hidden;border:2px solid var(--border);box-shadow:0 10px 40px rgba(0,0,0,0.4);height:100%;">
-        <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.65);"/>
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-          <div style="width:72px;height:72px;border-radius:50%;background:var(--crimson);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(200,16,46,0.6);">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
-          </div>
-        </div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
-          <div style="font-size:10px;color:var(--crimson);font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:6px;">Featured Video</div>
-          <div style="font-size:14px;color:white;font-weight:600;line-height:1.4;">Dr. Sanjay Gandhi — Cardiac Surgery at Geetanjali Hospital</div>
-        </div>
-      </div>
+  <!-- Video Gallery Slider -->
+  <div style="position:relative;">
+    <div id="vidSlider" style="display:flex;gap:16px;overflow-x:auto;scroll-behavior:smooth;padding-bottom:12px;scrollbar-width:none;">
+      <div class="vid-card" onclick="playVideo('umQC0NuxoSk')"><img src="https://img.youtube.com/vi/umQC0NuxoSk/hqdefault.jpg" alt="Cardiac Surgery at GMCH"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">Cardiac Surgery at Geetanjali Hospital</div></div>
+      <div class="vid-card" onclick="playVideo('8oY7e31EeqQ')"><img src="https://img.youtube.com/vi/8oY7e31EeqQ/hqdefault.jpg" alt="Patient Testimonial"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">Patient Testimonial — Heart Surgery</div></div>
+      <div class="vid-card" onclick="playVideo('Ktt5yl_7-pU')"><img src="https://img.youtube.com/vi/Ktt5yl_7-pU/hqdefault.jpg" alt="Patient Experience"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">Patient Experience — Recovery Story</div></div>
+      <div class="vid-card" onclick="playVideo('XGegNKmcXXA')"><img src="https://img.youtube.com/vi/XGegNKmcXXA/hqdefault.jpg" alt="470g Baby Surgery"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">World Record: 470g Baby Heart Surgery</div></div>
+      <div class="vid-card" onclick="playVideo('nO_DIwuGBnA')"><img src="https://img.youtube.com/vi/nO_DIwuGBnA/hqdefault.jpg" alt="ECMO Treatment"/><div class="vid-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vid-title">ECMO Life Support — Patient Recovery</div></div>
     </div>
-
-    <!-- Video 2 -->
-    <div style="position:relative;cursor:pointer;" onclick="openVideo('umQC0NuxoSk');">
-      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
-        <img src="media/heart-graphics/heart.png" alt="Heart Surgery Procedure" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.6);"/>
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
-          </div>
-        </div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
-          <div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">Cardiac Surgery Procedures at GMCH</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Video 3 -->
-    <div style="position:relative;cursor:pointer;" onclick="openVideo('8oY7e31EeqQ');">
-      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
-        <img src="https://img.youtube.com/vi/8oY7e31EeqQ/hqdefault.jpg" alt="Patient Testimonial" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.7);"/>
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
-          </div>
-        </div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
-          <div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">Patient Testimonial - Heart Surgery</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Video 4 -->
-    <div style="position:relative;cursor:pointer;" onclick="openVideo('Ktt5yl_7-pU');">
-      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
-        <img src="https://img.youtube.com/vi/Ktt5yl_7-pU/hqdefault.jpg" alt="Patient Experience" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.7);"/>
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
-          </div>
-        </div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
-          <div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">Patient Experience - Cardiac Surgery</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Video 5 -->
-    <div style="position:relative;cursor:pointer;" onclick="openVideo('XGegNKmcXXA');">
-      <div style="position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--border2);height:100%;">
-        <img src="media/special-cases/470g-baby-surgery-banner.png" alt="470g Baby Surgery" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.6);"/>
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-          <div style="width:44px;height:44px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg>
-          </div>
-        </div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
-          <div style="font-size:11px;color:white;font-weight:500;line-height:1.3;">World Record: 470g Baby Surgery</div>
-        </div>
-      </div>
-    </div>
+    <!-- Nav Arrows -->
+    <button onclick="document.getElementById('vidSlider').scrollBy({left:-320,behavior:'smooth'})" style="position:absolute;left:-16px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--crimson);border:none;color:#fff;font-size:18px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.4);">‹</button>
+    <button onclick="document.getElementById('vidSlider').scrollBy({left:320,behavior:'smooth'})" style="position:absolute;right:-16px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--crimson);border:none;color:#fff;font-size:18px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.4);">›</button>
   </div>
 
   <div style="text-align:center;margin-top:28px;">
@@ -562,21 +503,21 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 </section>
 
 <!-- VIDEO POPUP -->
-<div id="videoPopup" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;cursor:pointer;" onclick="closeVideo();">
-  <div style="position:relative;width:80%;max-width:900px;aspect-ratio:16/9;" onclick="event.stopPropagation();">
-    <div id="ytContainer" style="width:100%;height:100%;border-radius:8px;overflow:hidden;box-shadow:0 0 60px rgba(200,16,46,0.3);"></div>
-    <button onclick="closeVideo();" style="position:absolute;top:-40px;right:0;background:none;border:none;color:white;font-size:28px;cursor:pointer;padding:8px;">✕</button>
+<div id="videoPopup" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;" onclick="closeVideo();">
+  <div style="position:relative;width:85%;max-width:900px;aspect-ratio:16/9;" onclick="event.stopPropagation();">
+    <iframe id="ytFrame" src="" style="width:100%;height:100%;border:none;border-radius:8px;box-shadow:0 0 60px rgba(200,16,46,0.2);" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+    <button onclick="closeVideo();" style="position:absolute;top:-44px;right:0;background:none;border:none;color:white;font-size:28px;cursor:pointer;">✕</button>
+    <button onclick="navVideo(-1)" style="position:absolute;left:-50px;top:50%;transform:translateY(-50%);background:var(--crimson);border:none;color:#fff;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;">‹</button>
+    <button onclick="navVideo(1)" style="position:absolute;right:-50px;top:50%;transform:translateY(-50%);background:var(--crimson);border:none;color:#fff;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;">›</button>
   </div>
 </div>
 
 <script>
-function openVideo(videoId) {
-  window.open('https://www.youtube.com/watch?v=' + videoId, '_blank');
-}
-function closeVideo() {
-  document.getElementById('videoPopup').style.display = 'none';
-  document.getElementById('ytContainer').innerHTML = '';
-}
+var videos=['umQC0NuxoSk','8oY7e31EeqQ','Ktt5yl_7-pU','XGegNKmcXXA','nO_DIwuGBnA'];
+var currentVid=0;
+function playVideo(id){currentVid=videos.indexOf(id);if(currentVid<0)currentVid=0;document.getElementById('ytFrame').src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';document.getElementById('videoPopup').style.display='flex';}
+function closeVideo(){document.getElementById('videoPopup').style.display='none';document.getElementById('ytFrame').src='';}
+function navVideo(dir){currentVid=(currentVid+dir+videos.length)%videos.length;document.getElementById('ytFrame').src='https://www.youtube-nocookie.com/embed/'+videos[currentVid]+'?autoplay=1&rel=0';}
 </script>
 
 <!-- HIGHLIGHTS - PAGE PREVIEWS -->
