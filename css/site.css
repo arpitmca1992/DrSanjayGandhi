@@ -475,14 +475,39 @@
   overflow: hidden;
 }
 .video-modal-head {
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  padding: 14px 18px;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 10px 12px;
+  align-items: center;
+  padding: 12px 14px;
   border-bottom: 1px solid rgba(200,16,46,0.2);
 }
+.video-modal-meta { min-width: 0; text-align: center; padding: 0 4px; }
 .video-modal-title {
   font-size: 14px; font-weight: 600; color: var(--text);
-  margin: 0; line-height: 1.4;
+  margin: 0; line-height: 1.35;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+.video-modal-counter {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--crimson); margin: 3px 0 0;
+}
+.video-modal-counter[hidden], .video-modal-nav-btn[hidden] { display: none !important; }
+.video-modal-nav-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 36px; padding: 0 12px;
+  border-radius: 999px; border: 1px solid rgba(200,16,46,0.35);
+  background: rgba(200,16,46,0.1); color: var(--text);
+  font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+  flex-shrink: 0;
+}
+.video-modal-nav-btn--next { padding: 0 12px; }
+.video-modal-nav-btn:hover:not(:disabled) {
+  background: rgba(200,16,46,0.22); border-color: var(--crimson);
+}
+.video-modal-nav-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 .video-modal-close {
   width: 36px; height: 36px; flex-shrink: 0;
   border-radius: 50%; border: 1px solid rgba(200,16,46,0.35);
@@ -503,7 +528,16 @@ body.video-modal-open { overflow: hidden; }
 @media (max-width: 768px) {
   .video-modal { padding: 12px; align-items: flex-end; }
   .video-modal-dialog { border-radius: 12px 12px 0 0; }
-  .video-modal-title { font-size: 13px; }
+  .video-modal-head { padding: 10px 12px; gap: 8px; }
+  .video-modal-title {
+    font-size: 12px; white-space: normal;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .video-modal-nav-btn { min-height: 40px; min-width: 40px; padding: 0 10px; }
+}
+@media (max-width: 420px) {
+  .video-modal-nav-btn span { display: none; }
+  .video-modal-nav-btn { width: 40px; padding: 0; }
 }
 
 /* ── Highlight cards ── */
