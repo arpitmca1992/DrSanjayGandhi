@@ -1,9 +1,28 @@
 (function () {
   var playlist = [];
   var currentIndex = -1;
+  var scrollLockY = 0;
 
   var prevIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>';
   var nextIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>';
+
+  function lockPageScroll() {
+    scrollLockY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + scrollLockY + 'px';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+  }
+
+  function unlockPageScroll() {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollLockY);
+  }
 
   function buildPlaylistFromPage() {
     var items = [];
@@ -106,6 +125,7 @@
 
   function openModal() {
     var modal = document.getElementById('videoModal');
+    lockPageScroll();
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('video-modal-open');
@@ -144,6 +164,7 @@
     modal.hidden = true;
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('video-modal-open');
+    unlockPageScroll();
     playlist = [];
     currentIndex = -1;
   };

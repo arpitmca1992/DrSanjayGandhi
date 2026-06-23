@@ -29,26 +29,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,0.9
 .mob-close{position:absolute;top:20px;right:20px;font-size:28px;color:var(--text);background:none;border:none;cursor:pointer}
 .section{padding:88px 7%}
 .section-dark{background:var(--bg2)}
-.page-header{position:relative;overflow:hidden;padding-top:140px}
+.page-header{position:relative;overflow:hidden}
 .sec-eyebrow{display:flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--crimson);margin-bottom:14px}
 .sec-eyebrow-line{width:22px;height:1px;background:var(--crimson)}
 .sec-h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);font-weight:700;line-height:1.14;margin-bottom:14px}
 .sec-sub{color:var(--muted);font-size:14px;line-height:1.8;max-width:560px;margin-bottom:20px}
 .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--crimson);font-size:12px;font-weight:600;letter-spacing:0.06em;text-decoration:none;text-transform:uppercase;margin-top:8px}
 .back-link:hover{opacity:.85}
-.vid-section{margin-top:48px}
-.vid-section-title{font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,26px);font-weight:700;margin-bottom:8px}
-.vid-section-sub{color:var(--muted);font-size:13px;margin-bottom:24px}
-.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
-.vid-item{border-radius:10px;overflow:hidden;border:1px solid var(--border2);cursor:pointer;transition:transform .3s,box-shadow .3s;background:var(--surface)}
-.vid-item:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(200,16,46,0.15)}
-.vid-item img{width:100%;height:180px;object-fit:cover;display:block}
-.vid-item .vi-info{padding:14px 16px}
-.vid-item .vi-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.45}
-.vid-item .vi-thumb{position:relative}
-.vid-item .vi-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(200,16,46,0.9);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(200,16,46,0.4)}
-.vid-placeholder{height:120px;background:linear-gradient(135deg,#1a2a4e,#0d1b30);display:flex;align-items:center;justify-content:center}
-@media(max-width:1024px){.vid-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
   .nav-links{display:none}
   .nav-cta .btn-ghost,.nav-cta .btn-red{display:none}
@@ -59,15 +46,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,0.9
   .page-header .sec-h2{font-size:clamp(24px,6.5vw,30px);margin-bottom:12px}
   .page-header .sec-sub{margin-left:auto;margin-right:auto;font-size:14px;line-height:1.7;max-width:340px}
   .page-header>img[aria-hidden="true"]{width:130px!important;top:auto!important;bottom:-10px!important;left:50%!important;right:auto!important;transform:translateX(-50%);opacity:.05!important}
-  .vid-grid{grid-template-columns:1fr;gap:14px}
-  .vid-section{margin-top:36px}
   nav{height:56px;padding:0 4%}
 }
 @media(max-width:480px){
   .section{padding:40px 4%}
   .page-header{padding-top:76px!important;padding-bottom:24px!important}
   .logo-name{font-size:13px}
-  .vid-item img{height:160px}
 }
 </style>
 </head>
@@ -79,7 +63,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,0.9
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#expertise">Expertise</a></li>
     <li><a href="videos.html" style="color:var(--text)">Videos</a></li>
     <li><a href="news.html">News</a></li>
@@ -88,21 +72,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,0.9
   <div class="nav-cta">
     <a href="contact.html" class="btn btn-ghost">Appointment</a>
     <a href="tel:+91-9784586176" class="btn btn-red">Emergency 24×7</a>
-    <button class="mob-toggle" onclick="document.getElementById('mobMenu').classList.add('open')" aria-label="Open menu">☰</button>
+    <button class="mob-toggle" onclick="document.getElementById('mobMenu').classList.add('open')" aria-label="Open menu"><svg class="icon icon--lg" aria-hidden="true"><use href="assets/icons.svg#icon-menu"/></svg></button>
   </div>
 </nav>
 <div class="mob-menu" id="mobMenu">
-  <button class="mob-close" onclick="this.parentElement.classList.remove('open')" aria-label="Close menu">✕</button>
+  <button class="mob-close" onclick="this.parentElement.classList.remove('open')" aria-label="Close menu"><svg class="icon icon--lg" aria-hidden="true"><use href="assets/icons.svg#icon-close"/></svg></button>
   <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-  <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
+  <a href="index.html#about" onclick="this.parentElement.classList.remove('open')">About</a>
   <a href="index.html#expertise" onclick="this.parentElement.classList.remove('open')">Expertise</a>
   <a href="videos.html" onclick="this.parentElement.classList.remove('open')">Videos</a>
   <a href="news.html" onclick="this.parentElement.classList.remove('open')">News</a>
   <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
   <a href="tel:+91-9784586176" class="btn-red" style="margin-top:10px;padding:12px 24px;background:var(--crimson);color:white;text-decoration:none;border-radius:6px;">Emergency 24×7</a>
 </div>
-<section class="section page-header section-wrap">
-  <img src="media/heart-graphics/heart.png" alt="" class="page-header-deco" aria-hidden="true"/>
+<section class="section section-mid page-header page-header--inner section-wrap">
+  <img src="media/heart-graphics/heart.png" alt="" class="page-header-deco page-header-deco--float" aria-hidden="true"/>
   <div class="sec-header">
     <div class="sec-eyebrow-decor">
       <span class="sec-eyebrow-decor-line sec-eyebrow-decor-line--l"></span>
@@ -112,55 +96,151 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,22,40,0.9
       <span class="sec-eyebrow-decor-line sec-eyebrow-decor-line--r"></span>
     </div>
     <h1 class="sec-h2">Video Gallery</h1>
-    <p class="sec-sub">Surgical procedures, patient testimonials, and educational content from Dr. Sanjay Gandhi.</p>
-    <a href="index.html" class="back-link">← Back to Home</a>
+    <p class="sec-sub">Media interviews, landmark cases, surgical procedures, and patient stories from Dr. Sanjay Gandhi.</p>
+    <a href="index.html" class="back-link"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-chevron-left"/></svg> Back to Home</a>
   </div>
 </section>
 <section class="section section-dark" style="padding-top:0;">
-  <div class="vid-grid">
-    <div class="vid-item" onclick="playVideo('umQC0NuxoSk')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/umQC0NuxoSk/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Cardiac Surgery at Geetanjali Hospital</div></div></div>
-    <div class="vid-item" onclick="playVideo('8oY7e31EeqQ')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/8oY7e31EeqQ/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Testimonial — Heart Surgery</div></div></div>
-    <div class="vid-item" onclick="playVideo('Ktt5yl_7-pU')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/Ktt5yl_7-pU/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Experience — Recovery Story</div></div></div>
-    <div class="vid-item" onclick="playVideo('XGegNKmcXXA')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/XGegNKmcXXA/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">World Record: 470g Baby Heart Surgery</div></div></div>
-    <div class="vid-item" onclick="playVideo('2O8Evr9EUjA')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/2O8Evr9EUjA/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">A Case of Newborn Heart Surgery</div></div></div>
-    <div class="vid-item" onclick="playVideo('rHmpylT3UJo')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/rHmpylT3UJo/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Geetanjali Cardiac Centre</div></div></div>
-    <div class="vid-item" onclick="playVideo('6JBJ4Y_FpGU')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/6JBJ4Y_FpGU/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Cardiac Surgery Overview</div></div></div>
-    <div class="vid-item" onclick="playVideo('nz_PUWXU9vM')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/nz_PUWXU9vM/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Successful Cardiac Operation</div></div></div>
-    <div class="vid-item" onclick="playVideo('tf7B9dxJrkI')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/tf7B9dxJrkI/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Advanced Technologies at GMCH</div></div></div>
-    <div class="vid-item" onclick="playVideo('-Lty1aaFtF0')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/-Lty1aaFtF0/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">World Heart Day 2023</div></div></div>
-    <div class="vid-item" onclick="playVideo('tKcgH75Rftc')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/tKcgH75Rftc/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Heart Hole Surgery Success</div></div></div>
-    <div class="vid-item" onclick="playVideo('tOW5Gmjph_Y')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/tOW5Gmjph_Y/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Tough Case: Cardiac + Maternity</div></div></div>
-    <div class="vid-item" onclick="playVideo('nd8LMKIQT2c')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/nd8LMKIQT2c/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Story</div></div></div>
-    <div class="vid-item" onclick="playVideo('ucf_-4Gximk')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/ucf_-4Gximk/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Hypertension Awareness</div></div></div>
-    <div class="vid-item" onclick="playVideo('dX8-srMhFE0')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/dX8-srMhFE0/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Testimonial</div></div></div>
-    <div class="vid-item" onclick="playVideo('1WNIBPtAbmE')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/1WNIBPtAbmE/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Geetanjali Cardiac Centre Overview</div></div></div>
-    <div class="vid-item" onclick="playVideo('RXtUllqBaEk')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/RXtUllqBaEk/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Medical Buzz — Dr. Sanjay Gandhi</div></div></div>
-    <div class="vid-item" onclick="playVideo('-yhop8So_O0')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/-yhop8So_O0/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Dr. Sanjay Gandhi Podcast</div></div></div>
-    <div class="vid-item" onclick="playVideo('jT5IgU8MhsY')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/jT5IgU8MhsY/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Total Arterial Revascularization</div></div></div>
-    <div class="vid-item" onclick="playVideo('vsdowYuWuvg')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/vsdowYuWuvg/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Newborn Heart Surgery</div></div></div>
-    <div class="vid-item" onclick="playVideo('0LBzSEv3UbM')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/0LBzSEv3UbM/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Iron Man Heart Specialist</div></div></div>
-    <div class="vid-item" onclick="playVideo('teAtX0gSRto')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/teAtX0gSRto/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">First Heart Surgery in Rajasthan</div></div></div>
-    <div class="vid-item" onclick="playVideo('5vzx8fC-Fu4')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/5vzx8fC-Fu4/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">World Kidney Day</div></div></div>
-    <div class="vid-item" onclick="playVideo('QDr9hrWZDJI')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/QDr9hrWZDJI/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Testimonial</div></div></div>
-    <div class="vid-item" onclick="playVideo('hMoy1xP2xuc')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/hMoy1xP2xuc/hqdefault.jpg" alt="Video"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Redo Valve Replacement</div></div></div>
-    
-  </div>
 
-  <!-- Facebook Videos Section -->
-  <div class="vid-section">
-    <h2 class="vid-section-title">Surgery & Educational Videos</h2>
-    <p class="vid-section-sub">Surgical procedures and educational content from Facebook</p>
+  <!-- MEDIA & INTERVIEWS -->
+  <div class="vid-group" id="media">
+    <header class="vid-group-head">
+      <div class="vid-group-head__icon" aria-hidden="true">
+        <svg class="vid-group-head__icon-svg" aria-hidden="true"><use href="assets/icons.svg#icon-microphone"/></svg>
+      </div>
+      <div class="vid-group-head__text">
+        <span class="vid-group-head__eyebrow">In the Media</span>
+        <h2 class="vid-group-head__title">Interviews & Profiles</h2>
+        <p class="vid-group-head__sub">Podcasts, medical media features, and profiles highlighting Dr. Gandhi's expertise and journey.</p>
+      </div>
+      <span class="vid-group-head__count">3 videos</span>
+    </header>
     <div class="vid-grid">
-      <div class="vid-item" onclick="window.open('https://www.facebook.com/watch/?v=365680141147228','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Cardiac Surgery — Team in Action</div></div></div>
-      <div class="vid-item" onclick="window.open('https://www.facebook.com/watch/?v=2486397418248237','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Heart Surgery Procedure</div></div></div>
-      <div class="vid-item" onclick="window.open('https://www.facebook.com/watch/?v=1443885234088190','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Angiography & Intervention</div></div></div>
-      <div class="vid-item" onclick="window.open('https://www.facebook.com/watch/?v=2469959460126203','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Surgical Procedure — GMCH</div></div></div>
-      <div class="vid-item" onclick="window.open('https://www.facebook.com/watch/?v=140271994317378','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Heart Surgery — Educational</div></div></div>
-      <div class="vid-item" onclick="window.open('https://www.facebook.com/watch/?v=392807108365117','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Cardiac Care Video</div></div></div>
-      <div class="vid-item" onclick="window.open('https://www.facebook.com/watch/?v=2459467804199536','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Surgery Success Video</div></div></div>
-      <div class="vid-item" onclick="window.open('https://www.facebook.com/share/v/1JgYSHsAfF/','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Dr. Sanjay Gandhi — Profile</div></div></div>
+      <div class="vid-item" onclick="playVideo('RXtUllqBaEk','Medical Buzz — Dr. Sanjay Gandhi')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/RXtUllqBaEk/hqdefault.jpg" alt="Medical Buzz — Dr. Sanjay Gandhi" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Medical Buzz — Dr. Sanjay Gandhi</div></div></div>
+      <div class="vid-item" onclick="playVideo('-yhop8So_O0','Dr. Sanjay Gandhi Podcast')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/-yhop8So_O0/hqdefault.jpg" alt="Dr. Sanjay Gandhi Podcast" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Dr. Sanjay Gandhi Podcast</div></div></div>
+      <div class="vid-item" onclick="playVideo('0LBzSEv3UbM','Iron Man Heart Specialist')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/0LBzSEv3UbM/hqdefault.jpg" alt="Iron Man Heart Specialist" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Iron Man Heart Specialist</div></div></div>
     </div>
   </div>
+
+  <!-- SPECIAL CASES -->
+  <div class="vid-group">
+    <header class="vid-group-head">
+      <div class="vid-group-head__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      </div>
+      <div>
+        <span class="vid-group-head__eyebrow">Landmark Cases</span>
+        <h2 class="vid-group-head__title">Special Cases & Milestones</h2>
+        <p class="vid-group-head__sub">World-record neonatal surgery, complex newborn cases, and pioneering cardiac milestones in Rajasthan.</p>
+      </div>
+      <span class="vid-group-head__count">6 videos</span>
+    </header>
+    <div class="vid-grid">
+      <div class="vid-item" onclick="playVideo('XGegNKmcXXA','World Record: 470g Baby Heart Surgery')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/XGegNKmcXXA/hqdefault.jpg" alt="World Record: 470g Baby Heart Surgery" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">World Record: 470g Baby Heart Surgery</div></div></div>
+      <div class="vid-item" onclick="playVideo('2O8Evr9EUjA','A Case of Newborn Heart Surgery')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/2O8Evr9EUjA/hqdefault.jpg" alt="A Case of Newborn Heart Surgery" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">A Case of Newborn Heart Surgery</div></div></div>
+      <div class="vid-item" onclick="playVideo('vsdowYuWuvg','Newborn Heart Surgery')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/vsdowYuWuvg/hqdefault.jpg" alt="Newborn Heart Surgery" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Newborn Heart Surgery</div></div></div>
+      <div class="vid-item" onclick="playVideo('mg1JaE-GVxA','Heart Hole Surgery — 2-Year-Old Child')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/mg1JaE-GVxA/hqdefault.jpg" alt="Heart Hole Surgery — 2-Year-Old Child" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Heart Hole Surgery — 2-Year-Old Child</div></div></div>
+      <div class="vid-item" onclick="playVideo('tOW5Gmjph_Y','Tough Case: Cardiac + Maternity')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/tOW5Gmjph_Y/hqdefault.jpg" alt="Tough Case: Cardiac + Maternity" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Tough Case: Cardiac + Maternity</div></div></div>
+      <div class="vid-item" onclick="playVideo('teAtX0gSRto','First Heart Surgery in Rajasthan')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/teAtX0gSRto/hqdefault.jpg" alt="First Heart Surgery in Rajasthan" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">First Heart Surgery in Rajasthan</div></div></div>
+    </div>
+  </div>
+
+  <!-- SURGICAL PROCEDURES -->
+  <div class="vid-group">
+    <header class="vid-group-head">
+      <div class="vid-group-head__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+      </div>
+      <div>
+        <span class="vid-group-head__eyebrow">Procedures</span>
+        <h2 class="vid-group-head__title">Surgical Procedures & Operations</h2>
+        <p class="vid-group-head__sub">CABG, valve surgery, congenital repairs, and complex cardiac operations at Geetanjali Medical College & Hospital.</p>
+      </div>
+      <span class="vid-group-head__count">6 videos</span>
+    </header>
+    <div class="vid-grid">
+      <div class="vid-item" onclick="playVideo('4naOZJgNTDQ','Dr. Sanjay Gandhi — Successful Surgery | Geetanjali Cardiac Centre')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/4naOZJgNTDQ/hqdefault.jpg" alt="Dr. Sanjay Gandhi — Successful Surgery | Geetanjali Cardiac Centre" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Dr. Sanjay Gandhi — Successful Surgery | Geetanjali Cardiac Centre</div></div></div>
+      <div class="vid-item" onclick="playVideo('umQC0NuxoSk','Cardiac Surgery at Geetanjali Hospital')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/umQC0NuxoSk/hqdefault.jpg" alt="Cardiac Surgery at Geetanjali Hospital" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Cardiac Surgery at Geetanjali Hospital</div></div></div>
+      <div class="vid-item" onclick="playVideo('6JBJ4Y_FpGU','Cardiac Surgery Overview')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/6JBJ4Y_FpGU/hqdefault.jpg" alt="Cardiac Surgery Overview" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Cardiac Surgery Overview</div></div></div>
+      <div class="vid-item" onclick="playVideo('0Cbyvn5q_u4','Beating Heart Bypass — Total Arterial Revascularization')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/0Cbyvn5q_u4/hqdefault.jpg" alt="Beating Heart Bypass — Total Arterial Revascularization" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Beating Heart Bypass — Total Arterial Revascularization</div></div></div>
+      <div class="vid-item" onclick="playVideo('jT5IgU8MhsY','Total Arterial Revascularization')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/jT5IgU8MhsY/hqdefault.jpg" alt="Total Arterial Revascularization" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Total Arterial Revascularization</div></div></div>
+      <div class="vid-item" onclick="playVideo('hMoy1xP2xuc','Redo Valve Replacement')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/hMoy1xP2xuc/hqdefault.jpg" alt="Redo Valve Replacement" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Redo Valve Replacement</div></div></div>
+    </div>
+  </div>
+
+  <!-- PATIENT TESTIMONIALS -->
+  <div class="vid-group">
+    <header class="vid-group-head">
+      <div class="vid-group-head__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div>
+        <span class="vid-group-head__eyebrow">Patient Voices</span>
+        <h2 class="vid-group-head__title">Testimonials & Recovery Stories</h2>
+        <p class="vid-group-head__sub">Patients and families share their experience of cardiac care, surgery, and recovery with Dr. Sanjay Gandhi.</p>
+      </div>
+      <span class="vid-group-head__count">7 videos</span>
+    </header>
+    <div class="vid-grid">
+      <div class="vid-item" onclick="playVideo('8oY7e31EeqQ','Patient Testimonial — Heart Surgery')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/8oY7e31EeqQ/hqdefault.jpg" alt="Patient Testimonial — Heart Surgery" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Testimonial — Heart Surgery</div></div></div>
+      <div class="vid-item" onclick="playVideo('Ktt5yl_7-pU','Patient Experience — Recovery Story')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/Ktt5yl_7-pU/hqdefault.jpg" alt="Patient Experience — Recovery Story" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Experience — Recovery Story</div></div></div>
+      <div class="vid-item" onclick="playVideo('nz_PUWXU9vM','Patient Testimonial — Successful Cardiac Operation')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/nz_PUWXU9vM/hqdefault.jpg" alt="Patient Testimonial — Successful Cardiac Operation" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Testimonial — Successful Cardiac Operation</div></div></div>
+      <div class="vid-item" onclick="playVideo('tKcgH75Rftc','Patient Testimonial — Heart Hole Surgery Success')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/tKcgH75Rftc/hqdefault.jpg" alt="Patient Testimonial — Heart Hole Surgery Success" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Testimonial — Heart Hole Surgery Success</div></div></div>
+      <div class="vid-item" onclick="playVideo('nd8LMKIQT2c','Patient Story')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/nd8LMKIQT2c/hqdefault.jpg" alt="Patient Story" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Story</div></div></div>
+      <div class="vid-item" onclick="playVideo('dX8-srMhFE0','Patient Testimonial')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/dX8-srMhFE0/hqdefault.jpg" alt="Patient Testimonial" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Testimonial</div></div></div>
+      <div class="vid-item" onclick="playVideo('QDr9hrWZDJI','Patient Testimonial')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/QDr9hrWZDJI/hqdefault.jpg" alt="Patient Testimonial" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Patient Testimonial</div></div></div>
+    </div>
+  </div>
+
+  <!-- HOSPITAL, EDUCATION & AWARENESS -->
+  <div class="vid-group">
+    <header class="vid-group-head">
+      <div class="vid-group-head__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>
+      </div>
+      <div>
+        <span class="vid-group-head__eyebrow">Education & Awareness</span>
+        <h2 class="vid-group-head__title">Hospital, Education & Awareness</h2>
+        <p class="vid-group-head__sub">Geetanjali Cardiac Centre features, health awareness campaigns, and advanced cardiac care at GMCH.</p>
+      </div>
+      <span class="vid-group-head__count">7 videos</span>
+    </header>
+    <div class="vid-grid">
+      <div class="vid-item" onclick="playVideo('cePWBgsKMi0','Geetanjali Cardiac Centre — Dr. Sanjay Gandhi')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/cePWBgsKMi0/hqdefault.jpg" alt="Geetanjali Cardiac Centre — Dr. Sanjay Gandhi" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Geetanjali Cardiac Centre — Dr. Sanjay Gandhi</div></div></div>
+      <div class="vid-item" onclick="playVideo('rHmpylT3UJo','Geetanjali Cardiac Centre')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/rHmpylT3UJo/hqdefault.jpg" alt="Geetanjali Cardiac Centre" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Geetanjali Cardiac Centre</div></div></div>
+      <div class="vid-item" onclick="playVideo('1WNIBPtAbmE','Geetanjali Cardiac Centre Overview')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/1WNIBPtAbmE/hqdefault.jpg" alt="Geetanjali Cardiac Centre Overview" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Geetanjali Cardiac Centre Overview</div></div></div>
+      <div class="vid-item" onclick="playVideo('tf7B9dxJrkI','Advanced Technologies at GMCH')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/tf7B9dxJrkI/hqdefault.jpg" alt="Advanced Technologies at GMCH" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Advanced Technologies at GMCH</div></div></div>
+      <div class="vid-item" onclick="playVideo('-Lty1aaFtF0','World Heart Day 2023')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/-Lty1aaFtF0/hqdefault.jpg" alt="World Heart Day 2023" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">World Heart Day 2023</div></div></div>
+      <div class="vid-item" onclick="playVideo('ucf_-4Gximk','Hypertension Awareness')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/ucf_-4Gximk/hqdefault.jpg" alt="Hypertension Awareness" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Hypertension Awareness</div></div></div>
+      <div class="vid-item" onclick="playVideo('5vzx8fC-Fu4','World Kidney Day')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/5vzx8fC-Fu4/hqdefault.jpg" alt="World Kidney Day" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">World Kidney Day</div></div></div>
+    </div>
+  </div>
+
+  <!-- FACEBOOK VIDEOS (separate, at end) -->
+  <div class="vid-group vid-group--facebook">
+    <header class="vid-group-head">
+      <div class="vid-group-head__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </div>
+      <div>
+        <span class="vid-group-head__eyebrow">Facebook</span>
+        <h2 class="vid-group-head__title">Surgery & Educational Videos</h2>
+        <p class="vid-group-head__sub">Surgical procedures and educational content from Dr. Gandhi's Facebook page — opens on Facebook.</p>
+      </div>
+      <span class="vid-group-head__count">8 videos</span>
+    </header>
+    <div class="vid-grid">
+      <div class="vid-item vid-item--facebook" onclick="window.open('https://www.facebook.com/watch/?v=365680141147228','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Cardiac Surgery — Team in Action</div></div></div>
+      <div class="vid-item vid-item--facebook" onclick="window.open('https://www.facebook.com/watch/?v=2486397418248237','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Heart Surgery Procedure</div></div></div>
+      <div class="vid-item vid-item--facebook" onclick="window.open('https://www.facebook.com/watch/?v=1443885234088190','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Angiography & Intervention</div></div></div>
+      <div class="vid-item vid-item--facebook" onclick="window.open('https://www.facebook.com/watch/?v=2469959460126203','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Surgical Procedure — GMCH</div></div></div>
+      <div class="vid-item vid-item--facebook" onclick="window.open('https://www.facebook.com/watch/?v=140271994317378','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Heart Surgery — Educational</div></div></div>
+      <div class="vid-item vid-item--facebook" onclick="window.open('https://www.facebook.com/watch/?v=392807108365117','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Cardiac Care Video</div></div></div>
+      <div class="vid-item vid-item--facebook" onclick="window.open('https://www.facebook.com/watch/?v=2459467804199536','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Surgery Success Video</div></div></div>
+      <div class="vid-item vid-item--facebook" onclick="window.open('https://www.facebook.com/share/v/1JgYSHsAfF/','_blank')"><div class="vi-thumb vid-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="#C8102E"><polygon points="8,5 20,12 8,19"/></svg></div><div class="vi-info"><div class="vi-title">Dr. Sanjay Gandhi — Profile</div></div></div>
+    </div>
+  </div>
+
 </section>
 <script src="js/video-modal.js"></script>
 </body>

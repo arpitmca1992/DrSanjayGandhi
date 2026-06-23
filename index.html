@@ -145,7 +145,12 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .a3c h4 { font-size: 16px; font-weight: 700; margin-bottom: 14px; color: var(--text); }
 .a3c p, .a3c ul { font-size: 14px; color: var(--muted); line-height: 1.85; }
 .a3c ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-.a3c ul li::before { content: '✓  '; color: var(--crimson); font-weight: 700; }
+.a3c ul li { display: flex; align-items: flex-start; gap: 8px; }
+.a3c ul li::before {
+  content: '';
+  width: 14px; height: 14px; flex-shrink: 0; margin-top: 5px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C8102E' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L19 7'/%3E%3C/svg%3E") center/contain no-repeat;
+}
 .a3c-label { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--crimson); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
 .a3c-label::before { content: ''; width: 18px; height: 2px; background: var(--crimson); }
 .stars { color: var(--gold); font-size: 16px; margin-bottom: 16px; letter-spacing: 3px; }
@@ -321,7 +326,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="index.html#expertise">Expertise</a></li>
     <li><a href="index.html#videos">Videos</a></li>
     <li><a href="news.html">News</a></li>
@@ -339,9 +344,9 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu">
-  <button class="mob-close" onclick="this.parentElement.classList.remove('open')" aria-label="Close menu">✕</button>
+  <button class="mob-close" onclick="this.parentElement.classList.remove('open')" aria-label="Close menu"><svg class="icon icon--lg" aria-hidden="true"><use href="assets/icons.svg#icon-close"/></svg></button>
   <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-  <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
+  <a href="#about" onclick="this.parentElement.classList.remove('open')">About</a>
   <a href="index.html#expertise" onclick="this.parentElement.classList.remove('open')">Expertise</a>
   <a href="index.html#videos" onclick="this.parentElement.classList.remove('open')">Videos</a>
   <a href="news.html" onclick="this.parentElement.classList.remove('open')">News</a>
@@ -543,7 +548,8 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
         Career Highlights
       </div>
-      <div class="tl-scroll-wrap">
+      <div class="tl-scroll-wrap" id="careerTimeline">
+        <div class="tl-scroll-rail" aria-hidden="true"><span class="tl-scroll-rail__thumb"></span></div>
         <div class="tl-fade tl-fade--top"></div>
         <div class="tl-fade tl-fade--bottom"></div>
         <div class="tl-scroll-track">
@@ -558,6 +564,10 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
           <div class="tl-item"><div class="tl-dot"></div><div class="tl-line"></div><div><div class="tl-year">2003–06</div><div class="tl-title">M.Ch CTVS — SCTIMST, Trivandrum</div></div></div>
           <div class="tl-item"><div class="tl-dot"></div><div><div class="tl-year">1998–01</div><div class="tl-title">MS General Surgery — AIIMS, New Delhi</div></div></div>
         </div>
+        <span class="tl-scroll-hint" aria-hidden="true">
+          <svg class="tl-scroll-hint__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          Auto-scrolling highlights
+        </span>
       </div>
     </div>
   </div>
@@ -754,7 +764,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   </div>
   <div class="cta-band-right">
     <a href="contact.html" class="btn btn-white btn-lg">Book an Appointment</a>
-    <a href="tel:+919509700069" class="btn btn-ghost btn-lg btn-cta-phone">📞 +91 95097 00069</a>
+    <a href="tel:+919509700069" class="btn btn-ghost btn-lg btn-cta-phone btn-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-phone"/></svg> +91 95097 00069</a>
   </div>
 </div>
 
@@ -771,16 +781,16 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
       </a>
       <p>One of India's most trusted cardiac surgeons. 20+ years of excellence, 13,000+ surgeries, committed to saving lives with compassion and world-class expertise.</p>
       <div class="footer-socials">
-        <a href="https://www.facebook.com/sgandhicardiacsurgeon" class="social" target="_blank">f</a>
-        <a href="https://www.instagram.com/sgcardiacsurgeon/" class="social" target="_blank">ig</a>
-        <a href="https://www.youtube.com/channel/UCWSw6M3BHKL52JbRUq6XSgA" class="social" target="_blank">▶</a>
+        <a href="https://www.facebook.com/sgandhicardiacsurgeon" class="social" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon icon--social" aria-hidden="true"><use href="assets/icons.svg#icon-facebook"/></svg></a>
+        <a href="https://www.instagram.com/sgcardiacsurgeon/" class="social" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon icon--social" aria-hidden="true"><use href="assets/icons.svg#icon-instagram"/></svg></a>
+        <a href="https://www.youtube.com/channel/UCWSw6M3BHKL52JbRUq6XSgA" class="social" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon icon--social" aria-hidden="true"><use href="assets/icons.svg#icon-youtube"/></svg></a>
       </div>
     </div>
     <div class="footer-col">
       <h4>Navigation</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Dr. Sanjay Gandhi</a></li>
+        <li><a href="#about">About Dr. Sanjay Gandhi</a></li>
         <li><a href="expertise.html">Expertise</a></li>
         <li><a href="news.html">News & Articles</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -803,7 +813,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
         <li><a href="tel:+91-9784586176">+91-97845 86176</a></li>
         <li><a href="mailto:sgandhi32@yahoo.com">sgandhi32@yahoo.com</a></li>
         <li><a href="contact.html">Book Appointment</a></li>
-        <li><a href="about.html">Achievements</a></li>
+        <li><a href="#about">Achievements</a></li>
         <li><a href="news.html">News & Articles</a></li>
       </ul>
     </div>
@@ -890,6 +900,26 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
     });
   }, {threshold:0.5});
   counters.forEach(c=>obs.observe(c));
+})();
+
+// Career timeline — seamless loop + touch pause (mobile & desktop)
+(function(){
+  var wraps = document.querySelectorAll('.tl-scroll-wrap');
+  if(!wraps.length) return;
+  wraps.forEach(function(wrap){
+    var track = wrap.querySelector('.tl-scroll-track');
+    if(!track || track.dataset.loopReady) return;
+    Array.from(track.children).forEach(function(item){
+      track.appendChild(item.cloneNode(true));
+    });
+    track.dataset.loopReady = '1';
+    wrap.addEventListener('mouseenter', function(){ wrap.classList.add('is-paused'); });
+    wrap.addEventListener('mouseleave', function(){ wrap.classList.remove('is-paused'); });
+    wrap.addEventListener('touchstart', function(){ wrap.classList.add('is-paused'); }, {passive:true});
+    wrap.addEventListener('touchend', function(){
+      setTimeout(function(){ wrap.classList.remove('is-paused'); }, 2500);
+    }, {passive:true});
+  });
 })();
 </script>
 

@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-21",
-  "totalAssets": 67,
+  "lastUpdated": "2026-06-23",
+  "totalAssets": 69,
   "categories": {
     "news-coverage": {
       "description": "Newspaper articles covering Dr. Sanjay Gandhi's cardiac surgeries",
@@ -302,6 +302,23 @@
         "facebook": 1,
         "note": "See videos/youtube-links.txt for full list of 25 external video links shared on June 21, 2026"
       }
+    },
+    "backgrounds": {
+      "description": "Decorative section backgrounds for news page and homepage highlights",
+      "items": [
+        {
+          "file": "backgrounds/news-hero-composite.png",
+          "title": "News Hero Composite Background",
+          "description": "Wide hero: 470g, wireframe heart, infant hand, world map, trophy, gold EKG. Use for news page hero and homepage news highlight card.",
+          "suggestedUse": ["news.html page header", "news.html #world-record section", "index.html news highlight card"]
+        },
+        {
+          "file": "backgrounds/news-panels-moodboard.png",
+          "title": "News Panels Moodboard (12-panel grid)",
+          "description": "Themed medical mini-backgrounds: global map, pediatric care, holographic heart, DNA, awards, OR, 470g. Crop per section.",
+          "suggestedUse": ["news category section headers", "homepage highlights mosaic strip"]
+        }
+      ]
     }
   },
   "existing-images": {
@@ -338,7 +355,7 @@
         "file": "images/Profile/dr-sanjay-gandhi.png",
         "title": "Dr. Sanjay Gandhi - Profile Photo",
         "description": "Professional portrait in surgical attire, used across hero, about, and expertise pages",
-        "usedIn": ["index.html", "about.html", "expertise.html", "dr-sanjay-gandhi-redesign.html"]
+        "usedIn": ["index.html", "expertise.html", "dr-sanjay-gandhi-redesign.html"]
       }
     ],
     "heart-graphics": [
