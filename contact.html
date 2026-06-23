@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Contact | Dr. Sanjay Gandhi — Cardiac & Cardiothoracic Surgeon</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/site.css"/>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -169,41 +170,48 @@ footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px
 </div>
 
 <!-- PAGE HEADER -->
-<section class="section page-header" style="padding-top:140px;position:relative;overflow:hidden;">
-  <!-- Decorative Heart -->
-  <img src="media/heart-graphics/heart.png" alt="" style="position:absolute;top:15px;right:5%;width:190px;opacity:0.06;pointer-events:none;filter:drop-shadow(0 0 30px rgba(200,16,46,0.3));" aria-hidden="true"/>
-  <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>GET IN TOUCH</div>
-  <h2 class="sec-h2">Contact & Appointments</h2>
-  <p class="sec-sub">Every heart deserves the best care. Reach out to schedule an appointment or for 24×7 emergency assistance.</p>
+<section class="section section-mid page-header section-wrap">
+  <img src="media/heart-graphics/heart.png" alt="" class="page-header-deco" aria-hidden="true"/>
+  <div class="sec-header">
+    <div class="sec-eyebrow-decor">
+      <span class="sec-eyebrow-decor-line sec-eyebrow-decor-line--l"></span>
+      <span class="sec-eyebrow-decor-dot"></span>
+      <span class="sec-eyebrow-decor-text">Get in Touch</span>
+      <span class="sec-eyebrow-decor-dot"></span>
+      <span class="sec-eyebrow-decor-line sec-eyebrow-decor-line--r"></span>
+    </div>
+    <h2 class="sec-h2">Contact & Appointments</h2>
+    <p class="sec-sub">Every heart deserves the best care. Reach out to schedule an appointment or for 24×7 emergency assistance.</p>
+  </div>
 </section>
 
 <!-- CLINIC TIMINGS -->
 <section class="section section-mid" style="padding-top:0;">
-  <div class="about-grid" style="grid-template-columns:1fr 1fr;gap:40px;align-items:stretch;">
-    <div class="treat-card" style="padding:36px;display:flex;flex-direction:column;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:18px">🏥 Hospital Timings</div>
-      <h3 style="font-size:16px;margin-bottom:6px">Geetanjali Medical College & Hospital</h3>
-      <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px">Dept. of Cardiothoracic & Vascular Surgery, Eklingpura, Udaipur, Rajasthan</p>
-      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(200,16,46,0.08);border:1px solid var(--border);border-radius:3px;margin-top:auto;">
-        <span style="font-size:18px">🕘</span>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-card-label">🏥 Hospital Timings</div>
+      <h3>Geetanjali Medical College & Hospital</h3>
+      <p>Dept. of Cardiothoracic & Vascular Surgery, Eklingpura, Udaipur, Rajasthan</p>
+      <div class="info-card-time">
+        <span aria-hidden="true">🕘</span>
         <div>
-          <div style="font-size:13px;font-weight:600;color:var(--text)">09:00 AM to 05:00 PM</div>
-          <div style="font-size:11px;color:var(--muted)">Monday – Saturday</div>
+          <strong>09:00 AM to 05:00 PM</strong>
+          <span>Monday – Saturday</span>
         </div>
       </div>
     </div>
-    <div class="treat-card" style="padding:36px;display:flex;flex-direction:column;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:18px">🏠 Clinic Timings</div>
-      <h3 style="font-size:16px;margin-bottom:6px">Santosh Heart & Gynaec Care Clinic</h3>
-      <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px">294, B Block, Shyam Nagar, Sen Bhawan Street, Opposite Mahila Thana, Chitrakoot Nagar, Udaipur</p>
-      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(200,16,46,0.08);border:1px solid var(--border);border-radius:3px;margin-top:auto;">
-        <span style="font-size:18px">🕖</span>
+    <div class="info-card">
+      <div class="info-card-label">🏠 Clinic Timings</div>
+      <h3>Santosh Heart & Gynaec Care Clinic</h3>
+      <p>294, B Block, Shyam Nagar, Sen Bhawan Street, Opposite Mahila Thana, Chitrakoot Nagar, Udaipur</p>
+      <div class="info-card-time">
+        <span aria-hidden="true">🕖</span>
         <div>
-          <div style="font-size:13px;font-weight:600;color:var(--text)">07:00 PM to 08:00 PM</div>
-          <div style="font-size:11px;color:var(--muted)">Monday – Saturday</div>
+          <strong>07:00 PM to 08:00 PM</strong>
+          <span>Monday – Saturday</span>
         </div>
       </div>
-      <a href="https://g.page/santosh-heart-gynae-care-clinic?share" target="_blank" class="btn btn-ghost" style="margin-top:18px;font-size:11px">📍 Google Maps Direction →</a>
+      <a href="https://g.page/santosh-heart-gynae-care-clinic?share" target="_blank" class="btn btn-ghost btn-block" style="margin-top:18px;font-size:11px">📍 Google Maps Direction →</a>
     </div>
   </div>
 </section>
