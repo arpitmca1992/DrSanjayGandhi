@@ -223,6 +223,7 @@
           readA.textContent = el.textContent.trim();
           body.appendChild(readA);
         }
+        el.remove();
         return;
       }
       if (el.tagName === 'H3') {
