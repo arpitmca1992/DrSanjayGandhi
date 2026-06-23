@@ -44,6 +44,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .hero-h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 4.8vw, 68px); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 18px; }
 .hero-h1 .accent { color: var(--crimson); text-shadow: 0 0 40px rgba(200,16,46,0.4); }
 .hero-sub { font-size: 17px; color: var(--muted); max-width: 420px; margin-bottom: 32px; line-height: 1.85; font-weight: 400; }
+.hero-tagline-divider { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.hero-tagline-divider svg { flex-shrink: 0; }
 .hero-stats-row { display: flex; gap: 0; margin-bottom: 32px; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; width: fit-content; }
 .hstat { padding: 14px 20px; background: var(--surface); border-right: 1px solid var(--border); text-align: center; display: flex; flex-direction: column; align-items: center; }
 .hstat:last-child { border-right: none; }
@@ -82,11 +84,19 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .ecg-path { stroke: var(--crimson); stroke-width: 2.5; fill: none; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: ecgDraw 3s linear infinite; }
 @keyframes ecgDraw { to { stroke-dashoffset: 0; } }
 .hero-doctor { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; overflow: hidden; padding-top: 3rem; }
+.hero-profile-card { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.hero-dr-frame { position: relative; width: 100%; display: flex; justify-content: center; }
+.hero-profile-bridge { display: none; }
+.hero-dr-ring { display: none; }
 .hero-dr { position: relative; z-index: 2; width: 132%; max-width: none; object-fit: contain; object-position: top center; filter: drop-shadow(0 0 40px rgba(200,16,46,0.15)); margin: 0 -16%; border: 2px solid rgba(200,16,46,0.3); border-radius: 6px; padding: 4px; }
 .hero-info-card { position: relative; z-index: 3; background: linear-gradient(135deg, rgba(10,22,40,0.97) 0%, rgba(15,28,48,0.95) 100%); border: 1px solid rgba(200,16,46,0.2); backdrop-filter: blur(14px); border-radius: 6px; padding: 24px 28px; margin-top: -2px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.5); text-align: center; }
+.hic-eyebrow { display: none; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--crimson); margin-bottom: 6px; }
 .hic-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 10px; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
 .hic-deg { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border2); }
+.hic-creds { display: none; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 10px 0 14px; }
+.hic-cred { font-size: 9px; padding: 5px 11px; background: rgba(200,16,46,0.1); border: 1px solid rgba(200,16,46,0.28); border-radius: 20px; color: var(--text); font-weight: 600; letter-spacing: 0.04em; white-space: nowrap; }
 .hic-role { font-size: 13px; color: var(--crimson); font-weight: 600; line-height: 1.7; }
+.hic-role strong { display: block; font-weight: 700; margin-bottom: 2px; }
 .ring { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 500px; height: 500px; border-radius: 50%; border: 1px dashed rgba(200,16,46,0.15); animation: rotateSlow 25s linear infinite; z-index: 0; }
 .ring2 { width: 580px; height: 580px; border-color: rgba(200,16,46,0.08); animation: rotateSlow 35s linear infinite reverse; }
 @keyframes rotateSlow { to { transform: translate(-50%,-50%) rotate(360deg); } }
@@ -117,16 +127,31 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba
 .sec-eyebrow-line { width: 24px; height: 2px; background: var(--crimson); }
 .sec-h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.2vw, 44px); font-weight: 800; line-height: 1.12; margin-bottom: 16px; }
 .sec-sub { color: var(--muted); font-size: 15px; line-height: 1.8; max-width: 560px; font-weight: 400; }
-.expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
-.exp-card { padding: 24px 20px; text-align: left; border: 1px solid var(--border2); border-radius: 6px; background: var(--surface); transition: all 0.3s; cursor: default; position: relative; overflow: hidden; }
+.expertise-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 48px; }
+.expertise-section { position: relative; overflow: hidden; }
+.expertise-deco { position: absolute; top: 30px; left: 3%; width: 200px; opacity: 0.04; pointer-events: none; }
+.expertise-header { text-align: center; }
+.expertise-header .sec-h2 { margin: 0 auto 16px; max-width: 720px; }
+.sec-eyebrow-decor { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.sec-eyebrow-decor-line { width: 60px; height: 1px; display: block; flex-shrink: 0; }
+.sec-eyebrow-decor-line--l { background: linear-gradient(90deg, transparent, var(--crimson)); }
+.sec-eyebrow-decor-line--r { background: linear-gradient(90deg, var(--crimson), transparent); }
+.sec-eyebrow-decor-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--crimson); flex-shrink: 0; }
+.sec-eyebrow-decor-text { font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--crimson); }
+.exp-card { padding: 28px 24px; text-align: left; border: 1px solid var(--border2); border-radius: 10px; background: var(--surface); transition: all 0.3s; cursor: default; position: relative; overflow: hidden; }
 .exp-card::before { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 3px; background: linear-gradient(90deg, var(--crimson), #ff6b6b); transition: width 0.4s; }
+.exp-card::after { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--crimson); transition: height 0.35s; border-radius: 10px 0 0 10px; }
 .exp-card:hover { border-color: rgba(200,16,46,0.3); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(200,16,46,0.1); }
 .exp-card:hover::before { width: 100%; }
-.exp-icon { width: 48px; height: 48px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(200,16,46,0.08); border: 1px solid rgba(200,16,46,0.15); }
+.exp-card:hover::after { height: 100%; }
+.exp-card-head { display: flex; flex-direction: column; margin-bottom: 10px; }
+.exp-card-head .exp-name { margin-bottom: 0; }
+.exp-icon { width: 48px; height: 48px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: rgba(200,16,46,0.08); border: 1px solid rgba(200,16,46,0.15); flex-shrink: 0; }
 .exp-icon svg { width: 24px; height: 24px; }
-.exp-name { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.35; margin-bottom: 8px; }
+.exp-name { font-size: 16px; font-weight: 700; color: var(--text); line-height: 1.35; margin-bottom: 10px; }
 .exp-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
 .about-3col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid var(--border2); border-radius: 6px; overflow: hidden; margin-top: 40px; }
+.profile-row { display: flex; align-items: center; gap: 18px; }
 .a3c { padding: 40px 36px; border-right: 1px solid var(--border2); background: var(--surface); }
 .a3c:last-child { border-right: none; }
 .a3c h4 { font-size: 16px; font-weight: 700; margin-bottom: 14px; color: var(--text); }
@@ -153,37 +178,125 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 .footer-col ul a:hover { color: var(--crimson); }
 .footer-bottom { border-top: 1px solid var(--border2); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
 .footer-bottom p { font-size: 11px; color: var(--muted); }
-@media (max-width: 1024px) { .hero { grid-template-columns: 1fr 1fr; } .hero-right { height: auto; min-height: auto; padding: 40px 0; } .hero-heart-svg { height: 320px; } .hero-doctor { display: none; } .expertise-grid { grid-template-columns: repeat(3, 1fr); } .milestones-grid { grid-template-columns: repeat(3, 1fr); } .footer-grid { grid-template-columns: 1fr 1fr; } }
+.mob-toggle { display: none; width: 40px; height: 40px; border: 1px solid rgba(200,16,46,0.4); border-radius: 4px; align-items: center; justify-content: center; cursor: pointer; background: rgba(200,16,46,0.08); color: var(--crimson); font-size: 20px; font-weight: 700; }
+.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(10,22,40,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+.mob-menu.open { display: flex; }
+.mob-menu a { font-size: 16px; font-weight: 500; color: var(--text); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
+.mob-menu a:hover { color: var(--crimson); }
+.mob-close { position: absolute; top: 20px; right: 20px; font-size: 28px; color: var(--text); background: none; border: none; cursor: pointer; }
+@media (max-width: 1024px) { .hero { grid-template-columns: 1fr 1fr; } .hero-right { height: auto; min-height: auto; padding: 40px 0; } .hero-heart-svg { height: 320px; } .hero-doctor { display: none; } .expertise-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; } .milestones-grid { grid-template-columns: repeat(3, 1fr); } .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 768px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-left { padding: 100px 5% 30px; }
-  .hero-right { height: 250px; min-height: auto; padding: 20px 0; }
-  .hero-heart-svg { height: 200px; }
-  .hero-doctor { display: flex; padding-top: 0; height: auto; }
-  .hero-dr { width: 100%; max-width: 200px; margin: 0 auto; }
-  .hero-info-card { padding: 16px; margin-top: 10px; }
-  .hic-name { font-size: 14px; }
-  .hic-deg { font-size: 10px; }
-  .hic-role { font-size: 10px; }
-  .hero-stats-row { flex-wrap: wrap; gap: 12px; }
-  .hstat { min-width: 70px; }
-  .hstat-val { font-size: 18px; }
-  .hero-actions { flex-direction: column; gap: 10px; }
+  .hero-left {
+    padding: 84px 5% 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .eyebrow { justify-content: center; width: 100%; font-size: 10px; letter-spacing: 0.22em; margin-bottom: 10px; }
+  .eyebrow-line { width: 28px; }
+  .hero-h1 { font-size: clamp(28px, 7.5vw, 34px); margin-bottom: 12px; line-height: 1.1; max-width: 340px; }
+  .hero-tagline-divider { justify-content: center; gap: 10px; margin-bottom: 12px; width: 100%; max-width: 200px; }
+  .hero-tagline-divider::before,
+  .hero-tagline-divider::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(200,16,46,0.45)); }
+  .hero-tagline-divider::after { background: linear-gradient(90deg, rgba(200,16,46,0.45), transparent); }
+  .hero-sub { font-size: 14px; line-height: 1.7; margin-bottom: 22px; max-width: 340px; padding: 0 2px; }
+  .hero-stats-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    width: 100%; max-width: 340px; border: none; border-radius: 0; overflow: visible; margin-bottom: 22px;
+  }
+  .hstat {
+    padding: 14px 8px; min-width: 0; border: 1px solid rgba(200,16,46,0.22);
+    border-radius: 10px; background: rgba(21,34,64,0.65);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+  .hstat:last-child { border-right: 1px solid rgba(200,16,46,0.22); }
+  .hstat-val { font-size: 20px; }
+  .hstat-lbl { font-size: 8px; line-height: 1.35; letter-spacing: 0.08em; }
+  .hstat-icon { width: 18px; height: 18px; margin-bottom: 5px; }
+  .hero-actions { width: 100%; max-width: 340px; flex-direction: column; gap: 10px; margin-bottom: 4px; }
+  .hero-actions .btn { width: 100%; justify-content: center; border-radius: 6px; }
+  .emergency-btn { width: 100%; justify-content: center; padding: 12px 14px; border-radius: 6px; font-size: 11px; background: rgba(21,34,64,0.5); }
+  .hero-right { height: 170px; min-height: auto; padding: 4px 0 0; }
+  .hero-right .ring, .hero-right .ring2, .hero-right .ecg-line, .hero-right .hero-glow-orb { display: none; }
+  .hero-heart-svg { height: 155px; filter: drop-shadow(0 0 30px rgba(200,16,46,0.5)) drop-shadow(0 0 60px rgba(200,16,46,0.25)); }
+  .hero-doctor { display: flex; padding: 10px 4% 40px; height: auto; margin-top: 0; }
+  .hero-profile-card {
+    width: 100%; max-width: 340px; margin: 0 auto;
+    border-radius: 22px; padding: 0;
+    background: linear-gradient(180deg, var(--bg3) 0%, var(--bg) 100%);
+    border: 1px solid rgba(200,16,46,0.3);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,16,46,0.08), 0 8px 32px rgba(200,16,46,0.1);
+    overflow: hidden; position: relative;
+  }
+  .hero-profile-card::before {
+    content: ''; position: absolute; inset: 0; border-radius: 22px; z-index: 0; pointer-events: none;
+    background: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(200,16,46,0.06) 0%, transparent 60%);
+  }
+  .hero-profile-card::after {
+    content: ''; position: absolute; bottom: 12px; right: 14px; width: 56px; height: 56px; z-index: 0; pointer-events: none; opacity: 0.05;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C8102E'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E") center/contain no-repeat;
+  }
+  .hero-dr-frame {
+    margin: 0; z-index: 1; width: 100%; padding: 20px 20px 0; box-sizing: border-box;
+    background: linear-gradient(180deg, rgba(17,31,56,0.5) 0%, rgba(15,28,48,0.98) 100%);
+    position: relative; line-height: 0;
+  }
+  .hero-dr-frame::after { display: none; }
+  .hero-dr-ring { display: none; }
+  .hero-dr {
+    width: 100%; max-width: 100%; height: 230px; max-height: 230px;
+    border-radius: 0; object-fit: cover; object-position: top center;
+    margin: 0; padding: 0; border: none; box-shadow: none;
+    display: block; background: transparent; vertical-align: bottom;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+  }
+  .hero-profile-bridge { display: none; }
+  .hero-info-card {
+    padding: 0 20px 24px; margin: 0; border-radius: 0 0 20px 20px; text-align: center;
+    background: rgba(15,28,48,0.98);
+    border: none; box-shadow: none; position: relative; z-index: 1; overflow: visible;
+  }
+  .hero-info-card::before { display: none; }
+  .hero-info-card::after { display: none; }
+  .hic-eyebrow { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 9px; margin: 4px 0 8px; }
+  .hic-eyebrow::before, .hic-eyebrow::after { content: ''; width: 20px; height: 1px; background: linear-gradient(90deg, transparent, var(--crimson)); }
+  .hic-eyebrow::after { background: linear-gradient(90deg, var(--crimson), transparent); }
+  .hic-name { font-size: 23px; margin-bottom: 10px; }
+  .hic-deg { display: none; }
+  .hic-creds { display: flex; gap: 6px; margin: 0 0 14px; justify-content: center; }
+  .hic-cred { font-size: 9px; padding: 5px 11px; background: rgba(200,16,46,0.12); border: 1px solid rgba(200,16,46,0.35); border-radius: 20px; }
+  .hic-role { font-size: 11px; color: var(--muted); font-weight: 400; line-height: 1.75; padding: 14px 4px 0; margin: 0; border-top: 1px dashed rgba(200,16,46,0.25); }
+  .hic-role strong { display: block; color: var(--crimson); font-weight: 600; font-size: 11px; margin-bottom: 4px; }
   .about-3col { grid-template-columns: 1fr; }
+  .profile-row { flex-direction: column; text-align: center; }
+  .profile-row img { margin: 0 auto; }
   .a3c { padding: 28px 20px; }
   .cta-band { flex-direction: column; text-align: center; padding: 40px 5%; }
   .cta-band-right { justify-content: center; flex-wrap: wrap; }
   .footer-grid { grid-template-columns: 1fr; gap: 30px; }
   nav { padding: 0 4%; }
   .nav-links { display: none; }
-  .nav-cta { display: none; }
+  .nav-cta .btn { display: none; }
   .mob-toggle { display: flex; }
   .section { padding: 60px 5%; }
   .milestones { padding: 40px 5%; }
   .milestones-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .ms { padding: 20px 14px; }
   .ms-val { font-size: 22px; }
-  .expertise-grid { grid-template-columns: 1fr; gap: 12px; }
+  .expertise-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 28px; max-width: 340px; margin-left: auto; margin-right: auto; }
+  .expertise-section { padding-top: 48px; padding-bottom: 48px; }
+  .expertise-deco { left: 50%; top: auto; bottom: 0; transform: translateX(-50%); width: 150px; opacity: 0.03; }
+  .expertise-header .sec-h2 { font-size: clamp(22px, 6vw, 28px); margin-bottom: 8px; }
+  .sec-eyebrow-decor-line { width: 36px; }
+  .sec-eyebrow-decor-text { font-size: 10px; letter-spacing: 0.2em; }
+  .exp-card { padding: 18px 16px; border-radius: 12px; background: rgba(21,34,64,0.65); border-color: rgba(200,16,46,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,0.04); }
+  .exp-card:hover { transform: none; }
+  .exp-card-head { flex-direction: row; align-items: center; gap: 14px; margin-bottom: 10px; }
+  .exp-card-head .exp-icon { margin-bottom: 0; width: 44px; height: 44px; }
+  .exp-card-head .exp-name { margin-bottom: 0; font-size: 15px; }
+  .exp-desc { font-size: 13px; line-height: 1.65; padding-left: 58px; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .hero-strip { padding: 30px 4% !important; }
   .spec-item { width: 80px; }
@@ -191,17 +304,32 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   .spec-icon::before { inset: -5px; }
   .spec-icon svg { width: 20px; height: 20px; }
   .spec-item span { font-size: 8px; }
+  [style*="grid-template-columns:repeat(4"] { grid-template-columns: repeat(2,1fr) !important; gap: 12px !important; }
   [style*="grid-template-columns:repeat(3"] { grid-template-columns: repeat(2,1fr) !important; gap: 12px !important; }
   [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns:2fr"] { grid-template-columns: 1fr !important; }
+  [style*="grid-row:span"] { grid-row: span 1 !important; }
 }
 @media (max-width: 480px) {
-  .hero-left { padding: 80px 4% 20px; }
-  .hero-right { height: 180px; }
-  .hero-heart-svg { height: 150px; }
+  .hero-left { padding: 76px 4% 16px; }
   .hero-h1 { font-size: 26px; }
-  .hero-sub { font-size: 13px; }
-  .hero-dr { max-width: 160px; }
-  .hero-info-card { padding: 12px; }
+  .hero-sub { font-size: 13px; margin-bottom: 18px; }
+  .hero-stats-row { gap: 8px; margin-bottom: 18px; }
+  .hstat { padding: 12px 6px; }
+  .hstat-val { font-size: 18px; }
+  .hstat-lbl { font-size: 7px; }
+  .hero-right { height: 140px; }
+  .hero-heart-svg { height: 125px; }
+  .hero-doctor { padding: 8px 3% 32px; }
+  .hero-profile-card { max-width: 100%; border-radius: 20px; }
+  .hero-dr-frame { padding: 16px 16px 0; }
+  .hero-dr { height: 200px; max-height: 200px; }
+  .hero-info-card { padding: 0 16px 20px; border-radius: 0 0 18px 18px; }
+  .hic-eyebrow { margin: 4px 0 6px; }
+  .hic-name { font-size: 21px; }
+  .hic-cred { font-size: 8px; padding: 4px 9px; }
+  .hic-role { font-size: 10px; }
+  .hic-role strong { font-size: 10px; }
   .section { padding: 32px 4%; }
   .milestones { padding: 32px 4%; }
   .milestones-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -211,11 +339,16 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   .cta-band { padding: 28px 4%; }
   nav { height: 56px; }
   .logo-name { font-size: 13px; }
-  .hero-stats-row { gap: 8px; }
-  .hstat-val { font-size: 16px; }
-  .hstat-lbl { font-size: 8px; }
+  .exp-card { padding: 16px 14px; }
+  .exp-card-head .exp-icon { width: 40px; height: 40px; }
+  .exp-card-head .exp-icon svg { width: 20px; height: 20px; }
+  .exp-card-head .exp-name { font-size: 14px; }
+  .exp-desc { font-size: 12px; padding-left: 54px; }
+  .sec-eyebrow-decor-line { width: 28px; }
+  [style*="grid-template-columns:repeat(4"] { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns:repeat(3"] { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns:repeat(2"] { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns:2fr"] { grid-template-columns: 1fr !important; }
 }
 .blood-cells { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .blood-cell { position: absolute; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #ff6b6b, #8b0d20); opacity: 0.5; animation: flowCell linear infinite; }
@@ -227,12 +360,6 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 .reveal-delay-3 { transition-delay: 0.3s; }
 .strip-track { animation: marquee 30s linear infinite; }
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-.mob-toggle { display: none; width: 40px; height: 40px; border: 1px solid rgba(200,16,46,0.4); border-radius: 4px; align-items: center; justify-content: center; cursor: pointer; background: rgba(200,16,46,0.08); color: var(--crimson); font-size: 20px; font-weight: 700; }
-.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(10,22,40,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
-.mob-menu.open { display: flex; }
-.mob-menu a { font-size: 16px; font-weight: 500; color: var(--text); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
-.mob-menu a:hover { color: var(--crimson); }
-.mob-close { position: absolute; top: 20px; right: 20px; font-size: 28px; color: var(--text); background: none; border: none; cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
 </style>
 </head>
@@ -299,7 +426,9 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   <div class="hero-left">
     <div class="eyebrow"><span class="eyebrow-line"></span>World-Class Cardiac Care</div>
     <h1 class="hero-h1">Restoring Life,<br>One <span class="accent">Heartbeat</span><br>at a Time</h1>
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;"><span style="width:36px;height:1px;background:var(--muted);"></span><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--crimson)"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+    <div class="hero-tagline-divider" aria-hidden="true">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--crimson)"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    </div>
     <p class="hero-sub">Advanced Cardiothoracic & Vascular Surgical Care — Compassion, Precision & Evidence-Based Excellence.</p>
     <div class="hero-stats-row">
       <div class="hstat"><svg class="hstat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><div class="hstat-val">13,000+</div><div class="hstat-lbl">Surgeries Performed</div></div>
@@ -330,54 +459,72 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   </div>
 
   <div class="hero-doctor">
-    <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" class="hero-dr"/>
-    <div class="hero-info-card">
-      <div class="hic-name">Dr. Sanjay Gandhi</div>
-      <div class="hic-deg">MBBS (SPMC, Bikaner) | MS (AIIMS, New Delhi)<br>M.Ch CTVS (SCTIMST, Trivandrum)</div>
-      <div style="margin:10px auto;color:var(--crimson);"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-      <div class="hic-role">Associate Professor & Head, Department of<br>Cardiothoracic & Vascular Surgery<br>Geetanjali Medical College & Hospital, Udaipur</div>
+    <div class="hero-profile-card">
+      <div class="hero-dr-frame">
+        <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" class="hero-dr"/>
+      </div>
+      <div class="hero-profile-bridge" aria-hidden="true">
+        <svg viewBox="0 0 320 20" preserveAspectRatio="none" fill="none">
+          <path d="M0,10 L40,10 L48,10 L52,3 L56,17 L60,3 L64,17 L68,10 L100,10 L108,10 L112,3 L116,17 L120,3 L124,17 L128,10 L160,10 L168,10 L172,3 L176,17 L180,3 L184,17 L188,10 L220,10 L228,10 L232,3 L236,17 L240,3 L244,17 L248,10 L320,10" stroke="#C8102E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        </svg>
+      </div>
+      <div class="hero-info-card">
+        <div class="hic-eyebrow">Leading Cardiac Surgeon</div>
+        <div class="hic-name">Dr. Sanjay Gandhi</div>
+        <div class="hic-deg">MBBS (SPMC, Bikaner) | MS (AIIMS, New Delhi)<br>M.Ch CTVS (SCTIMST, Trivandrum)</div>
+        <div class="hic-creds">
+          <span class="hic-cred">MBBS · SPMC</span>
+          <span class="hic-cred">MS · AIIMS</span>
+          <span class="hic-cred">M.Ch · SCTIMST</span>
+        </div>
+        <div class="hic-role"><strong>Associate Professor & Head</strong>Department of Cardiothoracic & Vascular Surgery<br>Geetanjali Medical College & Hospital, Udaipur</div>
+      </div>
     </div>
   </div>
 </section>
 
 
 <!-- EXPERTISE -->
-<section class="section section-dark" id="expertise" style="position:relative;overflow:hidden;">
-  <img src="media/heart-graphics/heart-multiple.png" alt="" style="position:absolute;top:30px;left:3%;width:200px;opacity:0.04;pointer-events:none;" aria-hidden="true"/>
-  <div style="text-align:center" class="reveal">
-    <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;">
-      <span style="width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--crimson));display:block;"></span>
-      <span style="width:6px;height:6px;border-radius:50%;background:var(--crimson);"></span>
-      <span style="font-size:11px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--crimson);">Areas of Expertise</span>
-      <span style="width:6px;height:6px;border-radius:50%;background:var(--crimson);"></span>
-      <span style="width:60px;height:1px;background:linear-gradient(90deg,var(--crimson),transparent);display:block;"></span>
+<section class="section section-dark expertise-section" id="expertise">
+  <img src="media/heart-graphics/heart-multiple.png" alt="" class="expertise-deco" aria-hidden="true"/>
+  <div class="expertise-header reveal">
+    <div class="sec-eyebrow-decor">
+      <span class="sec-eyebrow-decor-line sec-eyebrow-decor-line--l"></span>
+      <span class="sec-eyebrow-decor-dot"></span>
+      <span class="sec-eyebrow-decor-text">Areas of Expertise</span>
+      <span class="sec-eyebrow-decor-dot"></span>
+      <span class="sec-eyebrow-decor-line sec-eyebrow-decor-line--r"></span>
     </div>
-    <h2 class="sec-h2" style="margin:0 auto 16px">Specialised Cardiothoracic & Vascular Procedures</h2>
+    <h2 class="sec-h2">Specialised Cardiothoracic & Vascular Procedures</h2>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;">
-    <!-- Heart Transplant -->
-    <div class="exp-card" style="padding:28px 24px;">
-      <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M8 12h2l1-3 2 6 1-3h2" stroke-opacity="0.7"/></svg></div>
-      <div class="exp-name" style="font-size:16px;margin-bottom:10px;">Heart Transplant</div>
-      <div class="exp-desc" style="font-size:13px;">Heart transplantation represents the most effective long-term treatment for advanced heart failure; however, the supply of donor hearts is limited.</div>
+  <div class="expertise-grid">
+    <div class="exp-card reveal">
+      <div class="exp-card-head">
+        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M8 12h2l1-3 2 6 1-3h2" stroke-opacity="0.7"/></svg></div>
+        <div class="exp-name">Heart Transplant</div>
+      </div>
+      <div class="exp-desc">Heart transplantation represents the most effective long-term treatment for advanced heart failure; however, the supply of donor hearts is limited.</div>
     </div>
-    <!-- LVAD -->
-    <div class="exp-card" style="padding:28px 24px;">
-      <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M15 10v6l-3-2-3 2v-6" stroke-opacity="0.6"/></svg></div>
-      <div class="exp-name" style="font-size:16px;margin-bottom:10px;">LVAD</div>
-      <div class="exp-desc" style="font-size:13px;">Intractable ventricular arrhythmias not responding to cardiac defibrillators and aggressive pharmacologic regimens. High-risk reparative cardiac operation.</div>
+    <div class="exp-card reveal reveal-delay-1">
+      <div class="exp-card-head">
+        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M15 10v6l-3-2-3 2v-6" stroke-opacity="0.6"/></svg></div>
+        <div class="exp-name">LVAD</div>
+      </div>
+      <div class="exp-desc">Intractable ventricular arrhythmias not responding to cardiac defibrillators and aggressive pharmacologic regimens. High-risk reparative cardiac operation.</div>
     </div>
-    <!-- ECMO -->
-    <div class="exp-card" style="padding:28px 24px;">
-      <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M10 12h4"/><path d="M12 4v4M12 16v4"/></svg></div>
-      <div class="exp-name" style="font-size:16px;margin-bottom:10px;">ECMO</div>
-      <div class="exp-desc" style="font-size:13px;">Clinical pathway and protocols for ECMO (PanMax) in cardiac failure. Indication for ECMO in adult cardiac failure is cardiogenic shock.</div>
+    <div class="exp-card reveal reveal-delay-2">
+      <div class="exp-card-head">
+        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M10 12h4"/><path d="M12 4v4M12 16v4"/></svg></div>
+        <div class="exp-name">ECMO</div>
+      </div>
+      <div class="exp-desc">Clinical pathway and protocols for ECMO (PanMax) in cardiac failure. Indication for ECMO in adult cardiac failure is cardiogenic shock.</div>
     </div>
-    <!-- Adult Cardiac -->
-    <div class="exp-card" style="padding:28px 24px;">
-      <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M8 12h8M12 8v8" stroke-opacity="0.5"/></svg></div>
-      <div class="exp-name" style="font-size:16px;margin-bottom:10px;">Adult Cardiac</div>
-      <div class="exp-desc" style="font-size:13px;">If one has coronary artery disease, wherein one or more of the main blood vessels feeding the heart is blocked, coronary artery bypass surgery may be required.</div>
+    <div class="exp-card reveal reveal-delay-3">
+      <div class="exp-card-head">
+        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M8 12h8M12 8v8" stroke-opacity="0.5"/></svg></div>
+        <div class="exp-name">Adult Cardiac</div>
+      </div>
+      <div class="exp-desc">If one has coronary artery disease, wherein one or more of the main blood vessels feeding the heart is blocked, coronary artery bypass surgery may be required.</div>
     </div>
   </div>
 </section>
@@ -415,7 +562,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
     <!-- LEFT: About the Doctor -->
     <div style="border:1px solid var(--border2);border-radius:8px;padding:32px 28px;background:var(--surface);">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:24px;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--crimson);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>About the Doctor</div>
-      <div style="display:flex;align-items:center;gap:18px;margin-bottom:20px;">
+      <div class="profile-row" style="display:flex;align-items:center;gap:18px;margin-bottom:20px;">
         <img src="media/profile/dr-sanjay-gandhi.png" alt="Dr. Sanjay Gandhi" style="width:130px;height:130px;border-radius:50%;object-fit:cover;object-position:top;border:3px solid var(--crimson);box-shadow:0 0 15px rgba(200,16,46,0.2);"/>
         <div>
           <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:4px;">Dr. Sanjay Gandhi</div>

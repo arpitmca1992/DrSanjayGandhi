@@ -85,17 +85,31 @@ footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px
 .mob-menu a { font-size: 16px; font-weight: 500; color: var(--text); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
 .mob-menu a:hover { color: var(--crimson); }
 .mob-close { position: absolute; top: 20px; right: 20px; font-size: 28px; color: var(--text); background: none; border: none; cursor: pointer; }
+.page-header { position: relative; overflow: hidden; }
 @media (max-width: 1024px) { .treat-grid { grid-template-columns: 1fr 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 768px) {
-  .about-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .page-header .about-grid > div:last-child { max-width: 340px; margin: 0 auto; width: 100%; }
+  .page-header .about-grid .btn { width: 100%; justify-content: center; }
+  .page-header .about-grid [style*="display:flex"] { flex-direction: column; width: 100%; }
   .cta-band { flex-direction: column; text-align: center; padding: 40px 5%; }
-  .cta-band-right { justify-content: center; flex-wrap: wrap; }
+  .cta-band-right { justify-content: center; flex-wrap: wrap; flex-direction: column; width: 100%; max-width: 340px; margin: 0 auto; }
+  .cta-band-right .btn { width: 100%; justify-content: center; }
   .footer-grid { grid-template-columns: 1fr; gap: 30px; }
   nav { padding: 0 4%; }
   .nav-links { display: none; }
-  .nav-cta { display: none; }
+  .nav-cta .btn { display: none; }
   .mob-toggle { display: flex; }
   .section { padding: 60px 5%; }
+  .page-header { padding-top: 84px !important; padding-bottom: 32px !important; text-align: center; }
+  .page-header .sec-eyebrow { justify-content: center; width: 100%; }
+  .page-header .sec-h2 { font-size: clamp(24px, 6.5vw, 30px); margin-bottom: 12px; }
+  .page-header .sec-sub, .page-header .about-body { text-align: left; }
+  .page-header .sec-sub { margin-left: auto; margin-right: auto; font-size: 14px; max-width: 340px; }
+  .page-header > img[aria-hidden="true"] { width: 130px !important; top: auto !important; bottom: -10px !important; left: 50% !important; right: auto !important; transform: translateX(-50%); opacity: 0.05 !important; animation: none !important; }
+  .rich-title { flex-direction: column; text-align: center; padding: 16px; gap: 10px; }
+  .rich-title .rt-icon { margin: 0 auto; }
+  .rich-title .rt-name { font-size: 16px; }
   .treat-grid { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns:repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
   [style*="grid-template-columns:repeat(3"] { grid-template-columns: 1fr !important; }
@@ -111,9 +125,11 @@ footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px
   [style*="height:240px"] { height: auto !important; max-height: 350px !important; }
   [style*="height:280px"] { height: auto !important; max-height: 350px !important; }
   .section { padding: 40px 4%; }
+  .page-header { padding-top: 76px !important; padding-bottom: 28px !important; }
   .cta-band { padding: 32px 4%; }
   .sec-h2 { font-size: 20px; }
   nav { height: 56px; }
+  .logo-name { font-size: 13px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
 </style>
@@ -162,7 +178,7 @@ footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px
 </div>
 
 <!-- WORLD RECORD HIGHLIGHT -->
-<section class="section section-mid" style="padding-top:140px;position:relative;overflow:hidden;">
+<section class="section section-mid page-header" style="padding-top:140px;position:relative;overflow:hidden;">
   <!-- Decorative Heart -->
   <img src="media/heart-graphics/heart.png" alt="" style="position:absolute;top:60px;right:3%;width:180px;opacity:0.06;pointer-events:none;filter:drop-shadow(0 0 30px rgba(200,16,46,0.4));animation:heartFloat 6s ease-in-out infinite;" aria-hidden="true"/>
   <style>@keyframes heartFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-15px) rotate(3deg)}}</style>
