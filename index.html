@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Dr. Sanjay Gandhi | Cardiothoracic & Vascular Surgeon</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/site.css?v=12"/>
+<link rel="stylesheet" href="css/site.css?v=13"/>
 <style>
 .hero { min-height: 100vh; padding-top: 68px; position: relative; overflow: hidden; background: radial-gradient(ellipse 60% 60% at 45% 50%, rgba(200,16,46,0.04) 0%, transparent 60%), linear-gradient(135deg, #0A1628 0%, #0D1B30 50%, #111F38 100%); display: grid; grid-template-columns: 1.05fr 1fr; align-items: stretch; }
 #particles { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
@@ -238,17 +238,14 @@
 </head>
 <body>
 
-<!-- PAGE LOADER WITH ECG LINE -->
-<div id="pageLoader" style="position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.5s;">
-  <svg width="200" height="60" viewBox="0 0 200 60" style="overflow:visible;">
-    <path d="M0,30 L40,30 L50,30 L55,10 L60,50 L65,10 L70,50 L75,30 L85,30 L120,30 L125,30 L130,10 L135,50 L140,10 L145,50 L150,30 L160,30 L200,30" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray:500;stroke-dashoffset:500;animation:loaderEcg 1.5s ease-in-out infinite;"/>
+<!-- PAGE LOADER -->
+<div class="site-loader" id="siteLoader" aria-busy="true" aria-label="Loading">
+  <svg class="site-loader__ecg" viewBox="0 0 200 60" aria-hidden="true">
+    <path class="site-loader__path" d="M0,30 L40,30 L50,30 L55,10 L60,50 L65,10 L70,50 L75,30 L85,30 L120,30 L125,30 L130,10 L135,50 L140,10 L145,50 L150,30 L160,30 L200,30"/>
   </svg>
-  <div style="font-family:'Playfair Display',serif;font-size:14px;color:var(--text);margin-top:16px;letter-spacing:0.05em;">Dr. Sanjay Gandhi</div>
+  <p class="site-loader__title">Dr. Sanjay Gandhi</p>
+  <span class="site-loader__sub">Cardiothoracic & Vascular Surgeon</span>
 </div>
-<style>
-@keyframes loaderEcg { 0%{stroke-dashoffset:500} 50%{stroke-dashoffset:0} 100%{stroke-dashoffset:-500} }
-</style>
-<script>window.addEventListener('load',function(){var l=document.getElementById('pageLoader');l.style.opacity='0';setTimeout(function(){l.style.display='none'},500)});</script>
 
 <!-- NAV -->
 <nav>
@@ -578,12 +575,12 @@
     <p>Two decades of surgical excellence, innovation, and lives saved across Rajasthan and beyond.</p>
   </div>
   <div class="milestones-grid">
-    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div><div class="ms-val">13,000+</div><div class="ms-lbl">Successful Surgeries</div></div>
-    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="ms-val">20+</div><div class="ms-lbl">Years of Experience</div></div>
-    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="ms-val">15+</div><div class="ms-lbl">Years as Dept. Head</div></div>
-    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4"/><path d="M3 9h18M3 15h18"/></svg></div><div class="ms-val">Pioneer</div><div class="ms-lbl">Advanced Cardiac Care</div></div>
-    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="ms-val">World</div><div class="ms-lbl">Record Holder · 470g Baby</div></div>
-    <div class="ms"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h5"/></svg></div><div class="ms-val">AIIMS &amp; SCTIMST</div><div class="ms-lbl">Fellowship Training</div></div>
+    <div class="ms ms--glow"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div><div class="ms-val">13,000+</div><div class="ms-lbl">Successful Surgeries</div></div>
+    <div class="ms ms--glow"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="ms-val">20+</div><div class="ms-lbl">Years of Experience</div></div>
+    <div class="ms ms--glow"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="ms-val">15+</div><div class="ms-lbl">Years as Dept. Head</div></div>
+    <div class="ms ms--glow"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4"/><path d="M3 9h18M3 15h18"/></svg></div><div class="ms-val">Pioneer</div><div class="ms-lbl">Advanced Cardiac Care</div></div>
+    <div class="ms ms--glow"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="ms-val">World</div><div class="ms-lbl">Record Holder · 470g Baby</div></div>
+    <div class="ms ms--glow"><div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h5"/></svg></div><div class="ms-val">AIIMS &amp; SCTIMST</div><div class="ms-lbl">Fellowship Training</div></div>
   </div>
 </div>
 
@@ -700,6 +697,29 @@
   </div>
 </section>
 
+<!-- PHILOSOPHY -->
+<section class="philosophy-band reveal" aria-label="Surgical philosophy">
+  <div class="philosophy-band__inner">
+    <div class="philosophy-band__quote">
+      <div class="philosophy-band__eyebrow">
+        <svg class="philosophy-band__heart" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        Surgical Philosophy
+      </div>
+      <blockquote>Every heartbeat tells a story — my role is to give that story the longest, fullest chapter possible with <em>precision, compassion,</em> and evidence-based excellence.</blockquote>
+      <cite>— Dr. Sanjay Gandhi · Head of CTVS, GMCH Udaipur</cite>
+    </div>
+    <div class="philosophy-creds">
+      <div class="philosophy-cred"><span class="philosophy-cred__val">470g</span><span class="philosophy-cred__lbl">World Record Neonatal Surgery</span></div>
+      <div class="philosophy-cred"><span class="philosophy-cred__val">98%</span><span class="philosophy-cred__lbl">Surgical Success Rate</span></div>
+      <div class="philosophy-cred"><span class="philosophy-cred__val">50+</span><span class="philosophy-cred__lbl">ECMO Patients Treated</span></div>
+      <div class="philosophy-cred"><span class="philosophy-cred__val">24×7</span><span class="philosophy-cred__lbl">Emergency Cardiac Care</span></div>
+    </div>
+  </div>
+  <svg class="ecg-divider ecg-divider--scroll" viewBox="0 0 720 40" aria-hidden="true" style="margin-top:40px;">
+    <path class="ecg-divider__path" d="M0,20 L80,20 L100,20 L108,6 L116,34 L124,6 L132,34 L140,20 L220,20 L240,20 L248,6 L256,34 L264,6 L272,34 L280,20 L360,20 L380,20 L388,6 L396,34 L404,6 L412,34 L420,20 L500,20 L520,20 L528,6 L536,34 L544,6 L552,34 L560,20 L640,20 L720,20"/>
+  </svg>
+</section>
+
 <!-- CTA BAND -->
 <div class="cta-band">
   <img src="media/heart-graphics/dr-gandhi-overlay.png" alt="" class="cta-deco-overlay" aria-hidden="true"/>
@@ -709,7 +729,7 @@
     <p>Compassionate Care · Advanced Technology · Better Outcomes</p>
   </div>
   <div class="cta-band-right">
-    <a href="contact.html" class="btn btn-white btn-lg">Book an Appointment</a>
+    <a href="contact.html" class="btn btn-white btn-lg btn-heartbeat">Book an Appointment</a>
     <a href="tel:+919509700069" class="btn btn-ghost btn-lg btn-cta-phone btn-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-phone"/></svg> +91 95097 00069</a>
   </div>
 </div>
@@ -869,6 +889,7 @@
   });
 })();
 </script>
+<script src="js/site-creative.js"></script>
 
 </body>
 </html>

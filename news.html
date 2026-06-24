@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>News | Dr. Sanjay Gandhi — Cardiothoracic & Vascular Surgeon</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/site.css?v=3"/>
+<link rel="stylesheet" href="css/site.css?v=13"/>
 <style>
 body.page-news .section .sec-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -65,6 +65,14 @@ body.page-news .section .sec-eyebrow-line {
 </head>
 <body class="page-news">
 
+<div class="site-loader" id="siteLoader" aria-busy="true" aria-label="Loading">
+  <svg class="site-loader__ecg" viewBox="0 0 200 60" aria-hidden="true">
+    <path class="site-loader__path" d="M0,30 L40,30 L50,30 L55,10 L60,50 L65,10 L70,50 L75,30 L85,30 L120,30 L125,30 L130,10 L135,50 L140,10 L145,50 L150,30 L160,30 L200,30"/>
+  </svg>
+  <p class="site-loader__title">Dr. Sanjay Gandhi</p>
+  <span class="site-loader__sub">Cardiothoracic & Vascular Surgeon</span>
+</div>
+
 <!-- NAV -->
 <nav>
   <a class="logo" href="index.html">
@@ -104,6 +112,20 @@ body.page-news .section .sec-eyebrow-line {
   <a href="news.html" onclick="this.parentElement.classList.remove('open')">News</a>
   <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
   <a href="tel:+91-9784586176" class="btn btn-red" style="margin-top:10px">Emergency 24×7</a>
+</div>
+
+<div class="trust-ribbon" role="region" aria-label="Credentials">
+  <div class="trust-ribbon__inner">
+    <span class="trust-ribbon__item"><strong>AIIMS</strong> New Delhi</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>SCTIMST</strong> Trivandrum</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>13,000+</strong> Surgeries</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>470g</strong> World Record</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>24×7</strong> Emergency</span>
+  </div>
 </div>
 
 <!-- PAGE HEADER -->
@@ -756,6 +778,7 @@ body.page-news .section .sec-eyebrow-line {
 })();
 </script>
 <script src="js/news-clippings.js"></script>
+<script src="js/site-creative.js"></script>
 
 </body>
 </html>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Contact | Dr. Sanjay Gandhi — Cardiothoracic & Vascular Surgeon</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/site.css?v=3"/>
+<link rel="stylesheet" href="css/site.css?v=13"/>
 <style>
 .about-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 70px; align-items: center; }
 .treat-card {
@@ -37,6 +37,14 @@
 </style>
 </head>
 <body>
+
+<div class="site-loader" id="siteLoader" aria-busy="true" aria-label="Loading">
+  <svg class="site-loader__ecg" viewBox="0 0 200 60" aria-hidden="true">
+    <path class="site-loader__path" d="M0,30 L40,30 L50,30 L55,10 L60,50 L65,10 L70,50 L75,30 L85,30 L120,30 L125,30 L130,10 L135,50 L140,10 L145,50 L150,30 L160,30 L200,30"/>
+  </svg>
+  <p class="site-loader__title">Dr. Sanjay Gandhi</p>
+  <span class="site-loader__sub">Cardiothoracic & Vascular Surgeon</span>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -79,6 +87,20 @@
   <a href="tel:+91-9784586176" class="btn btn-red" style="margin-top:10px">Emergency 24×7</a>
 </div>
 
+<div class="trust-ribbon" role="region" aria-label="Credentials">
+  <div class="trust-ribbon__inner">
+    <span class="trust-ribbon__item"><strong>AIIMS</strong> New Delhi</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>SCTIMST</strong> Trivandrum</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>13,000+</strong> Surgeries</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>470g</strong> World Record</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>24×7</strong> Emergency</span>
+  </div>
+</div>
+
 <!-- PAGE HEADER -->
 <section class="section section-mid page-header page-header--inner section-wrap">
   <img src="media/heart-graphics/heart.png" alt="" class="page-header-deco page-header-deco--float" aria-hidden="true"/>
@@ -92,6 +114,11 @@
     </div>
     <h1 class="sec-h2">Contact & Appointments</h1>
     <p class="sec-sub">Hospital consultations in Udaipur, evening clinic visits, and 24×7 emergency cardiac care.</p>
+    <div class="trust-stats-row">
+      <span class="trust-stat-pill"><strong>20+</strong> Years Experience</span>
+      <span class="trust-stat-pill"><strong>98%</strong> Success Rate</span>
+      <span class="trust-stat-pill"><strong>Head</strong> Dept. CTVS · GMCH</span>
+    </div>
     <a href="tel:+91-9784586176" class="contact-emergency-pill">
       <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-phone"/></svg>
       <span><strong>24×7 Emergency</strong> · +91 97845 86176</span>
@@ -133,6 +160,46 @@
   </div>
 </section>
 
+<!-- CARE JOURNEY -->
+<section class="section section-mid care-journey-section section-wrap">
+  <svg class="ecg-divider ecg-divider--scroll" viewBox="0 0 720 40" aria-hidden="true">
+    <path class="ecg-divider__path" d="M0,20 L80,20 L100,20 L108,6 L116,34 L124,6 L132,34 L140,20 L220,20 L240,20 L248,6 L256,34 L264,6 L272,34 L280,20 L360,20 L380,20 L388,6 L396,34 L404,6 L412,34 L420,20 L500,20 L520,20 L528,6 L536,34 L544,6 L552,34 L560,20 L640,20 L720,20"/>
+  </svg>
+  <div class="sec-header sec-header--center reveal">
+    <div class="sec-eyebrow-decor">
+      <span class="sec-eyebrow-decor-line sec-eyebrow-decor-line--l"></span>
+      <span class="sec-eyebrow-decor-dot"></span>
+      <span class="sec-eyebrow-decor-text">Patient Journey</span>
+      <span class="sec-eyebrow-decor-dot"></span>
+      <span class="sec-eyebrow-decor-line sec-eyebrow-decor-line--r"></span>
+    </div>
+    <h2 class="sec-h2">Your Care Journey</h2>
+    <p class="sec-sub">From first consultation to recovery — world-class cardiac care with compassion at every step.</p>
+  </div>
+  <div class="care-journey reveal">
+    <div class="care-journey__step">
+      <div class="care-journey__num">1</div>
+      <h3>Consultation</h3>
+      <p>Hospital or evening clinic visit — thorough cardiac assessment</p>
+    </div>
+    <div class="care-journey__step">
+      <div class="care-journey__num">2</div>
+      <h3>Diagnostics</h3>
+      <p>Echo, cath lab, and advanced imaging with Siemens Artis Zee</p>
+    </div>
+    <div class="care-journey__step">
+      <div class="care-journey__num">3</div>
+      <h3>Surgery</h3>
+      <p>CABG, valve, congenital, TAVI, ECMO & transplant expertise</p>
+    </div>
+    <div class="care-journey__step">
+      <div class="care-journey__num">4</div>
+      <h3>Recovery</h3>
+      <p>Guided rehabilitation and long-term follow-up care</p>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT FORM -->
 <section class="section section-dark" style="position:relative;overflow:hidden;">
   <img src="media/heart-graphics/heart-multiple.png" alt="" class="section-deco" style="bottom:20px;right:2%;width:280px;opacity:0.04;" aria-hidden="true"/>
@@ -161,7 +228,7 @@
       </div>
       <div class="fgroup"><label for="contact-message">Message</label><textarea id="contact-message" name="message" placeholder="Briefly describe your condition or query..."></textarea></div>
       <div class="form-actions">
-        <button type="submit" class="btn btn-red btn-lg btn-icon">Send Message <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg#icon-arrow-right"/></svg></button>
+        <button type="submit" class="btn btn-red btn-lg btn-icon btn-heartbeat">Send Message <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons.svg#icon-arrow-right"/></svg></button>
       </div>
     </form>
     <p class="contact-follow">Follow Dr. Gandhi —
@@ -240,6 +307,7 @@
   els.forEach(el=>obs.observe(el));
 })();
 </script>
+<script src="js/site-creative.js"></script>
 
 </body>
 </html>

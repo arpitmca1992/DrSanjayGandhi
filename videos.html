@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Videos | Dr. Sanjay Gandhi</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/site.css?v=3"/>
+<link rel="stylesheet" href="css/site.css?v=14"/>
 <style>
-.vid-group-head,.vid-item,.page-header .sec-header[data-motion],.vid-cat-nav{opacity:0;transform:translateY(28px)}
+.vid-group-head,.vid-item,.page-header .sec-header[data-motion]{opacity:0;transform:translateY(28px)}
 @media(max-width:768px){
   .page-videos .page-header{padding-top:84px!important;padding-bottom:28px!important;text-align:left}
   .page-videos .page-header .sec-sub{margin-left:0;margin-right:0;font-size:14px;line-height:1.7;max-width:560px}
@@ -15,7 +15,14 @@
 </style>
 </head>
 <body class="page-videos">
-<noscript><style>.vid-group-head,.vid-item,.page-header .sec-header[data-motion],.vid-cat-nav{opacity:1!important;transform:none!important}</style></noscript>
+<noscript><style>.vid-group-head,.vid-item,.page-header .sec-header[data-motion]{opacity:1!important;transform:none!important}</style></noscript>
+<div class="site-loader" id="siteLoader" aria-busy="true" aria-label="Loading">
+  <svg class="site-loader__ecg" viewBox="0 0 200 60" aria-hidden="true">
+    <path class="site-loader__path" d="M0,30 L40,30 L50,30 L55,10 L60,50 L65,10 L70,50 L75,30 L85,30 L120,30 L125,30 L130,10 L135,50 L140,10 L145,50 L150,30 L160,30 L200,30"/>
+  </svg>
+  <p class="site-loader__title">Dr. Sanjay Gandhi</p>
+  <span class="site-loader__sub">Cardiothoracic & Vascular Surgeon</span>
+</div>
 <nav>
   <a class="logo" href="index.html">
     <div class="logo-heart"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
@@ -25,7 +32,7 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#expertise">Expertise</a></li>
-    <li><a href="videos.html" style="color:var(--text)">Videos</a></li>
+    <li><a href="videos.html">Videos</a></li>
     <li><a href="news.html">News</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -44,6 +51,19 @@
   <a href="news.html" onclick="this.parentElement.classList.remove('open')">News</a>
   <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
   <a href="tel:+91-9784586176" class="btn-red" style="margin-top:10px;padding:12px 24px;background:var(--crimson);color:white;text-decoration:none;border-radius:6px;">Emergency 24×7</a>
+</div>
+<div class="trust-ribbon" role="region" aria-label="Credentials">
+  <div class="trust-ribbon__inner">
+    <span class="trust-ribbon__item"><strong>AIIMS</strong> New Delhi</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>SCTIMST</strong> Trivandrum</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>13,000+</strong> Surgeries</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>470g</strong> World Record</span>
+    <span class="trust-ribbon__sep">·</span>
+    <span class="trust-ribbon__item"><strong>24×7</strong> Emergency</span>
+  </div>
 </div>
 <section class="section section-mid page-header page-header--inner page-header--videos section-wrap">
   <img src="media/heart-graphics/heart.png" alt="" class="page-header-deco page-header-deco--float" aria-hidden="true"/>
@@ -67,14 +87,6 @@
   </div>
 </section>
 <section class="section section-dark vid-main" style="padding-top:0;">
-
-  <nav class="vid-cat-nav" aria-label="Jump to video category" data-motion="nav">
-    <a href="#media" class="vid-cat-nav__link is-active"><svg class="vid-cat-nav__icon" aria-hidden="true"><use href="assets/icons.svg#icon-microphone"/></svg> Media</a>
-    <a href="#cases" class="vid-cat-nav__link"><svg class="vid-cat-nav__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> Cases</a>
-    <a href="#procedures" class="vid-cat-nav__link"><svg class="vid-cat-nav__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg> Procedures</a>
-    <a href="#testimonials" class="vid-cat-nav__link"><svg class="vid-cat-nav__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Stories</a>
-    <a href="#education" class="vid-cat-nav__link"><svg class="vid-cat-nav__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg> Awareness</a>
-  </nav>
 
   <div class="vid-gallery">
   <!-- MEDIA & INTERVIEWS -->
@@ -111,7 +123,7 @@
       <span class="vid-group-head__count">6 videos</span>
     </header>
     <div class="vid-grid">
-      <div class="vid-item" onclick="playVideo('XGegNKmcXXA','World Record: 470g Baby Heart Surgery')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/XGegNKmcXXA/hqdefault.jpg" alt="World Record: 470g Baby Heart Surgery" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">World Record: 470g Baby Heart Surgery</div></div></div>
+      <div class="vid-item" onclick="playVideo('XGegNKmcXXA','World Record: 470g Baby Heart Surgery')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/XGegNKmcXXA/hqdefault.jpg" alt="World Record: 470g Baby Heart Surgery" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">World Record: 470g Baby Heart Surgery</div><span class="vid-tag">Neonatal</span></div></div>
       <div class="vid-item" onclick="playVideo('2O8Evr9EUjA','A Case of Newborn Heart Surgery')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/2O8Evr9EUjA/hqdefault.jpg" alt="A Case of Newborn Heart Surgery" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">A Case of Newborn Heart Surgery</div></div></div>
       <div class="vid-item" onclick="playVideo('vsdowYuWuvg','Newborn Heart Surgery')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/vsdowYuWuvg/hqdefault.jpg" alt="Newborn Heart Surgery" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Newborn Heart Surgery</div></div></div>
       <div class="vid-item" onclick="playVideo('mg1JaE-GVxA','Heart Hole Surgery — 2-Year-Old Child')"><div class="vi-thumb"><img src="https://img.youtube.com/vi/mg1JaE-GVxA/hqdefault.jpg" alt="Heart Hole Surgery — 2-Year-Old Child" loading="lazy"/><div class="vi-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 20,12 8,19"/></svg></div></div><div class="vi-info"><div class="vi-title">Heart Hole Surgery — 2-Year-Old Child</div></div></div>
@@ -262,5 +274,6 @@
 <script type="module" src="js/scroll-motion.js"></script>
 <script src="js/videos-page.js"></script>
 <script src="js/video-modal.js"></script>
+<script src="js/site-creative.js"></script>
 </body>
 </html>
