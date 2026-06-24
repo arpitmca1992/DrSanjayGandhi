@@ -3,107 +3,46 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>News | Dr. Sanjay Gandhi — Cardiac & Cardiothoracic Surgeon</title>
+<title>News | Dr. Sanjay Gandhi — Cardiothoracic & Vascular Surgeon</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/site.css"/>
+<link rel="stylesheet" href="css/site.css?v=3"/>
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --crimson: #C8102E; --crimson-dark: #8B0D20; --crimson-mid: #a50e26;
-  --bg: #0A1628; --bg2: #0D1B30; --bg3: #111F38;
-  --surface: #152240; --surface2: #1A2A4E;
-  --border: rgba(200,16,46,0.25); --border2: rgba(255,255,255,0.08);
-  --text: #E8EDF5; --muted: #7A8FA8; --gold: #C9A84C;
+body.page-news .section .sec-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: #fff;
+  background: linear-gradient(135deg, var(--crimson), var(--crimson-dark));
+  padding: 6px 14px; border-radius: 3px; margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(200,16,46,0.25);
 }
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(10,22,40,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 4%; height: 68px; }
-.logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
-.logo-heart { width: 38px; height: 38px; background: var(--crimson); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 16px rgba(200,16,46,0.5); }
-.logo-heart svg { width: 20px; height: 20px; }
-.logo-name { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.15; }
-.logo-role { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; margin-top: 1px; }
-.nav-links { display: flex; gap: 28px; list-style: none; }
-.nav-links a { font-size: 12px; font-weight: 500; color: var(--muted); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
-.nav-links a:hover { color: var(--text); }
-.nav-cta { display: flex; gap: 10px; }
-.btn { display: inline-flex; align-items: center; gap: 7px; padding: 9px 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; border-radius: 2px; cursor: pointer; border: none; transition: all 0.22s; font-family: 'Inter', sans-serif; }
-.btn-ghost { background: transparent; border: 1px solid rgba(200,16,46,0.5); color: var(--crimson); }
-.btn-ghost:hover { background: var(--crimson); color: white; border-color: var(--crimson); }
-.btn-red { background: var(--crimson); color: white; box-shadow: 0 4px 20px rgba(200,16,46,0.35); }
-.btn-red:hover { background: var(--crimson-mid); box-shadow: 0 4px 28px rgba(200,16,46,0.5); }
-.btn-lg { padding: 13px 28px; font-size: 13px; }
-.btn-white { background: white; color: var(--crimson); font-weight: 700; }
-.btn-white:hover { background: #f0f0f0; }
-.section { padding: 88px 7%; }
-.section-dark { background: var(--bg2); }
-.section-mid { background: var(--bg3); }
-.sec-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #fff; background: linear-gradient(135deg, var(--crimson), var(--crimson-dark)); padding: 6px 14px; border-radius: 3px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(200,16,46,0.25); }
-.sec-eyebrow-line { width: 22px; height: 2px; background: rgba(255,255,255,0.6); border-radius: 1px; }
-.sec-h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 40px); font-weight: 700; line-height: 1.14; margin-bottom: 14px; }
-.sec-sub { color: var(--muted); font-size: 14px; line-height: 1.8; max-width: 560px; }
+body.page-news .section .sec-eyebrow-line {
+  width: 22px; height: 2px; background: rgba(255,255,255,0.6); border-radius: 1px;
+}
 .about-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 70px; align-items: center; }
 .about-body { font-size: 14px; color: var(--muted); line-height: 1.9; margin-bottom: 24px; }
 .ach-list { display: flex; flex-direction: column; gap: 10px; }
 .ach { display: flex; align-items: flex-start; gap: 12px; font-size: 13px; color: var(--muted); }
-.ach-check { width: 20px; height: 20px; border-radius: 50%; background: rgba(200,16,46,0.12); border: 1px solid rgba(200,16,46,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--crimson); font-size: 10px; font-weight: 700; margin-top: 1px; }
 .treat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 48px; }
-.treat-card { background: var(--surface); border: 1px solid var(--border2); border-radius: 4px; padding: 28px 26px; transition: border-color 0.22s, transform 0.22s; position: relative; overflow: hidden; }
-.treat-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--crimson); transition: height 0.3s; }
+.treat-card {
+  background: var(--surface); border: 1px solid var(--border2); border-radius: 4px;
+  padding: 28px 26px; transition: border-color 0.22s, transform 0.22s;
+  position: relative; overflow: hidden;
+}
+.treat-card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0;
+  background: var(--crimson); transition: height 0.3s;
+}
 .treat-card:hover { border-color: var(--border); transform: translateY(-3px); }
 .treat-card:hover::before { height: 100%; }
 .treat-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
 .treat-card p { font-size: 12px; color: var(--muted); line-height: 1.7; }
-.cta-band { background: linear-gradient(110deg, var(--crimson-dark) 0%, var(--crimson) 60%, #d9223e 100%); padding: 68px 7%; display: flex; justify-content: space-between; align-items: center; gap: 40px; position: relative; overflow: hidden; }
-.cta-band::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; }
-.cta-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; line-height: 1.2; max-width: 500px; position: relative; }
-.cta-text p { color: rgba(255,255,255,0.72); font-size: 14px; margin-top: 8px; position: relative; }
-.cta-band-right { display: flex; gap: 14px; flex-shrink: 0; position: relative; }
-footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px 7% 28px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
-.footer-about p { font-size: 12px; color: var(--muted); line-height: 1.8; margin-top: 16px; max-width: 280px; }
-.footer-socials { display: flex; gap: 10px; margin-top: 20px; }
-.social { width: 32px; height: 32px; border: 1px solid var(--border2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--muted); text-decoration: none; transition: all 0.2s; }
-.social:hover { border-color: var(--crimson); color: var(--crimson); }
-.footer-col h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text); margin-bottom: 20px; }
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-col ul a { font-size: 12px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-.footer-col ul a:hover { color: var(--crimson); }
-.footer-bottom { border-top: 1px solid var(--border2); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-.footer-bottom p { font-size: 11px; color: var(--muted); }
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.mob-toggle { display: none; width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 3px; align-items: center; justify-content: center; cursor: pointer; background: transparent; color: var(--text); font-size: 18px; }
-.mob-menu { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(10,22,40,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
-.mob-menu.open { display: flex; }
-.mob-menu a { font-size: 16px; font-weight: 500; color: var(--text); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
-.mob-menu a:hover { color: var(--crimson); }
-.mob-close { position: absolute; top: 20px; right: 20px; font-size: 28px; color: var(--text); background: none; border: none; cursor: pointer; }
-.page-header { position: relative; overflow: hidden; }
-@media (max-width: 1024px) { .treat-grid { grid-template-columns: 1fr 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 1024px) { .treat-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 768px) {
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
   #world-record .about-grid > div:last-child { max-width: 100%; margin: 0 auto; width: 100%; }
   #world-record .about-grid .btn { width: 100%; justify-content: center; }
   #world-record .about-grid [style*="display:flex"] { flex-direction: column; width: 100%; }
-  .cta-band { flex-direction: column; text-align: center; padding: 40px 5%; }
-  .cta-band-right { justify-content: center; flex-wrap: wrap; flex-direction: column; width: 100%; max-width: 340px; margin: 0 auto; }
-  .cta-band-right .btn { width: 100%; justify-content: center; }
-  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-  nav { padding: 0 4%; }
-  .nav-links { display: none; }
-  .nav-cta .btn { display: none; }
-  .mob-toggle { display: flex; }
-  .section { padding: 60px 5%; }
-  .page-header { padding-top: 84px !important; padding-bottom: 32px !important; text-align: center; }
-  .page-header .sec-eyebrow { justify-content: center; width: 100%; }
-  .page-header .sec-h2 { font-size: clamp(24px, 6.5vw, 30px); margin-bottom: 12px; }
-  .page-header .sec-sub { margin-left: auto; margin-right: auto; font-size: 14px; max-width: min(100%, 420px); text-align: center; }
   .page-header .about-body { text-align: left; }
-  .page-header > img[aria-hidden="true"] { width: 130px !important; top: auto !important; bottom: -10px !important; left: 50% !important; right: auto !important; transform: translateX(-50%); opacity: 0.05 !important; animation: none !important; }
   .treat-grid { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns:repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
   [style*="grid-template-columns:repeat(3"] { grid-template-columns: 1fr !important; }
@@ -111,24 +50,20 @@ footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px
   [style*="height:240px"] { height: 180px !important; }
   [style*="height:280px"] { height: 200px !important; }
   .sec-h2 { font-size: 22px; }
-  .footer-bottom { flex-direction: column; text-align: center; }
 }
 @media (max-width: 480px) {
   [style*="grid-template-columns:repeat(4"] { grid-template-columns: 1fr !important; gap: 10px !important; }
   [style*="grid-template-columns:repeat(2"] { grid-template-columns: 1fr !important; }
   [style*="height:240px"] { height: auto !important; max-height: 350px !important; }
   [style*="height:280px"] { height: auto !important; max-height: 350px !important; }
-  .section { padding: 40px 4%; }
-  .page-header { padding-top: 76px !important; padding-bottom: 28px !important; }
-  .cta-band { padding: 32px 4%; }
   .sec-h2 { font-size: 20px; }
-  nav { height: 56px; }
-  .logo-name { font-size: 13px; }
 }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
 </style>
 </head>
-<body>
+<body class="page-news">
 
 <!-- NAV -->
 <nav>
@@ -138,7 +73,7 @@ footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px
     </div>
     <div>
       <div class="logo-name">DR. SANJAY GANDHI</div>
-      <div class="logo-role">Cardiac & Cardiothoracic Surgeon</div>
+      <div class="logo-role">Cardiothoracic & Vascular Surgeon</div>
     </div>
   </a>
   <ul class="nav-links">
@@ -612,7 +547,7 @@ footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px
         <div class="logo-heart"><svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
         <div>
           <div class="logo-name">DR. SANJAY GANDHI</div>
-          <div class="logo-role">Cardiac & Cardiothoracic Surgeon</div>
+          <div class="logo-role">Cardiothoracic & Vascular Surgeon</div>
         </div>
       </a>
       <p>One of India's most trusted cardiac surgeons. 20+ years of excellence, 13,000+ surgeries, committed to saving lives with compassion and world-class expertise.</p>
@@ -628,6 +563,7 @@ footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About Dr. Sanjay Gandhi</a></li>
         <li><a href="index.html#expertise">Expertise</a></li>
+        <li><a href="videos.html">Videos</a></li>
         <li><a href="news.html">News & Articles</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -655,7 +591,7 @@ footer { background: #0A1628; border-top: 1px solid var(--border); padding: 56px
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Dr. Sanjay Gandhi — Cardiac & Cardiothoracic Surgeon, Udaipur, Rajasthan. All rights reserved.</p>
+    <p>© 2026 Dr. Sanjay Gandhi — Cardiothoracic & Vascular Surgeon, Udaipur, Rajasthan. All rights reserved.</p>
     <p>MBBS · MS AIIMS New Delhi · M.Ch SCTIMST Trivandrum</p>
   </div>
 </footer>
